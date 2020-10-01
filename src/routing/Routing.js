@@ -12,7 +12,7 @@ import EducationPage from '../pages/Education';
 import TourismPage from '../pages/Tourism';
 import ArchivePage from '../pages/Archive';
 import ContactPage from '../pages/Contact';
-const base = '/:locale(en|fr)?';
+const base = '/:locale(en|fr)';
 const Routing = () => {
     return (
         <BrowserRouter>
@@ -28,6 +28,8 @@ const Routing = () => {
                 <Route path={`${base}/tourism`} component={TourismPage}/>
                 <Route path={`${base}/archive`} component={ArchivePage}/>
                 <Route path={`${base}/contact`} component={ContactPage}/>
+
+                <Redirect exact from={'/'} to={'/en/'}/>
 
                 {/* 404 page */}
                 <Route component={NotFoundPage}/>

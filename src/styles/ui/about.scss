@@ -1,0 +1,33 @@
+.about-info {
+  position: inherit;
+
+  .featured-image {
+    position: absolute;
+    left: 0;
+    width: 50%;
+  }
+
+  img {
+    height: 60px;
+  }
+
+  .about-more-item {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $main-color;
+    margin-bottom: 60px;
+    display: block;
+
+    span {
+      display: block;
+      line-height: 25px;
+      margin-top: 17px;
+    }
+
+    &:hover {
+      color: $gold;
+    }
+  }
+}

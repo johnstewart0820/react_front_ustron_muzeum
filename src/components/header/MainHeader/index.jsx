@@ -5,33 +5,39 @@ import bip from '../../../img/bip.png';
 import MainConstant from '../../../constants/MainConstant';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faFont, faLink } from "@fortawesome/free-solid-svg-icons";
-import "../../../styles/header/header.scss";
+
 const MainHeader = () => {
   return (
-    <div className="section">
-      <div className="logo-container">
+    <div className="row">
+      <div className="col-md-6">
         <Link className="logo" to="/">
-          <img  src={logo} alt={MainConstant.site_title} />
+          <img src={logo} alt={MainConstant.site_title} />
           <span>{MainConstant.site_title}</span>
         </Link>
       </div>
-      <div className="header-controller-container">
+      <div className="col-md-6 justify-content-center">
+        {/* helper */}
         <div className="page-helper">
-          <a className="helper">
+          <a href="http://o2.pl" className="helper helper-contrast">
             <FontAwesomeIcon icon={faEye} size="2x" />
           </a>
-          <a className="helper">
+          <a href="//#endregion" className="helper helper-link">
             <FontAwesomeIcon icon={faLink} size="2x" />
           </a>
-          <a className="helper helper-text-size">
+          <a href="//#endregion" className="helper helper-text-size">
             <FontAwesomeIcon icon={faFont} size="1x" />
             <FontAwesomeIcon icon={faFont} size="2x" />
             <FontAwesomeIcon icon={faFont} size="3x" />
           </a>
-          <a className="helper helper-bip">
-            <img className="bip-image" src={bip} alt={MainConstant.site_title} />
+          <a
+            href="//#endregion"
+            className="helper helper-bip"
+            style={{ width: 20 }}
+          >
+            <img src={bip} alt={"BIP"} />
           </a>
         </div>
+        {/* HELPER */}
       </div>
     </div>
   );

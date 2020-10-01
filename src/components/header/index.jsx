@@ -1,22 +1,19 @@
-
 import React from "react";
 import Language from "./Language";
 import MainMenu from "./MainMenu";
-import Search from "./Search";
+import MainSearch from "./Search";
 import MainHeader from "./MainHeader";
-import "../../styles/header/header.scss";
-
 const Header = () => {
 
   return (
-    <header className="header">
-      <div className="main-header-container">
+    <header className="main-header">
+      <div className="container-fluid pr-5">
         <MainHeader/>
-        <MainMenu/>
+        <MainMenu />
       </div>
-      <div className="main-option-container">
+      <div className="header-right-col">
         <Language />
-        <Search />
+        <MainSearch />
       </div>
     </header>
   );

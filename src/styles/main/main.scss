@@ -1,0 +1,142 @@
+// btn
+.btn {
+  display: inline-block;
+  padding: 23px 30px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+  min-width: 260px;
+  text-align: center;
+  transition: all 200ms linear;
+
+  &-primary {
+    background-color: $main-color;
+    color: #fff;
+
+    &:hover {
+      background-color: $gold;
+    }
+  }
+
+  &-secondary {
+    color: $gold;
+
+    &-outlined {
+      padding: 21px 30px;
+      color: $gold;
+      border: 1px solid $gold;
+
+      &:hover {
+        background-color: $gold;
+        color: #fff;
+      }
+    }
+  }
+}
+
+section {
+  &.bg-light-gray {
+    background-color: rgba(#c1c1c1, 0.06);
+  }
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.img-full {
+  width: 100%;
+  height: auto;
+}
+.img-small {
+  width: 15px;
+  height: 15px;
+}
+.row {
+  .education-bottom-image {
+    position: absolute;
+    bottom: 0;
+  }
+  .education-top-image {
+    position: absolute;
+    top: 0;
+  }
+}
+
+.breadcrumb {
+  margin-bottom: 30px;
+
+  ol {
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+
+      a {
+        color: rgba($main-color, 0.57);
+        font-size: 14px;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__separator {
+    color: rgba($main-color, 0.57);
+    font-size: 14px;
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+}
+
+.map-image {
+  height: 490px;
+  width: 100%;
+  background-size: cover;
+  display: block;
+}
+
+.contact-form-section {
+  background-color: rgba(#c1c1c1, 0.2);
+}
+
+.contact-form {
+  h3 {
+    font-size: 20px !important;
+    font-family: $roboto !important;
+    color: #707070 !important;
+    font-weight: 400 !important;
+  }
+  .form-group {
+  }
+  input,
+  textarea {
+    padding: 10px;
+    font-size: 20px;
+    color: #707070;
+    border: 0;
+    border-bottom: 2px solid #707070;
+    font-family: $roboto;
+    //width: 100%;
+    background-color: transparent;
+
+    &:focus {
+      outline: 0;
+      border-color: $gold;
+    }
+  }
+
+  textarea {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  button {
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+  }
+}

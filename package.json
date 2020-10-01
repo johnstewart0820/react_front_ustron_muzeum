@@ -1,5 +1,5 @@
 {
-  "name": "ustron-frontend",
+  "name": "ustron-frontend-new",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -28,7 +28,7 @@
     "react-qr-reader": "^2.2.1",
     "react-router-dom": "^5.2.0",
     "react-router-i18n": "^1.0.0",
-    "react-scripts": "3.4.1",
+    "react-scripts": "^3.4.3",
     "zxcvbn": "^4.4.2"
   },
   "scripts": {
