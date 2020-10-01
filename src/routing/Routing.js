@@ -12,8 +12,9 @@ import EducationPage from '../pages/Education';
 import TourismPage from '../pages/Tourism';
 import ArchivePage from '../pages/Archive';
 import ContactPage from '../pages/Contact';
-const base = '/:locale(en|fr)';
+import Utils from "../utils/Locale";
 const Routing = () => {
+    const base = '/:locale(en|cz|de|pl)';
     return (
         <BrowserRouter>
             <Switch>
@@ -29,7 +30,7 @@ const Routing = () => {
                 <Route path={`${base}/archive`} component={ArchivePage}/>
                 <Route path={`${base}/contact`} component={ContactPage}/>
 
-                <Redirect exact from={'/'} to={'/en/'}/>
+                <Redirect exact from={'/'} to={`/${Utils.getLocale()}/`}/>
 
                 {/* 404 page */}
                 <Route component={NotFoundPage}/>

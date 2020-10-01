@@ -1,8 +1,7 @@
 import React, {useEffect, useState} from "react";
 import PropTypes from "prop-types";
-import Axios from "axios";
 
-const MainFooter = (props) => {
+const Footer = (props) => {
   return (
     <footer className="main-footer">
       <div className="container">
@@ -19,7 +18,7 @@ const MainFooter = (props) => {
   );
 };
 
-MainFooter.propTypes = {
+Footer.propTypes = {
   data: PropTypes.object,
 };
-export default MainFooter;
+export default Footer;
