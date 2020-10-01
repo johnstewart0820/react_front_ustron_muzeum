@@ -5,7 +5,7 @@ const About = (props) => {
     const {history} = props;
     return (
         <>
-        asdfasdfasdfasdfsdaf
+        {window.location.href}
         </>
     );
 }
