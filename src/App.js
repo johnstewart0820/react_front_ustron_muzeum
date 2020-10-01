@@ -8,17 +8,11 @@ import Header from "./components/header";
 
 import NotFoundPage from "./pages/NotFoundPage";
 import HomePage from './pages/Home';
-import AboutPage from './pages/About';
-import ExhibitionPage from './pages/Exhibition';
-import EventPage from './pages/Event';
-import NewsPage from './pages/News';
-import ChroniclePage from './pages/Chronicle';
-import EducationPage from './pages/Education';
-import TourismPage from './pages/Tourism';
-import ArchivePage from './pages/Archive';
-import ContactPage from './pages/Contact';
+import Loader from "./components/general/Loader";
 import Utils from "./utils/Locale";
-import "./styles/layout.scss"
+import PageList from "./constants/PageList";
+
+import "./styles/layout.scss";
 
 const browserHistory = createBrowserHistory();
 const base = '/:locale(en|cz|de|pl)';
@@ -26,7 +20,7 @@ const App = () => {
     const [footerData, setFooterData] = useState({});
     const [headerData, setHeaderData] = useState([]);
     const [languages, setLanguages] = useState([]);
-
+    const [loading, setLoading] = useState(true);
     useEffect(() => {
         Axios.get("http://api.ustron.s3.netcore.pl/sites/getInfo?domain=muzeum.ustron.s3.netcore.pl")
         .then((response) => {
@@ -38,6 +32,7 @@ const App = () => {
           setHeaderData(top_menu_data);
           setLanguages(languages);
           setFooterData({footer_address, footer_hours, footer_links});
+          setLoading(false);
         });
     }, [])
     const getRoute = (data) => {
@@ -45,42 +40,54 @@ const App = () => {
         if (data.item.article) {
           // article
           route = `${data.item.article.slug.replaceAll(' ', '')},${data.item.article.id}`
-          console.log(route);
           return route;
         }
       
         else if ( !data.item.subitems && (!data.subitems || data.subitems.length == 0)) {
           // category
           route = `${data.item.name.replaceAll(' ', '')},${data.item.id}`
-          console.log(route);
           return route;
         }
     };
+    const getPage = (data) => {
+        let route = "";
+        if (data.item.article) {
+          return PageList[data.item.article.slug.replaceAll(' ', '')];
+        }
+        else if ( !data.item.subitems && (!data.subitems || data.subitems.length == 0)) {
+            return PageList[data.item.name.replaceAll(' ', '')];
+        }
+    }
 	return (
-        <BrowserRouter history={browserHistory}>
-            <Header menuData = {headerData} languages = {languages}/>
-            <main>
-            <Switch>
-                {/* Routes for pages which controlled from CMS */}
-                <Route exact path={base} component={HomePage}/>
-                {headerData.map((route) => (
-                    <Route key={route} path={`${base}/${getRoute(route)}`} component={ContactPage}/>
-                ))}
-                {headerData.map((route) => (
-                    route.subitems.map((item) => (
-                        <Route key={item} path={`${base}/${getRoute(item)}`} component={AboutPage}/>
-                    ))
-                ))}
+        <>
+        { loading && <Loader />} 
+        {
+            !loading && (
+            <BrowserRouter history={browserHistory}>
+                <Header menuData = {headerData} languages = {languages}/>
+                <main>
+                <Switch>
+                    {/* Routes for pages which controlled from CMS */}
+                    <Route exact path={base} component={HomePage}/>
+                    {headerData.map((route) => (
+                        <Route key={route} path={`${base}/${getRoute(route)}`} component={getPage(route)}/>
+                    ))}
+                    {headerData.map((route) => (
+                        route.subitems.map((item) => (
+                            <Route key={item} path={`${base}/${getRoute(item)}`} component={getPage(item)}/>
+                        ))
+                    ))}
 
-                <Redirect exact from={'/'} to={`/${Utils.getLocale()}/`}/>
+                    <Redirect exact from={'/'} to={`/${Utils.getLocale()}/`}/>
 
-                {/* 404 page */}
-                <Route component={NotFoundPage}/>
-            </Switch>
-            </main>
-            <Footer data = {footerData}/>
-        </BrowserRouter>
-
+                    {/* 404 page */}
+                    <Route component={NotFoundPage}/>
+                </Switch>
+                </main>
+                <Footer data = {footerData}/>
+            </BrowserRouter> )
+        }     
+        </>
     );
 };
     

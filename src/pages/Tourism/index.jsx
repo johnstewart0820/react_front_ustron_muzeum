@@ -6,6 +6,7 @@ const Tourism = (props) => {
 
     return (
         <>
+            Tourism
         </>
     );
 }

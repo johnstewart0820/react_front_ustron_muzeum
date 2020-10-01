@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { withRouter } from "react-router-dom";
 
-const Contact = (props) => {
+const EducationGlinoki = (props) => {
     const {history} = props;
-    useEffect(() => {
-    }, [])
+
     return (
         <>
-        {window.location.href}
+        EducationGlinoki
         </>
     );
 }
 
-export default withRouter(Contact);
+export default withRouter(EducationGlinoki);

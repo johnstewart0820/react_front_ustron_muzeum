@@ -6,6 +6,7 @@ const News = (props) => {
 
     return (
         <>
+            News
         </>
     );
 }

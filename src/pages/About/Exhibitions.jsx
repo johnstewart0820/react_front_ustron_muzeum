@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { withRouter } from "react-router-dom";
 
-const Education = (props) => {
+const Exhibitions = (props) => {
     const {history} = props;
-
     return (
         <>
+        Exhibitions
         </>
     );
 }
 
-export default withRouter(Education);
+export default withRouter(Exhibitions);
