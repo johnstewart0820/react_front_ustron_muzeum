@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
-import PropTypes from "prop-types";
 import {useHistory} from 'react-router-dom';
+import { SiteInfoContextConsumer } from "../../../constants/SiteInfoContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import Utils from "../../../utils/Locale";
@@ -26,31 +26,32 @@ const Language = (props) => {
       history.push(`/${language}`);
   }
   return (
-    <div className="language-switcher">
-      <ul>
-          {
-            languages && languages.map((language) => (
-              <li
-                style={{
-                  order: locale === language ? `1` : ``,
-                  display: locale === language ? `block` : ``,
-                }}
-                key={language}
-                onClick={() => changeLocale(language)}
-              >
-                {language}
-                {locale === language && (
-                  <FontAwesomeIcon icon={faChevronDown} size="1x" />
-                )}
-              </li>
-            ))
-          }
-      </ul>
-    </div>
+    <SiteInfoContextConsumer>
+		{ ({ languages, active_language, changeLanguage }) => (
+      <div className="language-switcher">
+        <ul>
+            {
+              languages && languages.map((language) => (
+                <li
+                  style={{
+                    order: locale === language ? `1` : ``,
+                    display: locale === language ? `block` : ``,
+                  }}
+                  key={language}
+                  onClick={() => changeLocale(language)}
+                >
+                  {language}
+                  {locale === language && (
+                    <FontAwesomeIcon icon={faChevronDown} size="1x" />
+                  )}
+                </li>
+              ))
+            }
+        </ul>
+      </div>
+    )}
+    </SiteInfoContextConsumer>
   );
 };
 
-Language.propTypes = {
-  data: PropTypes.array,
-};
 export default Language;

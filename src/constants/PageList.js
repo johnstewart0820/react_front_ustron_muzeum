@@ -1,7 +1,7 @@
 import AboutDescription from '../pages/About/Description';
 import AboutExhibitions from '../pages/About/Exhibitions';
 import AboutPhotoReports from '../pages/About/Photo_Reports';
-import PermanentExhibitions from '../pages/Exhibition/Permanent_Exhibitions';
+import MuseumExhibitions from '../pages/Exhibition/Museum_Exhibitions';
 import TemporaryExhibitions from '../pages/Exhibition/Temporary_Exhibitions';
 import EventPage from '../pages/Event';
 import NewsPage from '../pages/News';
@@ -19,18 +19,18 @@ export default {
     'opis-muzeum': AboutDescription,
     'Fotorelacje': AboutExhibitions,
     'Wystawy': AboutPhotoReports,
-    'Wystawystałe': PermanentExhibitions,
+    'museum_exhibitions': MuseumExhibitions,
     'muzeum-ustron-pl-wystawy': TemporaryExhibitions,
-    'muzeum-ustron-pl-wydarzenia': EventPage,
+    museum_events: EventPage,
     'muzeum-ustron-pl-aktualnosci': NewsPage,
-    'muzeum-ustron-pl-kronika': ChronicleUstron,
+    museum_chronicle: ChronicleUstron,
     'KronikaWystawCzasowych': ChronicleTemporaryExhibitions,
     'KronikaWydarzeńMuzealnych': ChronicleMuseumEvents,
     'Glinioki': EducationGlinoki,
-    'Industriada': EducationIndustriada,
+    museum_educational_movies: EducationIndustriada,
     'Kalendarz': EducationCalendar,
     'Najbliższewydarzenia': EducationUpcomingEvents,
     'Turystykaindustrialna': TourismPage,
-    'Cyfrowearchiwum': ArchivePage,
-    'Kontakt': ContactPage
+    museum_digital_archive: ArchivePage,
+    museum_contact: ContactPage
 };

@@ -1,62 +1,48 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
 import { withRouter } from "react-router";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Utils from "../../../utils/Locale";
+import { SiteInfoContextConsumer } from "../../../constants/SiteInfoContext";
 
 const MainMenu = (props) => {
-  let menu = props.data;
-
-  const handleAPILink = (data) => {
-    let link = "#";
-    const language = Utils.getLocale();
-    if (data.item.article) {
-      // article
-      link = `/${language}/${data.item.article.slug.replaceAll(' ', '')},${data.item.article.id}`
-    }
-  
-    else if ( !data.item.subitems && (!data.subitems || data.subitems.length == 0)) {
-      // category
-      link = `/${language}/${data.item.name.replaceAll(' ', '')},${data.item.id}`
-    }
-    return link;
-  };
 
   return (
-    <div className="row">
-      <div className="col-md-12">
-        <nav className="main-navigation">
-          <ul>
-            {menu.map((menuItem) => (
-              <li key={menuItem.item.id}>
-                <Link activeClassName="active" to={handleAPILink(menuItem)}>
-                  {menuItem.item.name}
-                  {menuItem.subitems.length > 0 && (
-                    <FontAwesomeIcon icon={faChevronDown} size="1x" />
-                  )}
-                </Link>
-                <ul>
-                  {menuItem.subitems.map((item) => (
-                    <li>
-                      <Link activeClassName="active" to={handleAPILink(item)}>
-                        {item.item.name}
+    <SiteInfoContextConsumer>
+      { ({ header_menu }) => (
+        <div className="row">
+          <div className="col-md-12">
+            <nav className="main-navigation">
+              <ul>
+                { console.log(header_menu),
+                header_menu && !!header_menu.length &&
+                  header_menu.map(({ item, subitems }, index) => (
+                    <li key={ index }>
+                      <Link activeClassName="active" to={ item.path }>
+                        { item.label }
+                        {subitems.length > 0 && (
+                          <FontAwesomeIcon icon={faChevronDown} size="1x" />
+                        )}
                       </Link>
+                      <ul>
+                        {subitems.map(({path, label}, index) => (
+                          <li key={ index }>
+                            <Link activeClassName="active" to={path}>
+                              {label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
                     </li>
-                  ))}
-                </ul>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </div>
-    </div>
+                )) }
+              </ul>
+            </nav>
+          </div>
+        </div>
+      )}
+    </SiteInfoContextConsumer>
   );
 };
 
-MainMenu.propTypes = {
-  data: PropTypes.array,
-};
 export default withRouter(MainMenu);

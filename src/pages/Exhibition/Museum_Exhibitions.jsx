@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { withRouter } from "react-router-dom";
 
-const PermanentExhibitions = (props) => {
+const MuseumExhibitions = (props) => {
     const {history} = props;
     return (
         <>
-        PermanentExhibitions
+        MuseumExhibitions
         </>
     );
 }
 
-export default withRouter(PermanentExhibitions);
+export default withRouter(MuseumExhibitions);

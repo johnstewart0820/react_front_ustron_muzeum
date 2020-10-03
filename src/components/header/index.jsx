@@ -11,18 +11,14 @@ const Header = (props) => {
     <header className="main-header">
       <div className="container-fluid pr-5">
         <MainHeader />
-        <MainMenu data = {props.menuData}/>
+        <MainMenu/>
       </div>
       <div className="header-right-col">
-        <Language data = {props.languages} />
+        <Language />
         <MainSearch />
       </div>
     </header>
   );
 };
 
-Header.propTypes = {
-  menuData: PropTypes.array,
-  languages: PropTypes.array,
-};
 export default Header;

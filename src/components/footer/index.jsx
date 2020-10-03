@@ -1,24 +1,26 @@
 import React, {useEffect, useState} from "react";
-import PropTypes from "prop-types";
+import { SiteInfoContextConsumer } from "../../constants/SiteInfoContext";
+
 
 const Footer = (props) => {
   return (
-    <footer className="main-footer">
-      <div className="container">
-        <div className="row align-items-end">
-          <div className="col-2" dangerouslySetInnerHTML={{__html: props.data.footer_address}}>
+    <SiteInfoContextConsumer>
+      { ({ footer_address, footer_hours, footer_links  }) => (
+        <footer className="main-footer">
+          <div className="container">
+            <div className="row align-items-end">
+              <div className="col-2" dangerouslySetInnerHTML={{__html: footer_address}}>
+              </div>
+              <div className="col-6" dangerouslySetInnerHTML={{__html: footer_hours}}>
+              </div>
+              <div className="col-4" dangerouslySetInnerHTML={{__html: footer_links}}>
+              </div>
+            </div>
           </div>
-          <div className="col-6" dangerouslySetInnerHTML={{__html: props.data.footer_hours}}>
-          </div>
-          <div className="col-4" dangerouslySetInnerHTML={{__html: props.data.footer_links}}>
-          </div>
-        </div>
-      </div>
-    </footer>
+        </footer>
+      )}
+    </SiteInfoContextConsumer>
   );
 };
 
-Footer.propTypes = {
-  data: PropTypes.object,
-};
 export default Footer;
