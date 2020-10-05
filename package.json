@@ -21,6 +21,7 @@
     "jspdf": "^2.1.1",
     "moment": "^2.27.0",
     "node-sass": "^4.14.1",
+    "pure-react-carousel": "^1.27.4",
     "react": "^16.13.1",
     "react-calendar": "^3.1.0",
     "react-datepicker": "^3.1.3",

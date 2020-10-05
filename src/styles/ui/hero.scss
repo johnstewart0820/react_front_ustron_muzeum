@@ -11,21 +11,23 @@ $slider-max-height: 700px;
   position: relative;
 
   .hero-title {
-    font-size: 21px;
-    font-family: $roboto;
+    font-size: 1.2em;
+    font-family: $lora;
+    font-weight: 700;
     color: $gold;
   }
 
   .hero-copy {
     margin: 30px 0 60px 0;
     &-line {
-      font-size: 44px;
+      font-size: 2.5em;
       font-family: $lora;
       text-transform: uppercase;
       color: #fff;
+      font-weight: 600;
 
       &.__big {
-        font-size: 85px;
+        font-size: 5.5em;
         line-height: 100px;
       }
     }
@@ -34,8 +36,8 @@ $slider-max-height: 700px;
       border: 2px solid $gold;
       width: 400px;
       padding: 20px;
-      font-size: 18px;
-      font-weight: 700;
+      font-size: 1em;
+      font-weight: 400;
       display: inline-block;
       background: $gold;
       color: #fff;
@@ -50,17 +52,16 @@ $slider-max-height: 700px;
     }
   }
 
-  .gatsby-image-wrapper {
+  .hero-top-img {
     position: absolute !important;
-    top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
     z-index: -1;
   }
 }
 
 .carousel {
   max-height: $slider-max-height;
+  padding: 0px !important;
   overflow: hidden;
 }

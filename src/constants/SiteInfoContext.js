@@ -60,7 +60,6 @@ class SiteInfoContextProvider extends Component{
 			const footer_address = widgets?.["footer-contact"]?.elements?.[0]?.content;
 			const footer_hours = widgets?.["footer-hours"]?.elements?.[0]?.content;
 			const footer_links = widgets?.["footer-links-1"]?.elements?.[0]?.content;
-
 			const header_menu = [];
 			for (let i in header_menu_structure) {
 				const main_item_data = header_menu_structure[i].item;
@@ -83,7 +82,7 @@ class SiteInfoContextProvider extends Component{
 				header_menu, 
 				footer_address, 
 				footer_hours,
-				footer_links 
+				footer_links,
 			})
 		})
 		.catch( err => {} )

@@ -1,3 +1,4 @@
+import HomePage from '../pages/Home';
 import AboutDescription from '../pages/About/Description';
 import AboutExhibitions from '../pages/About/Exhibitions';
 import AboutPhotoReports from '../pages/About/Photo_Reports';
@@ -14,6 +15,7 @@ import TourismPage from '../pages/Tourism';
 import ArchivePage from '../pages/Archive';
 import ContactPage from '../pages/Contact';
 export default {
+    'museum_homepage': HomePage,
     'opis-muzeum': AboutDescription,
     'Fotorelacje': AboutExhibitions,
     'Wystawy': AboutPhotoReports,

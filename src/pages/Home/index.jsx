@@ -1,13 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { withRouter } from "react-router-dom";
-import I18n from '../../I18n';
+import Loader from "../../components/general/Loader";
+import HomeSlider from "../../components/slider/HomeSlider";
 
 const Home = (props) => {
-    const {history} = props;
-
+    const data = props.page.acf;
+    console.log(props);
     return (
         <>
-            <I18n t="hello" />
+            {!data && <Loader/>}
+            {!!data &&
+                <div className="homepage-container">
+                    <HomeSlider slider_status={data.field_should_override_slider} data={data.field_override_slides}/>
+                </div>
+            }
         </>
     );
 }
