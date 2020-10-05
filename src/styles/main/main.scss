@@ -48,7 +48,7 @@ section {
 
 .img-full {
   width: 100%;
-  height: auto;
+  height: auto !important;
 }
 .img-small {
   width: 15px;
@@ -109,8 +109,6 @@ section {
     font-family: $roboto !important;
     color: #707070 !important;
     font-weight: 400 !important;
-  }
-  .form-group {
   }
   input,
   textarea {

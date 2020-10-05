@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { withRouter } from "react-router-dom";
 import Loader from "../../components/general/Loader";
-import HomeSlider from "../../components/slider/HomeSlider";
+import HomeSlider from "../../components/main/HomeSlider";
+import ObjectInfo from "../../components/main/object-info";
+import AboutInfo from "../../components/main/AboutInfo";
 
 const Home = (props) => {
     const data = props.page.acf;
@@ -12,6 +14,8 @@ const Home = (props) => {
             {!!data &&
                 <div className="homepage-container">
                     <HomeSlider slider_status={data.field_should_override_slider} data={data.field_override_slides}/>
+                    <ObjectInfo data={data} />
+                    <AboutInfo data={data} />
                 </div>
             }
         </>

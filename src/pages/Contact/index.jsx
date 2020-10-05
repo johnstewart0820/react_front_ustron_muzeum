@@ -25,7 +25,7 @@ const Contact = (props) => {
             {!!info && 
                 <>
                 <Description data={info} />
-                <ObjectInfo data={info} />
+                <ObjectInfo data={info.acf} />
                 <ContactForm />
                 <LocationMap data={info}/>
                 </>

@@ -25,8 +25,8 @@ const ObjectInfo = (props) => {
     setCurrent(section);
   };
   useEffect(() => {
-    if (data && data.field_contact_hours) {
-      const hourlist = get_contact_hours(data.field_contact_hours);
+    if (data && data.field_hours) {
+      const hourlist = get_contact_hours(data.field_hours);
       console.log(hourlist);
       setHourList(hourlist);
     }
@@ -39,16 +39,16 @@ const ObjectInfo = (props) => {
           {current === "hours" ? (
             <>
               <h3>
-                <small>{ data && data.field_contact_hours_title && data.field_contact_hours_title }</small>
+                <small>{ data && data.field_hours_title && data.field_hours_title }</small>
               </h3>
-              {data && data.field_contact_price_description && <div className="object-info-description" dangerouslySetInnerHTML={{__html: data.field_contact_hours_description}}></div>}
+              {data && data.field_hours_description && <div className="object-info-description" dangerouslySetInnerHTML={{__html: data.field_hours_description}}></div>}
             </>
           ) : (
             <>
               <h3>
-                <small>{ data.field_contact_price_title }</small>
+                <small>{ data.field_price_title }</small>
               </h3>
-              {data && data.field_contact_price_description && <div className="object-info-description" dangerouslySetInnerHTML={{__html: data.field_contact_price_description}}></div>}
+              {data && data.field_price_description && <div className="object-info-description" dangerouslySetInnerHTML={{__html: data.field_price_description}}></div>}
             </>
           )}
         </div>
@@ -96,7 +96,7 @@ const ObjectInfo = (props) => {
             </div>
           ) : (
             <div className="pricing mt-4">
-              <div className="price-list-detail" dangerouslySetInnerHTML={{__html: data.field_contact_price}}></div>
+              <div className="price-list-detail" dangerouslySetInnerHTML={{__html: data.field_price}}></div>
             </div>
           )}
         </div>
