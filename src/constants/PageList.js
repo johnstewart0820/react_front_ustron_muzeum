@@ -6,8 +6,6 @@ import TemporaryExhibitions from '../pages/Exhibition/Temporary_Exhibitions';
 import EventPage from '../pages/Event';
 import NewsPage from '../pages/News';
 import ChronicleUstron from '../pages/Chronicle/Chronicle_Ustron';
-import ChronicleTemporaryExhibitions from '../pages/Chronicle/Chronicle_Temporary_Exhibitions';
-import ChronicleMuseumEvents from '../pages/Chronicle/Chronicle_Museum_Events';
 import EducationGlinoki from '../pages/Education/Education_Glinoki';
 import EducationIndustriada from '../pages/Education/Education_Industriada';
 import EducationCalendar from '../pages/Education/Education_Calendar';
@@ -24,8 +22,6 @@ export default {
     museum_events: EventPage,
     'muzeum-ustron-pl-aktualnosci': NewsPage,
     museum_chronicle: ChronicleUstron,
-    'KronikaWystawCzasowych': ChronicleTemporaryExhibitions,
-    'KronikaWydarzeńMuzealnych': ChronicleMuseumEvents,
     'Glinioki': EducationGlinoki,
     museum_educational_movies: EducationIndustriada,
     'Kalendarz': EducationCalendar,
