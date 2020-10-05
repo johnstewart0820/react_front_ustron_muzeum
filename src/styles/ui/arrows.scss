@@ -39,3 +39,47 @@
 		}
 	}
 }
+
+.month-arrows{
+	@include flex-a-center;
+	height: 56px;
+
+	> .arrow-div {
+		@include transparent-button;
+		width: 56px;
+		height: 100%;
+		border-radius: 50%;
+		transition: background .4s;
+
+		@include flex-centered;
+
+		&:hover{
+			background: $gray;
+			svg{
+				path{
+					stroke: #fff;
+				}
+			}
+		}
+
+		&:first-child{
+			width: 42px;
+			height: 42px;
+			margin-right: 15px;
+
+			&:hover{
+				background: $gray;
+			}
+		}
+
+		&:last-child{
+			width: 42px;
+			height: 42px;
+			margin-right: 15px;
+
+			&:hover{
+				background: $gray;
+			}
+		}
+	}
+}

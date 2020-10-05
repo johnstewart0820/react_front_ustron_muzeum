@@ -1,75 +1,46 @@
 import React from "react";
-import DayButton from "../StadiumReservationComponents/DayButton";
 import PropTypes from 'prop-types';
 import moment from "moment";
-import Arrows from "../buttons/Arrows";
+import Angle from "../../svg/components/Angle";
 
 export const MonthCarousel = props => {
-    const [startDate, setStartDate] = React.useState(moment(props.startDate));
-    const [carouselDates, setCarouselDates] = React.useState([]);
-    const [selectedDate, setSelectedDate] = React.useState(null);
+    const [month, setMonth] = React.useState(moment(props.startDate));
 
     React.useEffect(() => {
-        setSelectedDate(props.selectedDate ? moment(props.selectedDate) : null);
-    }, [moment(props.selectedDate).format('DD.MM.YYYY')]);
-    React.useEffect(() => {
-        setStartDate(props.startDate ? moment(props.startDate) : null);
-    }, [moment(props.startDate).format('DD.MM.YYYY')]);
-
-    React.useEffect(() => {
-        const dates = [];
-
-        const cycleDate = moment(startDate);
-        const endDate = moment(startDate).add(props.amount, props.type || 'days');
-
-        for (cycleDate; cycleDate.isSameOrBefore(endDate); cycleDate.add(1, 'day')) {
-            const clone = cycleDate.clone();
-
-            dates.push({
-                key: cycleDate.format('DD.MM.YYYY'),
-                active: !!selectedDate?.isSame(cycleDate),
-                onClick: () => {
-                    setSelectedDate(clone);
-                    props.onDayClick && props.onDayClick(clone);
-                },
-                dayName: cycleDate.format('dddd').toUpperCase(),
-                monthName: cycleDate.format('MMMM').toUpperCase(),
-                date: cycleDate.date(),
-            });
-        }
-
-        setCarouselDates(dates);
-    }, [startDate.format('DD.MM.YYYY'), selectedDate?.format('DD.MM.YYYY')]);
-
-    const onArrowClick = action => setStartDate(startDate.clone()[action === 'prev' ? 'subtract' : 'add'](props.amount, props.type || 'days'));
-
+        setMonth(props.startDate ? moment(props.startDate) : null);
+    }, []);
+    const arrowPrevClick = (e) => {
+        setMonth(moment(month.subtract(1, 'months')));
+        props.handlePrevMonth(month);
+    };
+    const arrowNextClick = (e) => {
+        // console.log(moment().add(1, 'month').calendar());
+        setMonth(moment(month.add(1, 'months')));
+        props.handleNextMonth(month);
+    };
     return (
-        <div className="day-button-container">
-            <div className="day-button-carousel">
-                <div className="day-button-wrap">
-                    <div className={`carousel`}>
-                        <div className="carousel__body">
-                            <Arrows onClick={onArrowClick}/>
-                            <div className="carousel__overflow">
-                                <div className="carousel__wrap">
-                                    {carouselDates.map((item, index) => <DayButton key={index} {...item} />)}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div className="month-button-container month-arrows">
+            <div onClick={ e => arrowPrevClick( e )} className="arrow-div">
+                <Angle  direction={ "left" } />
+                <span className="d-none"> arrow </span>
             </div>
+            <div className="month">
+                {moment(month).format('MMMM').toUpperCase()}
+            </div>
+            <div className="year">
+                {moment(month).format('YYYY').toUpperCase()}
+            </div>
+            <div onClick={ e => arrowNextClick( e )} className="arrow-div">
+                <Angle direction={ "right" } />
+                <span className="d-none"> arrow </span>
+            </div>
+
         </div>
     );
 };
 
 MonthCarousel.propTypes = {
     startDate: PropTypes.object.isRequired,
-    selectedDate: PropTypes.object,
-    onDayClick: PropTypes.func,
-    type: PropTypes.string,
-    amount: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.number,
-    ]).isRequired,
+    handleNextMonth: PropTypes.func.isRequired,
+    handlePrevMonth: PropTypes.func.isRequired,
 };

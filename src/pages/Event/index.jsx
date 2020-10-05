@@ -8,6 +8,7 @@ import {DayCarousel} from "../../components/events/DayCarousel";
 import Loader from "../../components/general/Loader";
 import Carousel from "../../components/carousel/Carousel";
 import LoopEventsPost from "../../components/events/LoopEventsPost";
+import { MonthCarousel } from "../../components/events/MonthCarousel";
 
 const dateOrDate = (firstDate, secondDate) => {
     if (!firstDate && !secondDate)
@@ -20,10 +21,12 @@ const Event = (props) => {
     const acf = props.page.acf;
     const {history} = props;
     const [selectedDate, setSelectedDate] = React.useState(moment());
+    const [startDate, setStartDate] = React.useState(moment());
     const [data, setData] = React.useState(null);
     const [filterArgs, setFilterArgs] = React.useState({});
     React.useEffect(() => {
         console.log(selectedDate);
+        setStartDate(selectedDate);
         setData(null);
         API.getByConfig(acf.field_nearest_events_museum_categories, {
             ...filterArgs,
@@ -36,14 +39,20 @@ const Event = (props) => {
             setData(false);
         });
     }, [filterArgs, selectedDate]);
-
+    const handleNextMonth = (month) => {
+        setStartDate(moment(month));
+    }
+    const handlePrevMonth = (month) => {
+        setStartDate(moment(month));
+    }
     return (
         <>
             <MainHeaderSection extra_classes="subpage">
                 <Breadcrumbs breadcrumbs={[{label: "Muzeum Ustroński", to: "/"}, {label: "Wydarzenia"}]}/>
             </MainHeaderSection>
+            <MonthCarousel startDate={selectedDate} handleNextMonth={handleNextMonth} handlePrevMonth={handlePrevMonth}/>
             <DayCarousel
-                startDate={moment().subtract(3, 'days')}
+                startDate={startDate}
                 selectedDate={selectedDate}
                 onDayClick={date => setSelectedDate(date)}
                 amount={7}

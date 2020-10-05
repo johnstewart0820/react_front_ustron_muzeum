@@ -44,7 +44,7 @@ export const DayCarousel = props => {
     const onArrowClick = action => setStartDate(startDate.clone()[action === 'prev' ? 'subtract' : 'add'](props.amount, props.type || 'days'));
 
     return (
-        <div className="day-button-container">
+        <div className="day-button-container container">
             <div className="day-button-carousel">
                 <div className="day-button-wrap">
                     <div className={`carousel`}>
