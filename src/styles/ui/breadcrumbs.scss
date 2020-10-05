@@ -1,0 +1,22 @@
+@import "./mixins.scss";
+
+.breadcrumbs{
+
+	padding: 12px;
+
+	&__items {
+		@include flex-a-center;
+	}
+
+	div, a{ 
+		color: $main-color;
+		font-size: 12px;
+		text-decoration: none;	
+	}
+
+	a::after{
+		content: ">";
+		display: inline-block;
+		margin: 0 12px;
+	}
+}

@@ -87,6 +87,7 @@ API.getEntities = ({categories, ...rest}) => {
  * @param {QueryArgs} args
  */
 API.getByConfig = (config, args = {}) => {
+    console.log(config);
     if ((Array.isArray(config) && config.length > 1) || typeof config !== 'object') {
         console.error(config);
         throw new Error('Cannot generate query params for config above');

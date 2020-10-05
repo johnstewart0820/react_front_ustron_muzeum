@@ -1,0 +1,66 @@
+@import "./mixins.scss";
+
+.day_main {
+    cursor: pointer;
+  min-height: 190px;
+  width: 170px;
+  border: 2px solid gray;
+  margin: 40px 20px 10px 0 !important;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f9f9f9;
+  &:focus,
+  &.active {
+    outline: none;
+    background: #f9f9f9;
+    border: 2px solid $gold;
+  }
+  h3 {
+    margin: auto !important;
+    font-weight: normal;
+    transition: 0.5s;
+    color: $gray;
+  }
+  h1 {
+    margin: auto !important;
+    transition: 0.5s;
+    line-height: 0;
+    font-size: 45px;
+    color: $gray;
+  }
+  h4 {
+    margin: auto !important;
+    transition: 0.5s;
+    font-size: 18px;
+    color: $gray;
+  }
+  &:hover {
+    background: #f9f9f9;
+    border: 2px solid $gold;
+  }
+  hr {
+    transition: 0.5s;
+    border: 1px solid gray;
+    color: $gray;
+    width: 95%;
+  }
+}
+
+.day_main:hover {
+  border: 2px solid $gold;
+}
+
+.day_main:hover hr {
+  border: 1px solid $gold;
+}
+
+.day_main:focus * {
+  color: $gold;
+}
+
+.day_main:focus hr {
+  border: 1px solid $gold;
+}

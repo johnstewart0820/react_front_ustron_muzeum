@@ -1,0 +1,78 @@
+@import "./mixins.scss";
+
+.carousel{
+	padding: 50px 0;
+	
+	.arrows{
+		margin-bottom: 43px;
+		margin-right: 40px;
+		button {
+			&:focus {
+				outline: none;
+			}
+		}
+	}	
+
+
+	&.arrows-on-right{
+		.carousel__body{
+			display: flex;
+		}
+	}
+}
+
+.carousel__head{
+	@include flex-a-center;
+	margin-bottom: 35px;
+
+	.section-heading{
+		margin-bottom: 0;
+		.heading {
+			font-size: 28px;
+			font-weight: 600;
+			font-family: $lora;
+			color: white;
+		}
+	}
+}
+
+.carousel__arrows-placeholder{
+	height: 56px;
+	margin-bottom: 43px;
+}
+
+
+.carousel__overflow{
+	overflow: hidden;
+}
+
+.carousel__wrap {
+	position: relative;
+	width: 10000px;
+	display: flex;
+}
+
+@media (max-width: 600px){
+	
+	.carousel__arrows-placeholder{
+		display: none;
+	}
+
+	.carousel{
+		.arrows{
+			display: none;
+		}
+	}
+
+	.carousel__head{
+		flex-wrap: wrap;
+		> div{
+			width: 100%;
+		}
+
+		.link-to-all{
+			margin-left: 0;
+			margin-top: 20px;
+		}
+	}
+}
