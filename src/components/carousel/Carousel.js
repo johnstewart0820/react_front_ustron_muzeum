@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
+import moment from "moment";
 import LinkToAll from "../buttons/LinkToAll";
 import Arrows from '../buttons/Arrows';
 import SectionHeading from "../general/SectionHeading";
+import HeadingDate from "../buttons/HeadingDate";
 
 export default class Carousel extends Component{
 
@@ -13,7 +14,8 @@ export default class Carousel extends Component{
 		extra_classes: PropTypes.string,
 		ItemComponent: PropTypes.elementType.isRequired,
 		path_to_all:PropTypes.string,
-		link_to_all:PropTypes.string
+		link_to_all:PropTypes.string,
+		selectedDate: PropTypes.object,
 	};
 	
 	movement_duration = 650;
@@ -133,7 +135,7 @@ export default class Carousel extends Component{
 
 	render(){
 
-		const { heading, extra_classes, ItemComponent, path_to_all, link_to_all, bodyStyles , containerStyles} = this.props;
+		const { heading, selectedDate, extra_classes, ItemComponent, path_to_all, link_to_all, bodyStyles , containerStyles} = this.props;
 		const { items, wrap_left, transition } = this.state;
 
 		if( !items || !items.length || !ItemComponent ) return null;
@@ -149,6 +151,7 @@ export default class Carousel extends Component{
 					<div className="carousel__head">
 						<SectionHeading heading={ heading } />
 						<LinkToAll path={ path_to_all } href={ link_to_all }  />
+						<HeadingDate date= {selectedDate} />
 					</div>
 
 					<div className="carousel__body" style={ bodyStyles }>

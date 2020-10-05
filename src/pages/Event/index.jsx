@@ -52,6 +52,7 @@ const Event = (props) => {
             {!!data?.contents && (
                 <Carousel
                     heading={'WYBRANA DATA'}
+                    selectedDate={selectedDate}
                     containerStyles={{paddingLeft: '90px', backgroundColor: '#324655'}}
                     bodyStyles={{display: 'flex'}}
                     items={data.contents}
