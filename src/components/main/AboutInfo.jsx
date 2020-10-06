@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import DefaultImage from "../../img/loop/1.jpg";
+import DefaultImage from "../../img/loop/2.png";
 
 const AboutInfo = (props) => {
   const data = props.data;
