@@ -1,6 +1,5 @@
 import HomePage from '../pages/Home';
 import AboutDescription from '../pages/About/Description';
-import AboutExhibitions from '../pages/About/Exhibitions';
 import AboutPhotoReports from '../pages/About/Photo_Reports';
 import MuseumExhibitions from '../pages/Exhibition/Museum_Exhibitions';
 import TemporaryExhibitions from '../pages/Exhibition/Temporary_Exhibitions';
@@ -16,9 +15,8 @@ import ArchivePage from '../pages/Archive';
 import ContactPage from '../pages/Contact';
 export default {
     'museum_homepage': HomePage,
-    'opis-muzeum': AboutDescription,
-    'Fotorelacje': AboutExhibitions,
-    'Wystawy': AboutPhotoReports,
+    museum_about: AboutDescription,
+    'Fotorelacje': AboutPhotoReports,
     'museum_exhibitions': MuseumExhibitions,
     'muzeum-ustron-pl-wystawy': TemporaryExhibitions,
     museum_events: EventPage,

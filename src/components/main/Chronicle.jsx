@@ -53,7 +53,7 @@ const Chronicle = (props) => {
     <section className="section mt-5 mb-5 pt-5 pb-5">
       <Tabs
         source="events"
-        subtitle="Recently at the Ustroń Museum"
+        subtitle={data.field_hours_title}
         title="Events"
         linkToMore="test2"
         tabs={[
