@@ -6,11 +6,13 @@ const HarvestInfo = (props) => {
   const data = props.data;
   return (
     <section className="container section about-info mb-5 pt-5 pb-5">
-      <div className="row">
-          <h3>
-            <small>O muzeum</small>
-            {data.field_crops_title}
-          </h3>
+      <div >
+          <small>O muzeum</small>
+          <div>
+            <h3>
+              {data.field_crops_title}
+            </h3>
+          </div>
           <div className="row">
             <div className="col-md-3"></div>
             <div className="col-md-9">

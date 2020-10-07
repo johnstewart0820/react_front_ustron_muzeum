@@ -2,9 +2,7 @@
   position: inherit;
 
   .featured-image {
-    position: absolute;
-    left: 0;
-    width: 50%;
+    margin-left: -100px;
   }
 
   img {
@@ -12,7 +10,7 @@
   }
 
   .about-more-item {
-    font-size: 18px;
+    font-size: 1.13em;
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;

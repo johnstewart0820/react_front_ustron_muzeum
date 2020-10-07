@@ -9,8 +9,8 @@ const PeoriodicsInfo = (props) => {
             <img src={data.field_periodical_photo} className="img-full" />
           </div>
           <div className="col-md-6 peoriodics_link">
+            <small>O muzeum</small>
             <h3>
-              <small>O muzeum</small>
               <div className="peoriodics-main-title mb-5">
                 {data.field_periodical_title}
               </div>

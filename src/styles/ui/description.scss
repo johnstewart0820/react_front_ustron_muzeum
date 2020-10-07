@@ -4,7 +4,7 @@
   }
   
   .description-more-item {
-    font-size: 18px;
+    font-size: 1.13em;
     font-weight: bold;
     text-decoration: none;
     color: $main-color;
@@ -31,7 +31,7 @@
     line-height: 2;
     font-weight: 600;
     h4,h3 {
-      font-size: 47px;
+      // font-size: 2.94em;
       font-weight: 700;
       margin-bottom: 50px;
       margin-left: -40px;
@@ -108,12 +108,14 @@
       margin-left: 40px;
     }
     .img-handicraft {
-     height: 150px !important;
-     width: auto !important;
-     margin-bottom: 20px;
+      height: 100% !important;
+      width: auto !important;
+      margin-bottom: 20px;
     }
     .handicraft-img-cover {
       text-align: center;
+      height: 150px !important;
+      max-width: 100%;
     }
     .handicraft-decription {
       font-family: $lora;

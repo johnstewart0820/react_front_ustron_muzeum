@@ -8,8 +8,8 @@ const Shortcuts = (props) => {
       <div className="container">
         <div className="row pb-4 pt-5 justify-content-center">
           <div className="col-12 col-md-4 offset-md-2">
+            <small>{data.field_about_subtitle}</small>
             <h3>
-              <small>{data.field_about_subtitle}</small>
               {data.field_cut_title}
             </h3>
           </div>

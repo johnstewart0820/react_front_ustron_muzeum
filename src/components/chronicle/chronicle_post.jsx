@@ -17,7 +17,7 @@ const ChroniclePost = (props) => {
                     {chronicle && chronicle.title && <img src={chronicle.image} alt="" className="img-fluid" />}
                 </div>
                 <div className="col-8 chronicle-post">
-                    <small><div dangerouslySetInnerHTML={{__html: chronicle && chronicle.body}}></div></small>
+                    <div dangerouslySetInnerHTML={{__html: chronicle && chronicle.body}}></div>
                 </div>
                 </div>
             </div>

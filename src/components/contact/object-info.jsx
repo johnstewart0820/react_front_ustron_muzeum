@@ -38,16 +38,13 @@ const ObjectInfo = (props) => {
         <div className="col-12 col-lg-5 mb-5">
           {current === "hours" ? (
             <>
-              <h3>
-                <small>{ data && data.field_contact_hours_title && data.field_contact_hours_title }</small>
-              </h3>
-              {data && data.field_contact_price_description && <div className="object-info-description" dangerouslySetInnerHTML={{__html: data.field_contact_hours_description}}></div>}
+              <small>{ data && data.field_contact_hours_title && data.field_contact_hours_title }</small>
+                {data && data.field_contact_price_description && <div className="object-info-description" dangerouslySetInnerHTML={{__html: data.field_contact_hours_description}}></div>}
+
             </>
           ) : (
             <>
-              <h3>
-                <small>{ data.field_contact_price_title }</small>
-              </h3>
+              <small>{ data.field_contact_price_title }</small>
               {data && data.field_contact_price_description && <div className="object-info-description" dangerouslySetInnerHTML={{__html: data.field_contact_price_description}}></div>}
             </>
           )}

@@ -3,14 +3,14 @@
 .breadcrumbs{
 
 	padding: 12px;
-
+	font-weight: 500;
+	
 	&__items {
 		@include flex-a-center;
 	}
 
 	div, a{ 
-		color: $main-color;
-		font-size: 12px;
+		color: $main-color+55;
 		text-decoration: none;	
 	}
 

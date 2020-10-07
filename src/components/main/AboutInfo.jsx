@@ -6,17 +6,11 @@ const AboutInfo = (props) => {
   const data = props.data;
   return (
     <section className="container section about-info mt-5 mb-5 pt-5 pb-5">
-      <div className="featured-image">
-        <img src={DefaultImage} alt="" className="img-full" />
-      </div>
       <div className="row">
-        <div className="col-lg-7">&nbsp;</div>
+        <div className="col-lg-7"><img src={DefaultImage} alt="" className="img-full featured-image" /></div>
         <div className="col-12 col-lg-5 mb-5">
-          <h3>
-            <small>{data.field_about_title}</small>
-            {data.field_about_subtitle}
-          </h3>
-
+          <small>{data.field_about_title}</small>
+          <h3>{data.field_about_subtitle}</h3>
           <div className="row mt-5">
             {
               data && data.field_about_icons && data.field_about_icons.map((item, index) => (

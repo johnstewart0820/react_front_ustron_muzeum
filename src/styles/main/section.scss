@@ -1,36 +1,37 @@
 .section {
   h3 {
-    font-size: 47px;
+    font-size: 2.94em;
     font-family: $lora;
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 16px;
     color: $main-color;
+  }
 
-    small {
-      text-transform: capitalize;
-      color: $gold;
-      font-size: 21px;
+  small {
+    text-transform: capitalize;
+    color: $gold;
+    font-size: 1.313em !important;
+    display: block;
+    position: relative;
+    margin-bottom: 16px;
+    font-weight: 700;
+
+    &:before {
+      width: 3em;
+      height: 1px;
+      background: $gold;
       display: block;
-      position: relative;
-      margin-bottom: 16px;
-
-      &:before {
-        width: 68px;
-        height: 1px;
-        background: $gold;
-        display: block;
-        content: " ";
-        position: absolute;
-        left: -80px;
-        top: 11px;
-      }
+      content: " ";
+      position: absolute;
+      left: -3.5em;
+      top: 0.4em;
     }
   }
 
   &.related-items {
     h3 {
-      font-size: 33px;
+      font-size: 2.06em;
     }
   }
 
@@ -62,7 +63,7 @@
     }
 
     h1 {
-      font-size: 48px;
+      font-size: 2.94em;
       font-family: $lora;
       font-weight: bold;
       color: #fff;
@@ -87,7 +88,7 @@
       text-transform: uppercase;
       color: #fff;
       font-family: $lora;
-      font-size: 33px;
+      font-size: 2.06em;
       margin: 35px 0;
     }
 
@@ -110,14 +111,14 @@
       margin-bottom: 100px;
 
       .day {
-        font-size: 48px;
+        font-size: 3em;
         font-weight: 700;
         float: left;
         margin-right: 25px;
       }
 
       .details {
-        font-size: 18px;
+        font-size: 1.13em;
         text-transform: uppercase;
       }
     }
@@ -127,7 +128,7 @@
 .chronicle-post {
   color: $main-color;
   line-height: 2;
-  font-size: 12px;
+  font-size: 0.75em;
 }
 
 
@@ -136,7 +137,7 @@
   a {
     color: $main-color;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 0.75em;
   }
   .contact-phone {
     a {
@@ -153,8 +154,9 @@
     width: 100%;
   }
   .contact-block{
-    font-size: 14px;
+    font-size: 0.88em;
     line-height: 2;
+    font-weight: 500;
   }
   strong {
     text-transform: uppercase;
@@ -162,7 +164,7 @@
 }
 .archive-image-desc {
   p {
-    font-size: 48px;
+    font-size: 3em;
     line-height: 1;
   }
 }

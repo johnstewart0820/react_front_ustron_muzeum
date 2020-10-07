@@ -3,7 +3,7 @@ import { API } from "../extra/API";
 
 import { SITE, SITES_DOMAIN } from "../extra/site_settings";
 import { isContrastThemeOn, turnOnContrastTheme } from "../extra/theme";
-import FullPageLoader from '../components/general/FullPageLoader';
+import Loader from '../components/general/FullPageLoader';
 import LocalStorage from "./LocalStorage";
 
 import moment from 'moment';
@@ -44,7 +44,6 @@ class SiteInfoContextProvider extends Component{
 
 		API.get(`sites/getInfo?domain=${ SITES_DOMAIN[ SITE ] }`)
 		.then( res => {
-
 			const { info } = res.data;
 			// console.log( info );
 
@@ -105,9 +104,9 @@ class SiteInfoContextProvider extends Component{
 				...this.state,
 				changeLanguage: this.changeLanguage	
 			}} >
-				<FullPageLoader>
+				<Loader>
 					{ children }
-				</FullPageLoader>
+				</Loader>
 			</SiteInfoContext.Provider>
 		)
 	}

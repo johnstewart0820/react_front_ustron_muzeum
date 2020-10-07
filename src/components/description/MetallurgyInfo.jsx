@@ -4,13 +4,15 @@ const MetallurgyInfo = (props) => {
   const data = props.data;
   return (
     <section className="container section metallurgy-info mb-5 mt-5 pt-5 pb-5">
-      <div className="row">
-        <h3 className="mb-5">
-          <small>O muzeum</small>
-          <div className="metallurgy-main-title">
-            {data.field_metallurgy_title}
-          </div>
-        </h3>
+      <div>
+        <small>O muzeum</small>
+        <div>
+          <h3 className="mb-5">
+            <div className="metallurgy-main-title">
+              {data.field_metallurgy_title}
+            </div>
+          </h3>
+        </div>
       </div>
       <div className="row">
           <div className="col-md-6 metallurgy-link">

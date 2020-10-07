@@ -7,8 +7,8 @@ const ResearchInfo = (props) => {
     <section className="container section about-info mb-5 pt-5 pb-5">
       <div className="row">
           <div className="col-md-6">
+            <small>O muzeum</small>
             <h3>
-              <small>O muzeum</small>
               {data.field_research_title}
             </h3>
             <div className="mt-5 research-info-description">

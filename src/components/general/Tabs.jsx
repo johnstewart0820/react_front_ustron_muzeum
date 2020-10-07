@@ -21,8 +21,8 @@ const Tabs = (props) => {
       <div className="container">
         <div className="row pb-4 align-items-end align-content-end">
           <div className="col-4">
+          <small>{subtitle}</small>
             <h3 className="mb-0">
-              <small>{subtitle}</small>
               {title}
             </h3>
           </div>

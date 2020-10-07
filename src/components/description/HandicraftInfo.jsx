@@ -4,9 +4,9 @@ const HandicraftInfo = (props) => {
   const data = props.data;
   return (
     <section className="container section handicraft-info mb-5 mt-5 pt-5 pb-5">
-      <div className="row">
+      <div>
+        <small>O muzeum</small>
         <h3 className="mb-5">
-          <small>O muzeum</small>
           <div className="handicraft-main-title">
             {data.field_handicraft_title}
           </div>
