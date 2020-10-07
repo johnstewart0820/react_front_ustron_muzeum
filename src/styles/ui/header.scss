@@ -209,7 +209,6 @@
 
 .main-search {
   //   position: relative;
-
   &-trigger {
     width: 72px;
     height: 72px;
@@ -226,6 +225,9 @@
       opacity: 1;
       transform: translateY(0);
       visibility: visible;
+    }
+    .main-search-trigger {
+      border-bottom: 1px solid $main-color;
     }
   }
 
