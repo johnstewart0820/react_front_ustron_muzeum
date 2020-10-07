@@ -24,7 +24,7 @@ export default function PageRenderer(props) {
             setPageData(siteInfo.default_content);
             return;
         }
-
+        
         API.getPost(slug)
             .then(res => {
                 console.info('PAGE DATA', res.data.content);

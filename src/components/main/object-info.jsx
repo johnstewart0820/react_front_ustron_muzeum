@@ -43,9 +43,7 @@ const ObjectInfo = (props) => {
             </>
           ) : (
             <>
-              <h3>
-                <small>{ data.field_price_title }</small>
-              </h3>
+              <small>{ data.field_price_title }</small>
               {data && data.field_price_description && <div className="object-info-description" dangerouslySetInnerHTML={{__html: data.field_price_description}}></div>}
             </>
           )}

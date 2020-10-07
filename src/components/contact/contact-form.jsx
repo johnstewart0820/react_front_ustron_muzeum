@@ -82,9 +82,9 @@ const ContactForm = (props) => {
                 </textarea>
               </div>
               <div className="form-group offset-md-2 mb-5 col-md-12">
-                <button className="btn btn-primary" onClick={onSubmit}>
+                <a className="btn btn-primary" onClick={onSubmit}>
                   {<I18n t="send"/>}
-                </button>
+                </a>
               </div>
             </form>
           </div>

@@ -18,7 +18,7 @@ const EducationSection = (props) => {
             </h3>
           </div>
           <div className="col-4 offset-2 text-right">
-            <Link to={linkToMore} className="btn btn-secondary-outlined">
+            <Link to={linkToMore} className="btn btn-primary btn-secondary-outlined">
               kalendarz imprez
             </Link>
           </div>

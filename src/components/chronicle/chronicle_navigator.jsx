@@ -42,6 +42,6 @@ const ChronicleNavigator = (props) => {
 };
 
 ChronicleNavigator.propTypes = {
-  data: PropTypes.object,
+  data: PropTypes.number,
 }
 export default ChronicleNavigator;

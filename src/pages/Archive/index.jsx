@@ -29,7 +29,7 @@ const Archive = (props) => {
                             <div className="col-12 pt-5 pb-5 text-center">
                             <h1 className="text-uppercase mb-5 archive-image-desc" dangerouslySetInnerHTML={{__html: data && data.field_header_digital_archive_title}}>
                             </h1>
-                            <a href="#" className="btn btn-secondary mt-5">
+                            <a href="#" className="btn btn-primary mt-5">
                                 { data && data.field_header_digital_archive_button_title }
                             </a>
                             </div>
@@ -93,7 +93,7 @@ const Archive = (props) => {
                                 </p>
                             </div>
                             <div className="col-12 col-md-8">
-                                <div class="contact-block" dangerouslySetInnerHTML={{__html: data && data.field_digital_archive_description}}></div>
+                                <div className="contact-block" dangerouslySetInnerHTML={{__html: data && data.field_digital_archive_description}}></div>
                             </div>
                         </div>
                     </div>

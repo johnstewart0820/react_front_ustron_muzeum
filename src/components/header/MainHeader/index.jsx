@@ -1,7 +1,7 @@
 import React from "react";
 import {Link} from 'react-router-i18n';
 import logo from '../../../svg/logo.svg';
-import bip from '../../../img/bip.png';
+import BipIcon from '../../../svg/components/Bip';
 import MainConstant from '../../../constants/MainConstant';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faFont, faLink, faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
@@ -38,10 +38,10 @@ const MainHeader = () => {
       <div className="col-md-6 justify-content-center">
         {/* helper */}
         <div className="page-helper">
-          <a href="http://o2.pl" className="helper helper-contrast">
+          <a href="http://o2.pl" className="helper helper-contrast" onClick={(e) => toggleContrastVersion(e)}>
             <FontAwesomeIcon icon={faEye} size="2x" />
           </a>
-          <a href="//#endregion" className="helper helper-link">
+          <a href="//#endregion" className="helper helper-link" onClick={(e) => toggleUnderlineLinks(e)}>
             <FontAwesomeIcon icon={faLink} size="2x" />
           </a>
           <a href="//#endregion" className="helper helper-text-size" name="minus" onClick={(e) => changeFontSize(e)}>
@@ -57,7 +57,7 @@ const MainHeader = () => {
             className="helper helper-bip"
             style={{ width: 20 }}
           >
-            <img src={bip} alt={"BIP"} />
+            <BipIcon className="link bip"/>
           </a>
         </div>
         {/* HELPER */}

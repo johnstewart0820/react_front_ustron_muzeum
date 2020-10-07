@@ -138,3 +138,22 @@ section {
     cursor: pointer;
   }
 }
+
+body {
+  &.links-underline{
+		a:not(.button-link){
+			text-decoration: underline;
+    }
+    &.language-switcher{
+      li {
+        text-decoration: underline !important;
+      }
+    }
+    &.main-search-trigger {
+      svg {
+        border-bottom: 1px solid $main-color !important;
+      }
+    }
+  }
+ 
+}
