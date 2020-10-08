@@ -9,7 +9,7 @@ export const toggleContrastVersion = e => {
 }
 
 
-export const isContrastThemeOn = () => ( localStorage.getItem( contrast_key ) === "1" );
+export const isContrastThemeOn = () => { return localStorage.getItem( contrast_key ) === "1"; }
 
 
 export const turnOnContrastTheme = () => {
