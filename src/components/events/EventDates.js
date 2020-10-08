@@ -20,13 +20,13 @@ export default function EventDates ({ start_date, end_date }) {
 		<div className="event-dates">
 			{ start_date_obj && end_date_obj && 
 				<div className="event-dates__several_dates"> 
-					<div className="event-dates__date"> <DayNumMonth {...start_date_obj } /> </div>
-					<div className="event-dates__date"> <DayNumMonth {...end_date_obj } />  </div>
+					<div className="event-dates__date"> od&nbsp;&nbsp;&nbsp; <DayNumMonth {...start_date_obj } /> </div>
+					<div className="event-dates__date"> do&nbsp;&nbsp;&nbsp; <DayNumMonth {...end_date_obj } />  </div>
 				</div>
 			} 
 
 			{ start_date_obj && !end_date_obj && 
-				<div className="event-dates__date"> <DayNumMonth {...start_date_obj } />  </div>
+				<div className="event-dates__date"> od&nbsp;&nbsp;&nbsp; <DayNumMonth {...start_date_obj } />  </div>
 			}
 
 			<div className="event-dates__time">

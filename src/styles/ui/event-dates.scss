@@ -10,7 +10,6 @@
 
 
 .event-dates__time{
-	font-size: 1.14em;
 	font-weight: bold;
 	margin-left: auto;
 	padding: 0 10px;
@@ -31,7 +30,7 @@
 	flex: auto;
 
 	strong{
-		font-size: 1.28em;
+		font-size: 1em;
 	}
 
 	span{
@@ -39,6 +38,7 @@
 		letter-spacing: 2.3px;
 		text-transform: uppercase;
 		font-weight: bold;
+		font-size: 0.8em;
 	}
 }
 

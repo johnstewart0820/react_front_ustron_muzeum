@@ -3,7 +3,7 @@
 .loop-event-post{
 	text-decoration: none;
 	color: $gray;
-	width: 400px;
+	width: 380px;
 	margin-right: 14px;
 	border-bottom: 1px solid transparent;
 
@@ -12,9 +12,6 @@
 		.loop-event-post__thumbnail::before{
 			opacity: .78;
 		}		
-	}
-	.event-dates{
-		font-size: 0.8em;
 	}
 }
 
