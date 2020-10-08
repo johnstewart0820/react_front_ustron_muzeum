@@ -341,4 +341,12 @@ body.contrast{
 	.amounts-with-icons__item_circle{
 		background: rgba(255, 212, 1, .2);	
 	}
+
+	.hero-copy-cta {
+		&:hover {
+		  background: transparent !important;
+		  color: #fff !important;
+		  border-color: #fff !important;
+		}
+	}
 }
