@@ -8,6 +8,7 @@ import Footer from './components/footer';
 import Header from "./components/header";
 import Routing from "./routing/Routing";
 import PageList from "./constants/PageList";
+import ScrollToTop from "./extra/ScrollToTop";
 
 import "./styles/layout.scss";
 
@@ -15,12 +16,14 @@ const browserHistory = createBrowserHistory();
 const App = () => {
 	return (
         <BrowserRouter history={browserHistory}>
-            <SiteInfoContextProvider>            
-                <Header/>
-                <main>
-                    <Routing />
-                </main>
-                <Footer/>
+            <SiteInfoContextProvider>      
+                <ScrollToTop>      
+                    <Header/>
+                    <main>
+                        <Routing />
+                    </main>
+                    <Footer/>
+                </ScrollToTop>
             </SiteInfoContextProvider>
         </BrowserRouter> 
     );

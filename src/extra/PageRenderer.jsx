@@ -52,6 +52,8 @@ export default function PageRenderer(props) {
         layoutValue = 'events_single';
     else if (pageData.post_type === 'post')
         layoutValue = 'post_single';
+    else if (pageData.post_type === 'gallery')
+        layoutValue = 'post_single';
     else
         layoutValue = pageData.acf['field_layout'];
     const Layout = Layouts[layoutValue];
