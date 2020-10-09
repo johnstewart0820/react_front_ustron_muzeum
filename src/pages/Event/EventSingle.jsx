@@ -15,9 +15,21 @@ const dateOrDate = (firstDate, secondDate) => {
 
 export default function EventSinglePage(props) {
     const [events, setEvents] = React.useState(null);
+    const [filterArgs, setFilterArgs] = React.useState({});
+    const acf = props.page.acf;
+    console.log(props.page.categories);
     React.useEffect(() => {
-        API.getEntities({categories: props.page.categories}).then(res => setEvents(res.data.contents));
+        API.getEntities({categories: props.page.categories, 
+            date: dateOrDate('01.01.2020', filterArgs.date),
+            date_to: dateOrDate('31.12.2020', filterArgs.date_to),
+        }).then(res => {
+            setEvents(res.data.contents);
+        }).catch(err => {
+            console.error(err);
+            setEvents(false);
+        });
     }, []);
+
     return (
         <>
             <MainHeaderSection extra_classes="single">
