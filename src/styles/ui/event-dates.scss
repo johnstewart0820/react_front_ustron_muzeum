@@ -15,7 +15,8 @@
 	padding: 0 10px;
 	min-width: 80px;
 	text-align: center;
-
+	color: $main-color;
+	
 	> div {
 		// min-height: 42px;
 		padding: 8px 0;
@@ -31,6 +32,7 @@
 
 	strong{
 		font-size: 1em;
+		color: $main-color;
 	}
 
 	span{
@@ -39,6 +41,7 @@
 		text-transform: uppercase;
 		font-weight: bold;
 		font-size: 0.8em;
+		color: $main-color;
 	}
 }
 

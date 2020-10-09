@@ -6,7 +6,7 @@ import Breadcrumbs from "../../components/general/Breadcrumbs";
 import {API} from "../../extra/API";
 import {DayCarousel} from "../../components/events/DayCarousel";
 import Loader from "../../components/general/Loader";
-import Carousel from "../../components/carousel/Carousel";
+import EventCarousel from "../../components/carousel/EventCarousel";
 import LoopEventsPost from "../../components/events/LoopEventsPost";
 import { MonthCarousel } from "../../components/events/MonthCarousel";
 
@@ -59,7 +59,7 @@ const Event = (props) => {
             />
             {data === null && <Loader/>}
             {!!data?.contents && (
-                <Carousel
+                <EventCarousel
                     heading={'WYBRANA DATA'}
                     selectedDate={selectedDate}
                     containerStyles={{paddingLeft: '90px', backgroundColor: '#324655'}}

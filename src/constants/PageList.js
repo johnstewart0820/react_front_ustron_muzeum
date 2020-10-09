@@ -13,8 +13,14 @@ import EducationUpcomingEvents from '../pages/Education/Education_Upcoming_Event
 import TourismPage from '../pages/Tourism';
 import ArchivePage from '../pages/Archive';
 import ContactPage from '../pages/Contact';
+import NewsSingle from "../pages/News/NewsSingle";
+import EventSingle from "../pages/Event/EventSingle";
+import PostSingle from "../pages/PostSingle";
 export default {
-    'museum_homepage': HomePage,
+    events_single: EventSingle,
+    news_single: NewsSingle,
+    post_single: PostSingle,
+    museum_homepage: HomePage,
     museum_about: AboutDescription,
     'Fotorelacje': AboutPhotoReports,
     museum_exhibitions: MuseumExhibitions,

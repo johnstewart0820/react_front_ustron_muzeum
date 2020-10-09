@@ -151,6 +151,7 @@ export default class Carousel extends Component{
 					<div className="carousel__head">
 						<SectionHeading heading={ heading } />
 						<LinkToAll path={ path_to_all } href={ link_to_all }  />
+						<HeadingDate date= {selectedDate} />
 					</div>
 
 					<div className="carousel__body" style={ bodyStyles }>

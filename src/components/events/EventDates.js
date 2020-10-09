@@ -17,6 +17,8 @@ export default function EventDates ({ start_date, end_date }) {
 	const end_date_obj = getAllFromDateObject( end_date )
 		
 	return (
+		<>
+		{start_date && end_date &&
 		<div className="event-dates">
 			{ start_date_obj && end_date_obj && 
 				<div className="event-dates__several_dates"> 
@@ -40,6 +42,8 @@ export default function EventDates ({ start_date, end_date }) {
 				{ start_date_obj && !end_date_obj && <> { start_date_obj.time } </> }
 			</div>
 		</div>
+		}
+		</>
 	)
 }
 
