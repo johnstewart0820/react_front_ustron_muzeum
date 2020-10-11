@@ -14,6 +14,7 @@ const dateOrDate = (firstDate, secondDate) => {
 };
 
 export default function PostSinglePage(props) {
+    const breadcrumb = props.page.breadcrumb;
     const [events, setEvents] = React.useState(null);
     React.useEffect(() => {
         API.getEntities({categories: props.page.categories}).then(res => setEvents(res.data.contents));
@@ -21,7 +22,7 @@ export default function PostSinglePage(props) {
     return (
         <>
             <MainHeaderSection extra_classes="single">
-                <Breadcrumbs breadcrumbs={[]}/>
+                <Breadcrumbs breadcrumbs={breadcrumb}/>
             </MainHeaderSection>
             <EventSingleHead {...props.page}/>
 

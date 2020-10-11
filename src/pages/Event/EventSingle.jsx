@@ -17,6 +17,7 @@ export default function EventSinglePage(props) {
     const [events, setEvents] = React.useState(null);
     const [filterArgs, setFilterArgs] = React.useState({});
     const acf = props.page.acf;
+    const breadcrumb = props.page.breadcrumb;
     console.log(props.page.categories);
     React.useEffect(() => {
         API.getEntities({categories: props.page.categories, 
@@ -33,7 +34,7 @@ export default function EventSinglePage(props) {
     return (
         <>
             <MainHeaderSection extra_classes="single">
-                <Breadcrumbs breadcrumbs={[]}/>
+                <Breadcrumbs breadcrumbs={breadcrumb}/>
             </MainHeaderSection>
             <EventSingleHead {...props.page}/>
 

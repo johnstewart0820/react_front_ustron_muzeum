@@ -1,6 +1,6 @@
 import HomePage from '../pages/Home';
 import AboutDescription from '../pages/About/Description';
-import AboutPhotoReports from '../pages/About/Photo_Reports';
+import VirtualWalk from '../pages/About/VirtualWalk';
 import MuseumExhibitions from '../pages/Exhibition/Museum_Exhibitions';
 import TemporaryExhibitions from '../pages/Exhibition/Temporary_Exhibitions';
 import EventPage from '../pages/Event';
@@ -22,7 +22,7 @@ export default {
     post_single: PostSingle,
     museum_homepage: HomePage,
     museum_about: AboutDescription,
-    'Fotorelacje': AboutPhotoReports,
+    museum_virtualwalk: VirtualWalk,
     museum_exhibitions: MuseumExhibitions,
     'muzeum-ustron-pl-wystawy': TemporaryExhibitions,
     museum_events: EventPage,

@@ -9,6 +9,7 @@ import LoopSearchPostsContainer from "../loop/LoopSearchPostsContainer";
 
 const PaginatedNewsPage = props => {
     const container = React.useRef(null);
+    const breadcrumb = props.page.breadcrumb;
     const [data, setData] = React.useState(null);
     const [filters, setFilters] = React.useState({page: 0});
 
@@ -35,10 +36,7 @@ const PaginatedNewsPage = props => {
         <>
             {!props.hideHeader && (
                 <MainHeaderSection extra_classes={props.headerClasses}>
-                    <Breadcrumbs breadcrumbs={props.breadcrumbs || [
-                        {label: "Muzeum Ustroński", to: "/"},
-                        {label: props.page.title},
-                    ]}/>
+                    <Breadcrumbs breadcrumbs={breadcrumb}/>
                 </MainHeaderSection>
             )}
 

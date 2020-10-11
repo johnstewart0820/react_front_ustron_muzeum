@@ -12,6 +12,7 @@ import Breadcrumbs from "../../components/general/Breadcrumbs";
 
 const Contact = (props) => {
     const {history} = props;
+    const breadcrumb = props.page.breadcrumb;
     const [info, setInfo] = useState(null);
     useEffect(() => {        
         setInfo(props.page);
@@ -19,7 +20,7 @@ const Contact = (props) => {
     return (
         <ToastProvider>
             <MainHeaderSection extra_classes="subpage">
-                <Breadcrumbs breadcrumbs={[{label: "Muzeum Ustroński", to: "/"}, {label: "Kontakt"}]}/>
+                <Breadcrumbs breadcrumbs={breadcrumb}/>
             </MainHeaderSection>
             {!info && <Loader/>}
             {!!info && 

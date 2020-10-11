@@ -19,6 +19,7 @@ const dateOrDate = (firstDate, secondDate) => {
 
 const Event = (props) => {
     const acf = props.page.acf;
+    const breadcrumb = props.page.breadcrumb;
     const {history} = props;
     const [selectedDate, setSelectedDate] = React.useState(moment());
     const [startDate, setStartDate] = React.useState(moment());
@@ -48,7 +49,7 @@ const Event = (props) => {
     return (
         <>
             <MainHeaderSection extra_classes="subpage">
-                <Breadcrumbs breadcrumbs={[{label: "Muzeum Ustroński", to: "/"}, {label: "Wydarzenia"}]}/>
+                <Breadcrumbs breadcrumbs={breadcrumb}/>
             </MainHeaderSection>
             <MonthCarousel startDate={selectedDate} handleNextMonth={handleNextMonth} handlePrevMonth={handlePrevMonth}/>
             <DayCarousel

@@ -8,7 +8,7 @@ import {API} from "../../extra/API";
 
 export default function NewsSinglePage(props) {
     const [news, setNews] = React.useState(null);
-
+    const breadcrumb = props.page.breadcrumb;
     React.useEffect(() => {
         API.getEntities({categories: props.page.categories})
             .then(res => setNews(res.data.contents))
@@ -21,7 +21,7 @@ export default function NewsSinglePage(props) {
     return (
         <>
             <MainHeaderSection extra_classes="single">
-                <Breadcrumbs breadcrumbs={[]}/>
+                <Breadcrumbs breadcrumbs={breadcrumb}/>
             </MainHeaderSection>
             <NewsSingleHead {...props.page}/>
 

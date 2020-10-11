@@ -8,6 +8,7 @@ import ChroniclePost from "../../components/chronicle/chronicle_post";
 import ChronicleNavigator from "../../components/chronicle/chronicle_navigator";
 
 const ChronicleUstron = (props) => {
+    const breadcrumb = props.page.breadcrumb;
     const [info, setInfo] = useState({});
     const [index, setIndex] = useState(0);
     useEffect(() => {
@@ -23,7 +24,7 @@ const ChronicleUstron = (props) => {
     return (
         <>
             <MainHeaderSection extra_classes="subpage">
-                <Breadcrumbs breadcrumbs={[{label: "Muzeum Ustroński", to: "/"}, {label: "Kronika"}]}/>
+                <Breadcrumbs breadcrumbs={breadcrumb}/>
             </MainHeaderSection>
             <ChroniclePost data={info && info.acf && info.acf.field_chronicle_posts && info.acf.field_chronicle_posts[index]}/>
             <ChronicleNavigator data={info && info.acf && info.acf.field_chronicle_posts && info.acf.field_chronicle_posts.length} onChangeHandler= {handleClick} />

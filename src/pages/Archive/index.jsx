@@ -10,13 +10,14 @@ import Breadcrumbs from "../../components/general/Breadcrumbs";
 const Archive = (props) => {
     const {history} = props;
     const data = props.page.acf;
+    const breadcrumb = props.page.breadcrumb;
     return (
             <>
             {!data && <Loader/>}
             {!!data &&
             <>
                 <MainHeaderSection extra_classes="subpage">
-                    <Breadcrumbs breadcrumbs={[{label: "Muzeum Ustroński", to: "/"}, {label: "O muzeum"}]}/>
+                    <Breadcrumbs breadcrumbs={breadcrumb}/>
                 </MainHeaderSection>
                 <section
                     className="section hero-image"
