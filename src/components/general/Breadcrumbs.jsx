@@ -30,7 +30,7 @@ const getBreadCrumbs = (breadcrumbs) => {
 const Breadcrumbs = ({ breadcrumbs, extra_classes }) => {
 	const result = getBreadCrumbs(breadcrumbs);
 	return (
-		<div className={`breadcrumbs ${ extra_classes || "" }`}>
+		<div className={`breadcrumbs ${ extra_classes || "" } mb-5` }>
 			
 			<div className="container">
 				<div className="breadcrumbs__items">

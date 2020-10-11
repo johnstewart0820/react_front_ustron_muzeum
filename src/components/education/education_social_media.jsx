@@ -8,11 +8,9 @@ const EducationSocialMedia = (props) => {
     <section className="container section mb-5 mt-5 pb-5">
       <div className="row">
         <div className="col-12 mb-5">
-          <h3>
-            <small>
+          <small>
               <I18n t="museum_title"/>
             </small>
-          </h3>
           { 
             medias && medias.field_educational_videos_social_media_title && 
             <h3>

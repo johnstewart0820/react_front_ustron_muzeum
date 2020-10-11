@@ -10,6 +10,7 @@ export default class Carousel extends Component{
 
 	static propTypes = {
 		heading: PropTypes.string,
+		sub_heading: PropTypes.string,
 		items: PropTypes.array.isRequired,
 		extra_classes: PropTypes.string,
 		ItemComponent: PropTypes.elementType.isRequired,
@@ -135,7 +136,7 @@ export default class Carousel extends Component{
 
 	render(){
 
-		const { heading, selectedDate, extra_classes, ItemComponent, path_to_all, link_to_all, bodyStyles , containerStyles} = this.props;
+		const { heading, sub_heading, selectedDate, extra_classes, ItemComponent, path_to_all, link_to_all, bodyStyles , containerStyles} = this.props;
 		const { items, wrap_left, transition } = this.state;
 
 		if( !items || !items.length || !ItemComponent ) return null;
@@ -146,8 +147,14 @@ export default class Carousel extends Component{
 		}
 
 		return (
-				<div className={`carousel ${ extra_classes || "" }`} style={ containerStyles }>
-
+				<div className={`carousel ${ extra_classes || "" } mt-5`} style={ containerStyles }>
+					<div className="section">
+						{sub_heading ?
+							<small>{sub_heading}</small>
+						:
+							<></>
+						}
+					</div>
 					<div className="carousel__head">
 						<SectionHeading heading={ heading } />
 						<LinkToAll path={ path_to_all } href={ link_to_all }  />

@@ -146,7 +146,7 @@ export default class Carousel extends Component{
 		}
 
 		return (
-				<div className={`carousel ${ extra_classes || "" }`} style={ containerStyles }>
+				<div className={`carousel ${ extra_classes || "" } mt-5`} style={ containerStyles }>
 
 					<div className="carousel__head">
 						<SectionHeading heading={ heading } />
