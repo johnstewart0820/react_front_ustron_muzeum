@@ -3,10 +3,10 @@ import { withRouter } from "react-router-dom";
 import Loader from "../../components/general/Loader";
 import MainHeaderSection from "../../components/header/MainHeaderSection";
 import Breadcrumbs from "../../components/general/Breadcrumbs";
-
+import VirtualFrame from "../../components/iframe/VirtualFrame";
 const VirtualWalk = (props) => {
     const breadcrumb = props.page.breadcrumb;
-    const data = props.page.acf;
+    const data = props.page.acf.field_virtualwalk_list;
     return (
         <>
             {!data && <Loader/>}
@@ -15,15 +15,13 @@ const VirtualWalk = (props) => {
                 <MainHeaderSection extra_classes="subpage">
                     <Breadcrumbs breadcrumbs={breadcrumb}/>
                 </MainHeaderSection>
-                {/* <div className="description-container">
-                    <HomeSlider slider_status={data.field_should_override_slider} data={data.field_override_slides} height="500" extend_class="margin-bottom-500"/>
-                    <HarvestInfo data={data} />
-                    <ResearchInfo data={data} />
-                    <MonumentsInfo data={data} />
-                    <HandicraftInfo data={data} />
-                    <PeoriodicsInfo data={data} />
-                    <MetallurgyInfo data={data} />
-                </div> */}
+                {
+                    data.map((item, index) => (
+                        <div className="section container">
+                            <VirtualFrame data={item} key={index} />
+                        </div>
+                    ))
+                }
             </>
             }
         </>
