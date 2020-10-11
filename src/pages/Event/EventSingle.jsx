@@ -5,6 +5,8 @@ import OneCarouseInRow from "../../components/carousel/OneCarouseInRow";
 import Breadcrumbs from "../../components/general/Breadcrumbs";
 import EventSingleHead from "../../components/events/EventSingleHead";
 import LoopEventPost from "../../components/events/LoopEventPost";
+import Gallery from "../../components/gallery/Gallery";
+import Attachment from "../../components/attachment/Attachment";
 import {API} from "../../extra/API";
 const dateOrDate = (firstDate, secondDate) => {
     if (!firstDate && !secondDate)
@@ -37,7 +39,8 @@ export default function EventSinglePage(props) {
                 <Breadcrumbs breadcrumbs={breadcrumb}/>
             </MainHeaderSection>
             <EventSingleHead {...props.page}/>
-
+            {!!props.page.gallery?.length && <Gallery items={props.page.gallery}/>}
+            {!!props.page.attachments?.length && <Attachment items={props.page.attachments}/>}
             {events !== false && (
                 <OneCarouseInRow carousel={{
                     loading: events === null,

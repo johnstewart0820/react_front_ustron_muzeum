@@ -4,6 +4,8 @@ import OneCarouseInRow from "../../components/carousel/OneCarouseInRow";
 import Breadcrumbs from "../../components/general/Breadcrumbs";
 import NewsSingleHead from "../../components/news/NewsSingleHead";
 import LoopNewsPost from "../../components/news/LoopNewsPost";
+import Gallery from "../../components/gallery/Gallery";
+import Attachment from "../../components/attachment/Attachment";
 import {API} from "../../extra/API";
 
 export default function NewsSinglePage(props) {
@@ -17,14 +19,15 @@ export default function NewsSinglePage(props) {
                 setNews(false);
             });
     }, []);
-
+    console.log(props.page.gallery);
     return (
         <>
             <MainHeaderSection extra_classes="single">
                 <Breadcrumbs breadcrumbs={breadcrumb}/>
             </MainHeaderSection>
             <NewsSingleHead {...props.page}/>
-
+            {!!props.page.gallery?.length && <Gallery items={props.page.gallery}/>}
+            {!!props.page.attachments?.length && <Attachment items={props.page.attachments}/>}
             {news !== false && (
                 <OneCarouseInRow carousel={{
                     loading: news === null,

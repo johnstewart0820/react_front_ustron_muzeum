@@ -352,4 +352,9 @@ body.contrast{
 	.loop-news-post__content > div {
 		color: $contrast !important;
 	}
+	.event-dates {
+		span {
+			color: $contrast;
+		}
+	}
 }

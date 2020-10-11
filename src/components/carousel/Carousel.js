@@ -145,16 +145,9 @@ export default class Carousel extends Component{
 			transition: transition ? "left .6s" : "",
 			left: wrap_left
 		}
-
+		console.log(items);
 		return (
 				<div className={`carousel ${ extra_classes || "" } mt-5`} style={ containerStyles }>
-					<div className="section">
-						{sub_heading ?
-							<small>{sub_heading}</small>
-						:
-							<></>
-						}
-					</div>
 					<div className="carousel__head">
 						<SectionHeading heading={ heading } />
 						<LinkToAll path={ path_to_all } href={ link_to_all }  />
