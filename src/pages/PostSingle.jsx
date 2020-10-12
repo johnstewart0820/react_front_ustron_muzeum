@@ -10,10 +10,6 @@ import {API} from "../extra/API";
 
 export default function PostSinglePage(props) {
     const breadcrumb = props.page.breadcrumb;
-    const [events, setEvents] = React.useState(null);
-    React.useEffect(() => {
-        API.getEntities({categories: props.page.categories}).then(res => setEvents(res.data.contents));
-    }, []);
     console.log(props.page.gallery);
     return (
         <>
