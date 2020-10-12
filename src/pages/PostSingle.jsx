@@ -23,15 +23,7 @@ export default function PostSinglePage(props) {
             <PostSingleHead data={props.page}/>
             {!!props.page.gallery?.length && <Gallery items={props.page.gallery}/>}
             {!!props.page.attachments?.length && <Attachment items={props.page.attachments}/>}
-            {events !== false && (
-                <OneCarouseInRow carousel={{
-                    loading: events === null,
-                    sub_heading: 'Galeria',
-                    heading: 'SKANSEN',
-                    ItemComponent: LoopEventPost,
-                    items: events || [],
-                }}/>
-            )}
+            
         </>
     );
 };
