@@ -11,7 +11,7 @@ const MainMenu = (props) => {
   return (
     <SiteInfoContextConsumer>
       { ({ header_menu }) => (
-        <div className="row">
+        <div className="row main-header-navigation">
           <div className="col-md-12">
             <nav className="main-navigation">
               <ul>

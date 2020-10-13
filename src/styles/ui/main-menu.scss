@@ -1,0 +1,156 @@
+@import "./mixins.scss";
+
+
+.main-menu{
+    @include flex-wrap;
+    background: linear-gradient(to right, #324655, #556D80);
+    padding: 34px;
+
+    position: absolute;
+    z-index: 999;
+    left: calc(-100vw + 144px);
+    top: 70px;
+    min-height: 813px;
+    width: 100vw;
+
+    font-size: 1.2em;
+    font-family: $lora;
+
+    a{
+        color: $gold;
+        text-decoration: none;
+        display: block;
+    }
+
+    .main-menu__column {
+        padding-left: 20px;
+        strong {
+            color: #85cb3f;
+        }
+        a {
+            color: #85cb3f;
+        }
+        .main-menu__items {
+            a {
+                color: white;
+                text-decoration: none;
+            }
+        }
+        .sidebar-nochildren-span {
+            padding-left: 30px;
+        }
+    }
+
+    .header-actions{
+        display: none;
+    }
+
+    .search-form{
+        display: none;
+    }
+}
+
+
+$main-menu-colors:
+    "tourism" $green,
+    "culture" $turquoise,
+    "sport" $red,
+    "main" $yellow,
+    "stay-updated" $aqua;
+
+.main-menu__column{
+    flex: 1;
+
+    @each $class_name, $color in $main-menu-colors{
+        &.#{$class_name}{
+            .main-menu__title{
+                color: $color;
+            }
+
+            .main-menu__items a:hover{
+                color: $color;
+            }
+        }
+    }
+}
+
+
+.main-menu__title{
+    letter-spacing: 2.3px;
+    font-weight: bold;
+    border-bottom: 1px solid rgba( 255, 255 , 255, .5);
+    padding-bottom: 30px;
+    padding-left: 45px;
+    text-transform: uppercase;
+
+    strong{
+        margin-right: 8px;
+        cursor: pointer;
+        display: none;
+    }
+}
+
+.main-menu__items{
+    padding-top: 45px;
+    padding-left: 45px;
+    line-height: 70px;
+}
+
+@media (max-width: 1023px){
+    .main-menu{
+        height: calc(100vh - 72px);
+
+        .search-form{
+            display: block;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: calc(100vh - 72px);
+
+            position: fixed;
+
+            input{
+                margin-top: 0;
+            }
+
+            svg{
+                bottom: auto;
+                top: 32px
+            }
+        }
+
+        .header-actions{
+            display: flex;
+            height: 52px;
+            background: #F7F7F7;
+            margin-top: auto;
+
+            .link{
+                height: 52px;
+                width: 52px;
+            }
+
+            .search.link.active{
+                svg{
+                    position: relative; z-index: 2;
+                }
+
+                &::before{
+                    width: 52px;
+                    height: 52px;
+                    margin-left: -26px;
+                    margin-top: -26px;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 374px){
+    .main-menu .header-actions .link{
+        margin: 0;
+        flex: auto;
+    }
+}
