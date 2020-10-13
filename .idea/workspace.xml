@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="adb96592-3ffb-4c59-a854-22637f2608cd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/header/SideMenu/MainMenu.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/header/SideMenu/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/ui/main-menu.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/ui/sidebar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/MainHeader/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/MainHeader/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/MainMenu/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/MainMenu/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/layout.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/ui/header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/ui/header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/SideMenu/MainMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/SideMenu/MainMenu.jsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -47,7 +37,7 @@
         <entry file="file://$PROJECT_DIR$/src/styles/layout.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="94">
-              <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+              <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -55,8 +45,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/header/SideMenu/MainMenu.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="27" column="169" selection-start-line="27" selection-start-column="169" selection-end-line="27" selection-end-column="169" />
+            <state relative-caret-position="278">
+              <caret line="27" column="190" selection-start-line="27" selection-start-column="190" selection-end-line="27" selection-end-column="190" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -80,7 +70,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/header/MainMenu/index.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="418">
-              <caret line="19" column="53" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="53" />
+              <caret line="19" column="53" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="53" />
               <folding>
                 <element signature="e#1#27#0" expanded="true" />
               </folding>
@@ -292,12 +282,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602514571738</updated>
-      <workItem from="1602514573342" duration="29001000" />
+      <workItem from="1602514573342" duration="32276000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29001000" />
+    <option name="totallyTimeSpent" value="32276000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -314,12 +304,12 @@
     <layout>
       <window_info id="npm" side_tool="true" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2431694" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2431694" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection Results" weight="0.32923833" />
-      <window_info anchor="bottom" id="Terminal" weight="0.55651104" />
+      <window_info anchor="bottom" id="Terminal" weight="0.3280098" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -449,7 +439,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/header/MainMenu/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
-          <caret line="19" column="53" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="53" />
+          <caret line="19" column="53" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="53" />
           <folding>
             <element signature="e#1#27#0" expanded="true" />
           </folding>
@@ -459,7 +449,7 @@
     <entry file="file://$PROJECT_DIR$/src/styles/layout.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="94">
-          <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -479,8 +469,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/header/SideMenu/MainMenu.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="27" column="169" selection-start-line="27" selection-start-column="169" selection-end-line="27" selection-end-column="169" />
+        <state relative-caret-position="278">
+          <caret line="27" column="190" selection-start-line="27" selection-start-column="190" selection-end-line="27" selection-end-column="190" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>

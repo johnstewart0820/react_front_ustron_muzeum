@@ -25,7 +25,7 @@ const MainMenu = () => {
                                 <Link to={ item.path } className="main-menu__title" rel={'noopener noreferrer'}>
                                     
                                     { subitems && !!subitems.length && <strong onClick={ e => toggleMobileMenu( e, index ) }> &#62; </strong> }
-                                    { (!subitems || !subitems.length) ? <span className="sidebar-nochildren-span"> { item.label } </span> : <span> { item.label } </span> }
+                                    { (!subitems || !subitems.length) ? <span className="sidebar-nochildren-span"> { item.label } </span> : <span onClick={ e => toggleMobileMenu( e, index )}> { item.label } </span> }
                                     
                                 </Link>
                                 
