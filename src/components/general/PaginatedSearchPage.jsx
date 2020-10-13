@@ -13,11 +13,11 @@ const PaginatedSearchPage = props => {
     const [data, setData] = React.useState(null);
     const [filters, setFilters] = React.useState({page: 0});
     React.useEffect(() => {
-        console.log('a');
         setData(null);
         API.getPosts({
             query: props.page.match.params.id,
-            domain: window.document.domain
+            domain: window.document.domain,
+            page: filters.page
         }).then(res => {
             setData(res.data);
         });
