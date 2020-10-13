@@ -20,7 +20,6 @@ export default function EventSinglePage(props) {
     const [filterArgs, setFilterArgs] = React.useState({});
     const acf = props.page.acf;
     const breadcrumb = props.page.breadcrumb;
-    console.log(props.page.categories);
     React.useEffect(() => {
         API.getEntities({categories: props.page.categories, 
             date: dateOrDate('01.01.2020', filterArgs.date),

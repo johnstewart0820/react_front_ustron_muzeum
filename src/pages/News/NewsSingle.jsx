@@ -19,7 +19,6 @@ export default function NewsSinglePage(props) {
                 setNews(false);
             });
     }, []);
-    console.log(props.page.gallery);
     return (
         <>
             <MainHeaderSection extra_classes="single">

@@ -15,6 +15,8 @@ import ContactPage from '../pages/Contact';
 import NewsSingle from "../pages/News/NewsSingle";
 import EventSingle from "../pages/Event/EventSingle";
 import PostSingle from "../pages/PostSingle";
+import SearchPage from "../pages/Search";
+
 export default {
     events_single: EventSingle,
     news_single: NewsSingle,
@@ -32,5 +34,6 @@ export default {
     'Kalendarz': EducationCalendar,
     'Najbliższewydarzenia': EducationUpcomingEvents,
     museum_digital_archive: ArchivePage,
-    museum_contact: ContactPage
+    museum_contact: ContactPage,
+    search: SearchPage,
 };

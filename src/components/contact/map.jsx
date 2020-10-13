@@ -5,7 +5,6 @@ import React from "react";
 
 const LocationMap = (props) => {
   const data = props.data;
-  console.log(props);
   const lat = parseFloat(data && data.acf && data.acf.field_map_gps && data.acf.field_map_gps.split(";")[0]);
   const lng = parseFloat(data && data.acf && data.acf.field_map_gps && data.acf.field_map_gps.split(";")[1]); 
   return (

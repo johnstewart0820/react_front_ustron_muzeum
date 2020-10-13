@@ -145,7 +145,6 @@ export default class Carousel extends Component{
 			transition: transition ? "left .6s" : "",
 			left: wrap_left
 		}
-		console.log(items);
 		return (
 				<div className={`carousel ${ extra_classes || "" } mt-5`} style={ containerStyles }>
 					<div className="carousel__head">

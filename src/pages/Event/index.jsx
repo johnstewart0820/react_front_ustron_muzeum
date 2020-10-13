@@ -26,7 +26,6 @@ const Event = (props) => {
     const [data, setData] = React.useState(null);
     const [filterArgs, setFilterArgs] = React.useState({});
     React.useEffect(() => {
-        console.log(selectedDate);
         // setStartDate(selectedDate);
         setData(null);
         API.getByConfig(acf.field_nearest_events_museum_categories, {

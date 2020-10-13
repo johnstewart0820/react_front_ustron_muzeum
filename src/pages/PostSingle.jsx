@@ -10,7 +10,6 @@ import {API} from "../extra/API";
 
 export default function PostSinglePage(props) {
     const breadcrumb = props.page.breadcrumb;
-    console.log(props.page.gallery);
     return (
         <>
             <MainHeaderSection extra_classes="single">

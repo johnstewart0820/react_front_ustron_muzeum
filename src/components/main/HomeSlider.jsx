@@ -5,7 +5,6 @@ import "pure-react-carousel/dist/react-carousel.es.css";
 import DefaultImage from "../../img/loop/3.jpg";
 
 const HomeSlider = (props) => {
-  console.log(props.extend_class);
   return (
     <CarouselProvider
       naturalSlideWidth={1920}

@@ -15,7 +15,7 @@ const MainMenu = (props) => {
           <div className="col-md-12">
             <nav className="main-navigation">
               <ul>
-                { console.log(header_menu),
+                { 
                 header_menu && !!header_menu.length &&
                   header_menu.map(({ item, subitems }, index) => (
                     <li key={ index }>

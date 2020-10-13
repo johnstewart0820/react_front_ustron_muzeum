@@ -5,21 +5,23 @@ import Breadcrumbs from "./Breadcrumbs";
 import Loader from "./Loader";
 import Pagination from "../loop/Pagination";
 import LoopSearchPostsContainer from "../loop/LoopSearchPostsContainer";
+import { main_url } from "../../extra/main_menu";
 
-const PaginatedExhibitionPage = props => {
+
+const PaginatedSearchPage = props => {
     const container = React.useRef(null);
-    const breadcrumb = props.page.breadcrumb;
     const [data, setData] = React.useState(null);
     const [filters, setFilters] = React.useState({page: 0});
-
     React.useEffect(() => {
-        API.getByConfig(props.page.acf.field_exhibitions, {page: filters.page}).then(res => {
+        console.log('a');
+        setData(null);
+        API.getPosts({
+            query: props.page.match.params.id,
+            domain: window.document.domain
+        }).then(res => {
             setData(res.data);
-        }).catch(err => {
-            console.error(err);
-            setData(false);
         });
-    }, [filters]);
+    }, [props.page.match.params.id, filters]);
     const onPageChange = page => {
         setFilters({...filters, page});
         window.scrollTo({top: container.current.getBoundingClientRect().top + window.scrollY});
@@ -29,7 +31,7 @@ const PaginatedExhibitionPage = props => {
         <>
             {!props.hideHeader && (
                 <MainHeaderSection extra_classes={props.headerClasses}>
-                    <Breadcrumbs breadcrumbs={breadcrumb}/>
+                    <Breadcrumbs breadcrumbs={[{label: "Start", href: main_url},{label: "Muzeum Ustroński", to: "/"}, {label: "Szukaj"}]} needOperate = {false}/>
                 </MainHeaderSection>
             )}
 
@@ -54,4 +56,4 @@ const PaginatedExhibitionPage = props => {
     );
 };
 
-export default PaginatedExhibitionPage;
+export default PaginatedSearchPage;

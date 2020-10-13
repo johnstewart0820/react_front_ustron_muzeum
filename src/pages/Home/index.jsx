@@ -10,7 +10,6 @@ import EducationSection from "../../components/main/EducationSection";
 
 const Home = (props) => {
     const data = props.page.acf;
-    console.log(props);
     return (
         <>
             {!data && <Loader/>}

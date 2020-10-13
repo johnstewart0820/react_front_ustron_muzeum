@@ -4,7 +4,6 @@ import DefaultImage from "../../img/loop/1.jpg";
 const fromTimeStampToDateObj = timestamp => ( new Date( timestamp * 1000 ));
 
 const EventSingleHead = (props) => {
-    console.log(props);
     const event_dates = {
 		start_date: props.event_start_date ? fromTimeStampToDateObj( props.event_start_date ) : null,
 		end_date: props.event_end_date ? fromTimeStampToDateObj( props.event_end_date ) : null,

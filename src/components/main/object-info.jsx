@@ -17,7 +17,6 @@ const get_contact_hours = (param) => {
   return hour_list;
 }
 const ObjectInfo = (props) => {
-  console.log(props);
   const data = props.data;
   const [current, setCurrent] = useState("hours");
   const [hour_list, setHourList] = useState([]);
@@ -27,7 +26,6 @@ const ObjectInfo = (props) => {
   useEffect(() => {
     if (data && data.field_hours) {
       const hourlist = get_contact_hours(data.field_hours);
-      console.log(hourlist);
       setHourList(hourlist);
     }
 

@@ -7,11 +7,15 @@ import Layouts from "../constants/PageList";
 import NotFoundPage from "../pages/NotFoundPage";
 
 export default function PageRenderer(props) {
-    const {locale, slug} = useParams();
+    const {locale, slug, id} = useParams();
     const siteInfo = React.useContext(SiteInfoContext).site_info;
     const [pageData, setPageData] = React.useState(null);
 
     React.useEffect(() => {
+        if (slug === 'search') {
+            setPageData({post_type: 'search', query: id});
+            return;
+        }
         if (!locale || !siteInfo.languages.split(',').includes(locale)) {
             /* show 404 if invalid locale */
             setPageData(false);
@@ -20,19 +24,16 @@ export default function PageRenderer(props) {
 
         if (!slug) {
             // no page id/slug = home page
-            console.info('PAGE DATA', siteInfo.default_content);
             setPageData(siteInfo.default_content);
             return;
         }
         
         API.getPost(slug)
             .then(res => {
-                console.info('PAGE DATA', res.data.content);
                 setPageData(res.data.content);
             })
             .catch(e => {
                 setPageData(false);
-                console.log(e);
             });
     }, [locale, slug, siteInfo.default_content?.id]);
 
@@ -45,8 +46,9 @@ export default function PageRenderer(props) {
         return <NotFoundPage/>;
 
     let layoutValue;
-    
-    if (pageData.post_type === 'news')
+    if (pageData.post_type === 'search')
+        layoutValue = 'search';
+    else if (pageData.post_type === 'news')
         layoutValue = 'news_single';
     else if (pageData.post_type === 'events')
         layoutValue = 'events_single';

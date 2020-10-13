@@ -24,7 +24,6 @@ const ChronicleNavigator = (props) => {
   const [page, setPage] = React.useState(1);
   const handleChange = (event, value) => {
     setPage(value);
-    console.log(value);
     onChangeHandler(value);
   };
 
