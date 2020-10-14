@@ -2,16 +2,21 @@
 
 .breadcrumbs{
 
-	padding: 12px;
+	padding: 12px 0px;
 	font-weight: 500;
-	
+	width: 100%;
+
 	&__items {
 		@include flex-a-center;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        width: 100%;
 	}
 
-	div, a{ 
+	div, a{
 		color: $main-color+55;
-		text-decoration: none;	
+		text-decoration: none;
 	}
 
 	a::after{
