@@ -25,11 +25,16 @@ const HomeSlider = (props) => {
                   <div className="hero-copy-line __big">{item.field_slide_title}</div>
                   <div className="hero-copy-line">{item.field_slide_content}</div>
                 </div>
-                {item.field_slide_button_title && 
+                {item.field_slide_button_title &&
                 <Link to={!item.field_slide_button_link ? '/' : item.field_slide_button_link} className="hero-copy-cta">
                   {item.field_slide_button_title}
                 </Link>}
-                <img src={item.field_slide_image.length > 0 ? item.field_slide_image : DefaultImage} alt="" className={`hero-top-img ${props.extend_class}`}></img>
+                  <div
+                      key={ index }
+                      className={`pictures-slider__slide thumbnail hero-top-img`}
+                      style={{ backgroundImage: `url("${ item.field_slide_image }")`}}
+                  >
+                  </div>
               </div>
             </Slide>
           ))

@@ -35,7 +35,7 @@ const ObjectInfo = (props) => {
   return (
     <section className="container section object-info">
       <div className="row">
-        <div className="col-12 col-lg-5 mb-5">
+        <div className="col-12 col-md-5 mb-5">
           {current === "hours" ? (
             <>
               <small>{ data && data.field_hours_title && data.field_hours_title }</small>
@@ -48,8 +48,8 @@ const ObjectInfo = (props) => {
             </>
           )}
         </div>
-        <div className="col-lg-7">
-          <div className="section-switcher">
+        <div className="col-12 col-md-7">
+          <div className="section-switcher in-col">
             <button
               type="button"
               className={current === "hours" ? "active" : ""}

@@ -1,57 +1,130 @@
 .main-footer {
-  background-color: rgba(#324655, 0.08);
-  padding: 70px 0;
-
-  .text-logo {
-    font-size: 2.06em;
-    font-family: $lora;
-    color: $main-color;
-    font-weight: 700;
-    text-decoration: none;
-    display: block;
-  }
-
-  p {
-    font-size: 0.88em;
-    line-height: 18px;
-    color: $main-color;
-
-    strong {
-      text-transform: uppercase;
+    background-color: rgba(#324655, 0.08);
+    padding: 70px 0;
+    .footer-address {
+        margin-bottom: 20px;
     }
-  }
-
-  .contact-details {
-    font-size: 0.88em;
-    a {
-      color: $main-color;
-      text-decoration: none;
+    .footer-hours {
+        margin-bottom: 20px;
     }
-  }
-
-  .working-hours {
-    background-color: rgba(#324655, 0.52);
-
-    .days-column,
-    .hours-column {
-      background-color: transparent;
+    .text-logo {
+        font-size: 2.06em;
+        font-family: $lora;
+        color: $main-color;
+        font-weight: 700;
+        text-decoration: none;
+        display: block;
     }
-  }
 
-  nav {
-    ul {
-      li {
-        margin: 12px 0;
-        float: left;
-        width: 50%;
-        a {
-          color: $main-color;
-          font-size: 0.88em;
-          text-transform: uppercase;
-          font-weight: bold;
-          text-decoration: none;
+    p {
+        font-size: 0.88em;
+        line-height: 18px;
+        color: $main-color;
+
+        strong {
+            text-transform: uppercase;
         }
-      }
     }
-  }
+    .days-column {
+        background-color: $main-color;
+        padding: 50px 30px 40px 40px;
+    }
+
+    .hours-column {
+        background: $gold;
+        padding: 50px 0px 40px 0px;
+        flex: 1;
+        height: 100%;
+
+        .day {
+            font-weight: bold;
+        }
+    }
+    .contact-details {
+        font-size: 0.88em;
+        a {
+            color: $main-color;
+            text-decoration: none;
+        }
+    }
+
+    .working-hours {
+        background-color: rgba(#324655, 0.52);
+
+        .days-column,
+        .hours-column {
+            background-color: transparent;
+        }
+    }
+
+    nav {
+        ul {
+            li {
+                margin: 12px 0;
+                float: left;
+                width: 50%;
+                a {
+                    color: $main-color;
+                    font-size: 0.88em;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    .main-footer {
+        .contact-details {
+            font-size: 0.7em !important;
+        }
+        p {
+            font-size: 0.7em !important;
+        }
+        nav > ul > li > a {
+            font-size: 0.7em !important;
+        }
+        .text-logo {
+            font-size: 1.8em !important;
+        }
+        .days-column {
+            padding: 40px 30px 30px 40px !important;
+        }
+        .day {
+            font-size: 0.8em !important;
+        }
+        .hours-column {
+            padding: 40px 0px 30px 0px !important;
+        }
+    }
+
+}
+
+@media (max-width: 1100px) {
+    .main-footer {
+        .contact-details {
+            font-size: 0.6em !important;
+        }
+        p {
+            font-size: 0.6em !important;
+        }
+        nav > ul > li > a {
+            font-size: 0.6em !important;
+        }
+        .text-logo {
+            font-size: 1.4em !important;
+        }
+        .days-column {
+            padding: 40px 30px 30px 40px !important;
+        }
+        .day {
+            font-size: 0.7em !important;
+        }
+        .hours-column {
+            padding: 40px 0px 30px 0px !important;
+        }
+    }
+
 }

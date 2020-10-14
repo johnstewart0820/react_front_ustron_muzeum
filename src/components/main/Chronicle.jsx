@@ -6,9 +6,9 @@ const TabContentFormatter = (props) => {
   const { data } = props;
   return (
     <>
-      <div className="col-4">{data.image}</div>
-      <div className="col-8">
-        <p className="mb-4 text-justify">{data.text}</p>
+      <div className="col-12 col-md-4 d-flex justify-content-center mb-4">{data.image}</div>
+      <div className="col-12 col-md-8">
+        <p className="mb-4 chronicle-desc" dangerouslySetInnerHTML={{__html: data && data.text}}/>
         <a href={data.moreLink} className="btn btn-primary">
           {data.button_title}
         </a>

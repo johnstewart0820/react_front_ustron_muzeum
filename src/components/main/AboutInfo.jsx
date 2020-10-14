@@ -7,8 +7,8 @@ const AboutInfo = (props) => {
   return (
     <section className="container section about-info mt-5 mb-5 pt-5 pb-5">
       <div className="row">
-        <div className="col-lg-7"><img src={DefaultImage} alt="" className="img-full featured-image" /></div>
-        <div className="col-12 col-lg-5 mb-5">
+        <div className="col-12 col-md-7"><img src={DefaultImage} alt="" className="img-full featured-image" /></div>
+        <div className="col-12 col-md-5 mb-5">
           <small>{data.field_about_title}</small>
           <h3>{data.field_about_subtitle}</h3>
           <div className="row mt-5">

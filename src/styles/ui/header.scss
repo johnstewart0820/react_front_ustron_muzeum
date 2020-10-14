@@ -11,7 +11,8 @@
     .logo {
         span {
             font-weight: 700;
-            font-size: 1.69em;
+            font-size: 1.69em !important;
+            line-height: 1 !important;
             font-family: $lora;
             color: $main-color;
             text-decoration: none;
@@ -214,7 +215,7 @@
     &-trigger {
         width: 72px;
         height: 72px;
-        line-height: 82px;
+        line-height: 82px !important;
         background-color: $gold;
         color: $main-color;
         display: block;
