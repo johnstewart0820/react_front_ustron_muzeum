@@ -43,6 +43,12 @@
 	background-color: white;
 }
 
+.loop-event-post__content_education{
+	padding: 20px 0px;
+	color: white;
+}
+
+
 .loop-event-post__title{
 	font-family: $lora;
 	font-weight: 600;
@@ -51,6 +57,24 @@
 	text-transform: capitalize;
 }
 
+.loop-event-post__title_education{
+	font-family: $lora;
+	font-weight: 400;
+	font-size: 1.2em;
+	letter-spacing: 0;
+	text-transform: capitalize;
+	color: $gold;
+	padding-bottom: 12px;
+}
+.loop-event-post__label_education{
+	font-family: $lora;
+	font-weight: 500;
+	font-size: 1.3em;
+	letter-spacing: 0;
+	text-transform: capitalize;
+	color: white;
+	padding-bottom: 12px;
+}
 
 @media (max-width: 430px){
 	.loop-event-post{

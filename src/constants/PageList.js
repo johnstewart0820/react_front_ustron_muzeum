@@ -6,10 +6,8 @@ import TemporaryExhibitions from '../pages/Exhibition/Temporary_Exhibitions';
 import EventPage from '../pages/Event';
 import NewsPage from '../pages/News';
 import ChronicleUstron from '../pages/Chronicle/Chronicle_Ustron';
-import EducationGlinoki from '../pages/Education/Education_Glinoki';
+import EducationLesson from '../pages/Education/Education_Lesson';
 import EducationFilm from '../pages/Education/Education_Film';
-import EducationCalendar from '../pages/Education/Education_Calendar';
-import EducationUpcomingEvents from '../pages/Education/Education_Upcoming_Events';
 import ArchivePage from '../pages/Archive';
 import ContactPage from '../pages/Contact';
 import NewsSingle from "../pages/News/NewsSingle";
@@ -29,10 +27,8 @@ export default {
     museum_events: EventPage,
     museum_news: NewsPage,
     museum_chronicle: ChronicleUstron,
-    'Glinioki': EducationGlinoki,
+    museum_lessons: EducationLesson,
     museum_educational_movies: EducationFilm,
-    'Kalendarz': EducationCalendar,
-    'Najbliższewydarzenia': EducationUpcomingEvents,
     museum_digital_archive: ArchivePage,
     museum_contact: ContactPage,
     search: SearchPage,

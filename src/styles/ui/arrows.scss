@@ -40,6 +40,32 @@
 	}
 }
 
+.education-arrow {
+	button {
+		&:first-child {
+			background-color: rgba(100, 100,100, 0.08);
+			&:hover{
+				background: $gray;
+				svg{
+					path{
+						stroke: #fff;
+					}
+				}
+			}
+		}
+		&:last-child {
+			background-color: rgba(150, 150,150, 0.08);
+			&:hover{
+				background: $gray;
+				svg{
+					path{
+						stroke: #fff;
+					}
+				}
+			}
+		}
+	}
+}
 .month-arrows{
 	@include flex-a-center;
 	height: 56px;
