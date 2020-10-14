@@ -1,18 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const AttachmentItem = ({ name, index, title, onClick }) => (
-	name ?
-	( 
-		<div className="attachment-item">
+		<div className="attachment-item d-flex justify-content-center align-items-center">
 			<div
 				onClick={ () => onClick( index ) }
 				className="thumbnail mb-4"  
-				style={{ backgroundImage: `url(${ name })` }} 
-			/>
+			>
+				<FontAwesomeIcon icon={faDownload} size="5x"/>
+				<p className="pt-4">{title}</p>
+			</div>
 		</div>
-	)
-	: null
 )
 
 // AttachmentItem.propTypes = { 

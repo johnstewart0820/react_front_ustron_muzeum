@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import AttachmentItem from "./AttachmentItem";
 import ExpandedAttachment from "./ExpandedAttachment";
 import OneCarouselInRow from "../carousel/OneCarouseInRow";
+import Axios from 'axios';
 
 export default class Attachment extends Component {
 
@@ -22,7 +23,21 @@ export default class Attachment extends Component {
     }
 
 
-    itemClick = (item_index) => this.setState({expanded: true, active_photo: item_index});
+    itemClick = (item_index) => {
+        const link = document.createElement('a');
+        const url = this.props.items[item_index].name;
+        link.href = url;
+        link.setAttribute('download', url.split('/')[url.split('/').length - 1]);
+        link.setAttribute('target', '_blank');
+        document.body.appendChild(link);
+        link.click();
+        // setTimeout(() => {
+        //     const response = {
+        //       file: this.props.items[item_index].name,
+        //     };
+        //     window.open(response.file);
+        //   }, 100);
+    };
 
 
     closeExpanded = () => this.setState({expanded: false});
