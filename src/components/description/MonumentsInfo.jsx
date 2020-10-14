@@ -7,22 +7,24 @@ const MonumentsInfo = (props) => {
     <div className="monuments-info mb-5">
       <section className="section container">
         <div className="row">
-            <div className="col-md-6 monuments-img-container">
-              {
-                data.field_monument_elements.map((item, key) => (
-                  <div className="col-md-6">
-                    <img src={item.field_monument_elements_photo} className="img-full" />
-                    <div className="monument-title">
-                      {item.field_monument_elements_title}
-                    </div>
-                    <div className="monument-decription">
-                      {item.field_monument_elements_description}
-                    </div>
-                  </div>
-                ))
-              }
+            <div className="col-md-6 col-12 monuments-img-container">
+                <div className="row">
+                  {
+                    data.field_monument_elements.map((item, key) => (
+                      <div className="col-md-6 col-12">
+                        <img src={item.field_monument_elements_photo} className="img-full" />
+                        <div className="monument-title">
+                          {item.field_monument_elements_title}
+                        </div>
+                        <div className="monument-decription">
+                          {item.field_monument_elements_description}
+                        </div>
+                      </div>
+                    ))
+                  }
+                </div>
             </div>
-            <div className="col-md-6 monument_link">
+            <div className="col-md-6 col-12 monument_link">
               <small>O muzeum</small>
               <h3>
                 <div className="monuments-main-title mb-5">

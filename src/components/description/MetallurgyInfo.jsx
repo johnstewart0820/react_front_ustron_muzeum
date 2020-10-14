@@ -27,7 +27,7 @@ const MetallurgyInfo = (props) => {
             {
               data.field_metallurgy_elements.map((item, key) => (
                 <div className="col-md-4 metallurgy-img-cover">
-                  <div className="img-full img-metallurgy" >
+                  <div className=" img-metallurgy" >
                     {item.field_metallurgy_elements_number}
                   </div>
                   <div className="metallurgy-decription">
