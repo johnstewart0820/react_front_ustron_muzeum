@@ -5,6 +5,7 @@ import {API} from "./API";
 import Loader from "../components/general/Loader";
 import Layouts from "../constants/PageList";
 import NotFoundPage from "../pages/NotFoundPage";
+import ErrorPage from "../pages/ErrorPage";
 
 export default function PageRenderer(props) {
     const {locale, slug, id} = useParams();

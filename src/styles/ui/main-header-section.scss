@@ -19,7 +19,7 @@
 
 
 .main-header-section__main{
-	width: calc(100% - 88px);
+	width: 100%;
 	@include flex-wrap;
 	flex-direction: column;
 

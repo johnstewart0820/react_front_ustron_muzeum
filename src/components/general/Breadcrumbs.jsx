@@ -33,7 +33,7 @@ const Breadcrumbs = ({ breadcrumbs, extra_classes, needOperate = true }) => {
 	else
 		result = breadcrumbs;
 	return (
-		<div className={`breadcrumbs ${ extra_classes || "" } mb-5` }>
+		<div className={`breadcrumbs ${ extra_classes || "" } mb-4` }>
 			
 			<div className="container">
 				<div className="breadcrumbs__items">

@@ -9,7 +9,7 @@ import Header from "./components/header";
 import Routing from "./routing/Routing";
 import PageList from "./constants/PageList";
 import ScrollToTop from "./extra/ScrollToTop";
-
+import ErrorHandler from "./extra/ErrorHandler";
 import "./styles/layout.scss";
 
 const browserHistory = createBrowserHistory();
@@ -20,7 +20,9 @@ const App = () => {
                 <ScrollToTop>      
                     <Header/>
                     <main>
-                        <Routing />
+                        <ErrorHandler>
+                            <Routing />
+                        </ErrorHandler>
                     </main>
                     <Footer/>
                 </ScrollToTop>
