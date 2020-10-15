@@ -28,7 +28,7 @@ class Sidebar extends Component {
                 </button>
                 
                 { this.state.menu_open &&
-                <MainMenu />
+                <MainMenu onNavigate={this.toggleMainMenu}/>
                 }
             </div>
         )

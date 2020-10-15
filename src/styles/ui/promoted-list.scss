@@ -252,6 +252,9 @@
 }
 
 @media (max-width: 1000px) {
+    .main-menu__items {
+        line-height: 1.5 !important;
+    }
     .metallurgy-img-container {
         div {
             font-size: 1em !important;

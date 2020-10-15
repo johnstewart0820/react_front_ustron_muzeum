@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { SiteInfoContextConsumer } from "../../../constants/SiteInfoContext";
-import { Link } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 
-const MainMenu = () => {
-    
+const MainMenu = (props) => {
+    const history = useHistory();
     const [ open_menu, setOpenMenu ] = useState( null );
     
     function toggleMobileMenu ( e, index ) {
@@ -24,14 +24,14 @@ const MainMenu = () => {
                                 <Link to={ item.path } className="main-menu__title" rel={'noopener noreferrer'}>
                                     
                                     { subitems && !!subitems.length && <strong onClick={ e => toggleMobileMenu( e, index ) }> &#62; </strong> }
-                                    { (!subitems || !subitems.length) ? <span className="sidebar-nochildren-span"> { item.label } </span> : <span onClick={ e => toggleMobileMenu( e, index )}> { item.label } </span> }
+                                    { (!subitems || !subitems.length) ? <span className="sidebar-nochildren-span" onClick={(e)=> (history.push(item.path),props.onNavigate(e))}> { item.label } </span> : <span onClick={ e => toggleMobileMenu( e, index )}> { item.label } </span> }
                                     
                                 </Link>
                                 
                                 { subitems && !!subitems.length &&
                                 <div className="main-menu__items">
                                     { subitems.map(({ label, path}, index) => (
-                                        <Link key={ index } to={ path } rel={'noopener noreferrer'}> { label } </Link>
+                                        <Link key={ index } to={ path } rel={'noopener noreferrer'} onClick={(e)=> (history.push(path),props.onNavigate(e))}> { label } </Link>
                                     )) }
                                 </div>
                                 }
