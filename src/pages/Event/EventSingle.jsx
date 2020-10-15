@@ -31,7 +31,7 @@ export default function EventSinglePage(props) {
             setEvents(false);
         });
     }, []);
-
+    console.log('aaa');
     return (
         <>
             <MainHeaderSection extra_classes="single">
