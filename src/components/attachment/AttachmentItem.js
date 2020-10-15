@@ -7,9 +7,9 @@ const AttachmentItem = ({ name, index, title, onClick }) => (
 		<div className="attachment-item d-flex justify-content-center align-items-center">
 			<div
 				onClick={ () => onClick( index ) }
-				className="thumbnail mb-4"  
+				className="thumbnail"  
 			>
-				<FontAwesomeIcon icon={faDownload} size="5x"/>
+				<FontAwesomeIcon icon={faDownload} size="3x"/>
 				<p className="download-description pt-4">{title}</p>
 			</div>
 		</div>

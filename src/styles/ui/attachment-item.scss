@@ -1,10 +1,10 @@
 .attachment-item{
 	cursor: pointer;
-	width: 300px;
-	height:221px;
+	width: 200px;
+	height:120px;
 	margin-right: 19px;
-	border: 1px solid $main-color;
-	border-radius: 1.5em;
+	border: 3px solid $main-color;
+	border-radius: 1em;
 	
 	.loader{
 		margin: auto;
@@ -14,8 +14,8 @@
 
 		text-align: center;
 		p {
-			font-weight: 600;
-			font-size: 1.5em;
+			font-weight: 500;
+			font-size: 1em;
 			color: $main-color;
 		}
 	}

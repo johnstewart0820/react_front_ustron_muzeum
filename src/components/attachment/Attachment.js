@@ -53,7 +53,7 @@ export default class Attachment extends Component {
         const carousel = {
             items,
             extra_classes: "arrows-on-right",
-            heading: this.props.heading || "Załączniki",
+            heading: this.props.heading || "Pliki do pobrania",
             ItemComponent: AttachmentItem,
         };
 

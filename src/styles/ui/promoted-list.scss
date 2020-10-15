@@ -252,6 +252,19 @@
 }
 
 @media (max-width: 1000px) {
+    .main-menu__title {
+        padding: 15px 15px !important;
+    }
+    .day_main {
+        font-size: 0.8em !important;
+        h3 {
+            font-size: 100% !important;
+        }
+    }
+    .loop-news-post__title.heading {
+        font-size: 1em !important;
+        line-height: 1 !important;
+    }
     .homepage-container > .carousel {
         padding-left: 0px !important;
     }
@@ -259,7 +272,10 @@
         padding-left: 0px !important;
     }
     .main-menu__items {
-        line-height: 1.5 !important;
+        line-height: 2 !important;
+        a {
+            font-size: 0.7em !important;
+        }
     }
     .event-dates-education {
         flex-wrap: nowrap !important;
@@ -293,6 +309,7 @@
     }
     .handicraft-description {
         padding-left: 0em !important;
+        padding-right: 0px !important;
     }
     .handicraft-img-cover {
         margin-bottom: 20px !important;
@@ -360,18 +377,19 @@
         }
     }
     .news-single-section .news-single-categories-title {
-        font-size: 2.5em !important;
+        font-size: 2em !important;
         line-height: 1 !important;
+        margin-bottom: 20px !important;
     }
     .news-single-section .news-single-categories-label {
-        font-size: 2em !important;
+        font-size: 1.5em !important;
         line-height: 1 !important;
     }
     .heading {
         font-size: 2.5em !important;
     }
     .download-description {
-        font-size: 1.5em !important;
+        font-size: 1em !important;
     }
     .social-media {
         line-height: 1 !important;
@@ -466,23 +484,29 @@
         }
     }
     .news-single-section .news-single-categories-title {
-        font-size: 2em !important;
+        font-size: 1.5em !important;
         line-height: 1 !important;
     }
     .news-single-categories-label {
-        font-size: 1.5em !important;
+        font-size: 1em !important;
         line-height: 1 !important;
     }
     .heading {
         font-size: 2em !important;
     }
     .download-description {
-        font-size: 1.5em !important;
+        font-size: 1em !important;
     }
     .social-medias {
         height: 380px !important;
         span {
             font-size: 1.2em !important;
         }
+    }
+    .month-button-container {
+        padding-left: 0px !important;
+    }
+    .day-button-container {
+        padding-left: 0px !important;
     }
 }

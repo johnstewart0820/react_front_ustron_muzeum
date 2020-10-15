@@ -26,7 +26,8 @@
   .research-info-description {
     color: $main-color;
     padding-left: 40px;
-    padding-right: 130px;
+    padding-right: 40px;
+    text-align: justify;
     font-family: $lora;
     line-height: 2;
     font-weight: 600;
@@ -96,9 +97,10 @@
   }
   .handicraft-info {
     .handicraft-description {
+      text-align: justify;
       color: $main-color;
       padding-left: 40px;
-      padding-right: 130px;
+      padding-right: 40px;
       font-family: $lora;
       line-height: 2;
       font-weight: 600;
@@ -153,6 +155,7 @@
   }
   .metallurgy-info {
     .metallurgy-description {
+      text-align: justify;
       color: $main-color;
 
       font-family: $lora;
