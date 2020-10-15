@@ -93,7 +93,7 @@ const Archive = (props) => {
                                     { data && data.field_digital_archive_bank && data.field_digital_archive_bank.split(' 4')[1] }
                                 </p>
                             </div>
-                            <div className="col-12 col-md-8">
+                            <div className="col-12 col-md-8 mt-4">
                                 <div className="contact-block" dangerouslySetInnerHTML={{__html: data && data.field_digital_archive_description}}></div>
                             </div>
                         </div>

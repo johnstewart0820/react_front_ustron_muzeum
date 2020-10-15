@@ -19,37 +19,37 @@ const EducationVideos = (props) => {
               }
             </div>
             <div className="row col-12 mt-4">
-              <div className="col-6">
+              <div className="col-md-6 col-12">
                 {videos && videos.field_educational_videos && 
                   <video poster={videos.field_educational_videos[0].field_educational_videos_image} alt="" className="img-full" 
                     src={videos.field_educational_videos[0].field_educational_videos_link} controls
                   />
                 }
               </div>
-              <div className="col-6">
+              <div className="col-md-6 col-12">
                 <div className="row education-top-image">
-                  <div className="col-6">
+                  <div className="col-md-6 col-12">
                     {videos && videos.field_educational_videos && 
                       <video poster={videos.field_educational_videos[1].field_educational_videos_image} alt="" className="img-full" 
                         src={videos.field_educational_videos[1].field_educational_videos_link} controls
                       />  
                     }
                   </div>
-                  <div className="col-6">
+                  <div className="col-md-6 col-12">
                     {videos && videos.field_educational_videos && 
                       videos.field_educational_videos[1].field_educational_videos_description
                     }
                   </div>
                 </div>
                 <div className="row education-bottom-image">
-                  <div className="col-6">
+                  <div className="col-md-6 col-12">
                     {videos && videos.field_educational_videos && 
                       <video poster={videos.field_educational_videos[2].field_educational_videos_image} alt="" className="img-full" 
                         src={videos.field_educational_videos[2].field_educational_videos_link} controls
                       />  
                     }
                   </div>
-                  <div className="col-6">
+                  <div className="col-md-6 col-12">
                     {videos && videos.field_educational_videos && 
                       videos.field_educational_videos[2].field_educational_videos_description
                     }

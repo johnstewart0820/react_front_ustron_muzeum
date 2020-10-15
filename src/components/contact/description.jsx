@@ -57,7 +57,7 @@ const Description = (props) => {
                 <br/>
                 <p>4{ info && info.acf && info.acf.field_museum_contact_bank && info.acf.field_museum_contact_bank.split(' 4')[1] }</p>
             </div>
-            <div className="col-12 col-md-8">
+            <div className="col-12 col-md-8 mt-4">
             <div className="contact-block" dangerouslySetInnerHTML={{__html: info && info.acf && info.acf.field_museum_contact_description}}></div>
             </div>
         </div>

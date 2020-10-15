@@ -8,12 +8,12 @@
 		border-bottom: 1px solid #707070;
 		.loop-search-post__thumbnail::before{
 			opacity: .78;
-		}		
+		}
 	}
 }
 
 .loop-search-post__thumbnail{
-	height: 221px;	
+	height: 221px;
 	display: flex;
 
 	&::before{
@@ -61,7 +61,7 @@
 		width: 254px;
 
 		&__thumbnail{
-			height: 136px;
+			//height: 136px;
 		}
 
 		&__content{

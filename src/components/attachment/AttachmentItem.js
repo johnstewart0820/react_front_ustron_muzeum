@@ -10,7 +10,7 @@ const AttachmentItem = ({ name, index, title, onClick }) => (
 				className="thumbnail mb-4"  
 			>
 				<FontAwesomeIcon icon={faDownload} size="5x"/>
-				<p className="pt-4">{title}</p>
+				<p className="download-description pt-4">{title}</p>
 			</div>
 		</div>
 )

@@ -252,8 +252,23 @@
 }
 
 @media (max-width: 1000px) {
+    .homepage-container > .carousel {
+        padding-left: 0px !important;
+    }
+    .description-container > .carousel {
+        padding-left: 0px !important;
+    }
     .main-menu__items {
         line-height: 1.5 !important;
+    }
+    .event-dates-education {
+        flex-wrap: nowrap !important;
+    }
+    .loop-event-post__title_education.heading {
+        font-size: 1.2em !important;
+    }
+    .loop-event-post__label_education.heading {
+        font-size: 1.3em !important;
     }
     .metallurgy-img-container {
         div {
@@ -352,7 +367,16 @@
         font-size: 2em !important;
         line-height: 1 !important;
     }
-
+    .heading {
+        font-size: 2.5em !important;
+    }
+    .download-description {
+        font-size: 1.5em !important;
+    }
+    .social-media {
+        line-height: 1 !important;
+        padding-bottom: 5px !important;
+    }
 }
 
 @media (max-width: 750px) {
@@ -366,8 +390,30 @@
         padding-left: 0px !important;
         margin-top: 10px !important;
     }
+    .expanded-gallery__items {
+        width: 100% !important;
+    }
+    .social-medias {
+        height: 480px !important;
+        span {
+            font-size: 1.2em !important;
+        }
+    }
 }
 @media (max-width: 500px) {
+    .carousel {
+        padding-left: 40px !important;
+    }
+    .loop-event-post__title_education.heading {
+        font-size: 1.2em !important;
+    }
+    .loop-event-post__label_education.heading {
+        font-size: 1.3em !important;
+    }
+    .MuiPaginationItem-sizeLarge {
+        min-width: 32px !important;
+        height: 32px !important;
+    }
     .handicraft-decription {
         padding-right: 0px !important;
         padding-left: 0px !important;
@@ -426,5 +472,17 @@
     .news-single-categories-label {
         font-size: 1.5em !important;
         line-height: 1 !important;
+    }
+    .heading {
+        font-size: 2em !important;
+    }
+    .download-description {
+        font-size: 1.5em !important;
+    }
+    .social-medias {
+        height: 380px !important;
+        span {
+            font-size: 1.2em !important;
+        }
     }
 }
