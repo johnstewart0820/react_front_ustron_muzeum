@@ -276,7 +276,7 @@
                 border: 0;
                 outline: 0;
                 color: #fff;
-                font-size: 1.88em;
+                font-size: 1.88em !important;
                 cursor: pointer;
                 // flex-grow: 1;
 
@@ -319,6 +319,9 @@
         margin-right: 20px !important;
         margin-left: 20px !important;
     }
+    .search-bar {
+        width: 100vw !important;
+    }
 
 }
 
@@ -336,9 +339,19 @@
     .page-helper > .helper-bip {
         display: none;
     }
+    .main-search .search-bar form input {
+        padding: 0px !important;
+    }
+    .main-search .search-bar form button[type="reset"] {
+        padding-right: 5px !important;
+    }
+    .main-search .search-bar {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .main-search .search-bar form {
+        padding-left: 3px !important;
+        padding-right: 3px !important;
+    }
 }
-
-
-
-
 
