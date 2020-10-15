@@ -17,7 +17,7 @@ const MetallurgyInfo = (props) => {
       <div className="row">
           <div className="col-md-6 metallurgy-link">
             <div className="metallurgy-description mb-5">
-              {data.field_metallurgy_description}
+              <div dangerouslySetInnerHTML={{__html: data.field_metallurgy_description}}></div>
             </div>
             <Link to={!data.field_metallurgy_button_link ? "#" : data.field_metallurgy_button_link} className="btn btn-primary btn-link">
               {data.field_metallurgy_button_title}
@@ -27,7 +27,7 @@ const MetallurgyInfo = (props) => {
             {
               data.field_metallurgy_elements.map((item, key) => (
                 <div className="col-md-4 metallurgy-img-cover">
-                  <div className="img-full img-metallurgy" >
+                  <div className=" img-metallurgy" >
                     {item.field_metallurgy_elements_number}
                   </div>
                   <div className="metallurgy-decription">

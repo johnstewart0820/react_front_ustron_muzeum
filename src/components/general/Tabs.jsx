@@ -20,13 +20,13 @@ const Tabs = (props) => {
     >
       <div className="container">
         <div className="row pb-4 align-items-end align-content-end">
-          <div className="col-4">
+          <div className="col-12 col-md-4">
           <small>{subtitle}</small>
             <h3 className="mb-0">
               {title}
             </h3>
           </div>
-          <div className="col-6 offset-2">
+          <div className="col-12 col-md-8">
             <div className="section-switcher in-col">
               {tabs &&
                 tabs.map((tab) => (

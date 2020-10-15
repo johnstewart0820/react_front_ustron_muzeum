@@ -13,7 +13,7 @@ const HandicraftInfo = (props) => {
         </h3>
       </div>
       <div className="row">
-          <div className="col-md-6 handicraft-link">
+          <div className="col-md-6 col-12 handicraft-link">
             <div className="handicraft-description mb-5">
               {data.field_handicraft_description}
             </div>
@@ -21,17 +21,19 @@ const HandicraftInfo = (props) => {
               {data.field_handicraft_button_title}
             </Link>
           </div>
-          <div className="col-md-6 handicraft-img-container row">
-            {
-              data.field_handicraft_elements.map((item, key) => (
-                <div className="col-md-4 handicraft-img-cover">
-                  <img src={item.field_handicraft_elements_image} className="img-full img-handicraft" />
-                  <div className="handicraft-decription">
-                    {item.field_handicraft_elements_description}
-                  </div>
-                </div>
-              ))
-            }
+          <div className="col-md-6 col-12 handicraft-img-container">
+              <div className="row">
+                {
+                  data.field_handicraft_elements.map((item, key) => (
+                    <div className="col-md-4 col-12 handicraft-img-cover">
+                      <img src={item.field_handicraft_elements_image} className="img-full img-handicraft" />
+                      <div className="handicraft-decription">
+                        {item.field_handicraft_elements_description}
+                      </div>
+                    </div>
+                  ))
+                }
+              </div>
           </div>
         </div>
     </section>

@@ -5,10 +5,9 @@ const PeoriodicsInfo = (props) => {
   return (
     <section className="section container peoriodics-info mb-5">
       <div className="row">
-          <div className="col-md-6 peoriodics-img-container">
-            <img src={data.field_periodical_photo} className="img-full" />
+          <div className="col-md-6 col-12 peoriodics-img-container" style={{backgroundImage: `url(${data.field_periodical_photo})`}}>
           </div>
-          <div className="col-md-6 peoriodics_link">
+          <div className="col-md-6 col-12 peoriodics_link">
             <small>O muzeum</small>
             <h3>
               <div className="peoriodics-main-title mb-5">

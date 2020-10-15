@@ -28,12 +28,10 @@ const getBreadCrumbs = (breadcrumbs) => {
 
 const Breadcrumbs = ({ breadcrumbs, extra_classes, needOperate = true }) => {
 	let result;
-	console.log(breadcrumbs);
 	if (needOperate)
 		result = getBreadCrumbs(breadcrumbs);
 	else
 		result = breadcrumbs;
-	console.log(result);
 	return (
 		<div className={`breadcrumbs ${ extra_classes || "" } mb-5` }>
 			

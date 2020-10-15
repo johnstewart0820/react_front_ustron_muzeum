@@ -11,15 +11,15 @@ const MainMenu = (props) => {
   return (
     <SiteInfoContextConsumer>
       { ({ header_menu }) => (
-        <div className="row">
+        <div className="row main-header-navigation">
           <div className="col-md-12">
             <nav className="main-navigation">
               <ul>
-                { 
+                {
                 header_menu && !!header_menu.length &&
                   header_menu.map(({ item, subitems }, index) => (
                     <li key={ index }>
-                      <Link activeClassName="active" to={ item.path }>
+                      <Link activeclassname="active" to={ item.path }>
                         { item.label }
                         {subitems.length > 0 && (
                           <FontAwesomeIcon icon={faChevronDown} size="1x" />
@@ -28,7 +28,7 @@ const MainMenu = (props) => {
                       <ul>
                         {subitems.map(({path, label}, index) => (
                           <li key={ index }>
-                            <Link activeClassName="active" to={path}>
+                            <Link activeclassname="active" to={path}>
                               {label}
                             </Link>
                           </li>

@@ -2,7 +2,7 @@
   .description-harvest-more {
     padding-top: 3em;
   }
-  
+
   .description-more-item {
     font-size: 1.13em;
     font-weight: bold;
@@ -11,18 +11,18 @@
     margin-bottom: 60px;
     display: block;
     padding-right: 5em;
-  
+
     span {
       display: block;
       line-height: 25px;
       margin-top: 17px;
     }
-  
+
     &:hover {
       color: $gold;
     }
   }
-  
+
   .research-info-description {
     color: $main-color;
     padding-left: 40px;
@@ -52,21 +52,21 @@
     .monuments-img-container {
       display: inline-flex;
     }
-  
+
     .monument-title {
       font-family: $lora;
       color: $gold;
       font-size: 1.3em;
       margin: 1.5em 0px;
     }
-  
+
     .monument-decription {
       font-family: $lora;
       color: white;
       font-size: 1.5em;
       font-weight: 500;
     }
-    
+
     .monument_link {
       padding-left: 10em;
     }
@@ -76,7 +76,7 @@
     }
 
     .monument-link {
-      
+
         border: 2px solid $gold;
         width: 260px;
         padding: 20px;
@@ -92,7 +92,7 @@
           color: #fff;
           border-color: #fff;
         }
-    }  
+    }
   }
   .handicraft-info {
     .handicraft-description {
@@ -107,13 +107,12 @@
       margin-left: 40px;
     }
     .img-handicraft {
-      height: 100% !important;
+      height: 150px !important;
       width: auto !important;
       margin-bottom: 20px;
     }
     .handicraft-img-cover {
       text-align: center;
-      height: 150px !important;
       max-width: 100%;
     }
     .handicraft-decription {
@@ -125,40 +124,37 @@
     }
   }
   .peoriodics-info {
-    padding: 10em 0em;
+    padding-top: 10em ;
+    padding-bottom: 10em ;
     .peoriodics-img-container {
       display: inline-flex;
     }
-  
+
     .peoriodics-title {
       font-family: $lora;
       color: $gold;
       font-size: 1.3em;
       margin: 1.5em 0px;
     }
-  
+
     .peoriodics-decription {
       font-family: $lora;
       font-size: 1em;
       font-weight: 600;
       color: $main-color;
       line-height: 2;
-      padding-left: 40px;
-      padding-right: 130px;
     }
-    
+
     .peoriodics_link {
       padding-left: 10em;
     }
     .peoriodics-link {
-      margin-left: 40px;
-    }  
+    }
   }
   .metallurgy-info {
     .metallurgy-description {
       color: $main-color;
-      padding-left: 40px;
-      padding-right: 130px;
+
       font-family: $lora;
       line-height: 2;
       font-weight: 600;
@@ -167,8 +163,8 @@
       margin-left: 40px;
     }
     .img-metallurgy {
-      height: 150px !important;
-      width: 150px !important;
+      height: 150px;
+      width: 150px ;
       border: 1px solid $gold;
       background-color: $gold;
       border-radius: 50%;
@@ -179,7 +175,7 @@
       font-family: $lora;
       font-size: 2.2em;
       color: $main-color;
-      font-weight: 800;  
+      font-weight: 800;
       text-align: center;
     }
     .metallurgy-decription {
@@ -192,3 +188,4 @@
     }
   }
 }
+

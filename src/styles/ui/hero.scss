@@ -57,6 +57,10 @@ $slider-max-height: 700px;
     left: 0;
     width: 100%;
     z-index: -1;
+    background: no-repeat;
+    height: 700px;
+    background-size: cover;
+    background-position: 50%;
   }
 }
 
@@ -67,6 +71,10 @@ $slider-max-height: 700px;
 
 .carousel-provider {
   padding: 0px !important;
+  height: 700px !important;
+}
+.carousel-provider > div {
+    height: 100%;
 }
 
 .margin-bottom-500 {
