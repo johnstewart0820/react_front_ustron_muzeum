@@ -11,7 +11,7 @@
 		border-bottom: 1px solid #707070;
 		.loop-event-post__thumbnail::before{
 			opacity: .78;
-		}		
+		}
 	}
 }
 
@@ -20,7 +20,7 @@
 	height: 221px;
 	width: 100%;
 	display: flex;
-	
+
 	&::before{
 		opacity: 0;
 		transition: opacity .5s;
@@ -81,9 +81,8 @@
 		width: 254px;
 
 		&__thumbnail{
-			height: 136px;
+			//height: 136px;
 		}
-
 
 		.event-dates{
 			margin-left: -16px;
