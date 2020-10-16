@@ -334,6 +334,8 @@ body.contrast{
 	}
 
 	.hero-copy-cta {
+		background-color: #000 !important;
+		color: $contrast !important;
 		&:hover {
 		  background: transparent !important;
 		  color: #fff !important;
