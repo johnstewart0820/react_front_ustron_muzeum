@@ -80,3 +80,45 @@ $slider-max-height: 700px;
 .margin-bottom-500 {
   margin-bottom: 500px;
 }
+
+.hero-title {
+  font-size: 1.2em;
+  font-family: $lora;
+  font-weight: 700;
+  color: $gold;
+}
+
+.hero-copy {
+  margin: 30px 0 60px 0;
+  &-line {
+    font-size: 2.5em;
+    font-family: $lora;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+
+    &.__big {
+      font-size: 5.5em;
+      line-height: 100px;
+    }
+  }
+
+  &-cta {
+    border: 2px solid $gold;
+    width: 400px;
+    padding: 20px;
+    font-size: 1em;
+    font-weight: 400;
+    display: inline-block;
+    background: $gold;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+      background: transparent;
+      color: #fff;
+      border-color: #fff;
+    }
+  }
+}

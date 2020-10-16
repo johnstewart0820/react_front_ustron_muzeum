@@ -12,6 +12,7 @@ import EventCarouselExhibition from "../../components/carousel/EventCarouselExhi
 import EventCarouselEvents from "../../components/carousel/EventCarouselEvents";
 import LoopEventsPostEducation from "../../components/events/LoopEventsPostEducation";
 import LoopEventsPost from "../../components/events/LoopEventsPost";
+import PageHeaderOrSlider from "../../extra/PageHeaderOrSlider";
 import {API} from "../../extra/API";
 
 const Home = (props) => {
@@ -71,7 +72,8 @@ const Home = (props) => {
             {!data && <Loader/>}
             {!!data &&
                 <div className="homepage-container">
-                    <HomeSlider slider_status={data.field_should_override_slider} data={data.field_override_slides} height="700"/>
+                    {/* <HomeSlider slider_status={data.field_should_override_slider} data={data.field_override_slides} height="700"/> */}
+                    <PageHeaderOrSlider page={props.page} />
                     <ObjectInfo data={data} />
                     <AboutInfo data={data} />
                     {!!temporary_data && !!permanent_data && (

@@ -13,10 +13,15 @@
 	.thumbnail {
 
 		text-align: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 50%;
+
 		p {
 			font-weight: 500;
 			font-size: 1em;
 			color: $main-color;
 		}
+		
 	}
 }
