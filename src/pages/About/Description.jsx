@@ -10,6 +10,7 @@ import PeoriodicsInfo from "../../components/description/PeoriodicsInfo";
 import MetallurgyInfo from "../../components/description/MetallurgyInfo";
 import MainHeaderSection from "../../components/header/MainHeaderSection";
 import Breadcrumbs from "../../components/general/Breadcrumbs";
+import PageHeaderOrSlider from "../../extra/PageHeaderOrSlider";
 
 const Description = (props) => {
     const data = props.page.acf;
@@ -23,7 +24,8 @@ const Description = (props) => {
                     <Breadcrumbs breadcrumbs={breadcrumb}/>
                 </MainHeaderSection>
                 <div className="description-container">
-                    <HomeSlider slider_status={data.field_should_override_slider} data={data.field_override_slides} height="500" extend_class="margin-bottom-500"/>
+                    {/* <HomeSlider slider_status={data.field_should_override_slider} data={data.field_override_slides} height="500" extend_class="margin-bottom-500"/> */}
+                    <PageHeaderOrSlider page={props.page} show_title={false}/>
                     <HarvestInfo data={data} />
                     <ResearchInfo data={data} />
                     <MonumentsInfo data={data} />

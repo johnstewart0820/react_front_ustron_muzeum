@@ -16,9 +16,8 @@ const getSlides = (page, defaultContent) => {
 
 const PageHeaderOrSlider = props => {
     const slides = getSlides(props.page, React.useContext(SiteInfoContext).site_info.default_content);
-
     if (slides?.length)
-        return <PicturesSlider style={{minHeight: "calc( 740px - 90px)"}} slides={slides} title={props.page.title}/>;
+        return <PicturesSlider style={{minHeight: "calc( 740px - 90px)"}} slides={slides} title={props.page.title} show_title={props.show_title}/>;
 
     return (
         <PageHeaderSection>

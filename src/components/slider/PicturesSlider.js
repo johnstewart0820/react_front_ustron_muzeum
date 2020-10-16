@@ -6,7 +6,7 @@ import Angle from "../../svg/components/Angle";
 import { StopIcon, PlayIcon } from "../../svg/icons";
 import {Link} from "react-router-dom";
 
-const SlideContent = ({ field_slide_title, field_slide_content, field_slide_button_title, field_slide_button_link }) => (
+const SlideContent = ({ field_slide_title, field_slide_content, field_slide_button_title, field_slide_button_link, show_title = true }) => (
 	<>
 		<div className="pictures-slider__slide_content container">
 
@@ -17,15 +17,19 @@ const SlideContent = ({ field_slide_title, field_slide_content, field_slide_butt
 					<span> { top_link_label } </span>
 				</a>
 			}*/}
-			<div className="hero-title">{field_slide_title}</div>
-			<div className="hero-copy">
-				<div className="hero-copy-line __big">{field_slide_title}</div>
-				<div className="hero-copy-line">{field_slide_content}</div>
-			</div>
-			{field_slide_button_title &&
-			<Link to={!field_slide_button_link ? '/' : field_slide_button_link} className="hero-copy-cta">
-				{field_slide_button_title}
-			</Link>}
+			{show_title === false ? null :
+			<>
+				<div className="hero-title">{field_slide_title}</div>
+				<div className="hero-copy">
+					<div className="hero-copy-line __big">{field_slide_title}</div>
+					<div className="hero-copy-line">{field_slide_content}</div>
+				</div>
+				{field_slide_button_title &&
+				<Link to={!field_slide_button_link ? '/' : field_slide_button_link} className="hero-copy-cta">
+					{field_slide_button_title}
+				</Link>}
+			</>
+			}
 			{/* {field_slide_title && <div className="pictures-slider__slide_title">{field_slide_title}</div>}
 			{field_slide_content && <div className="pictures-slider__slide_desc">{field_slide_content}</div>}
 			{field_slide_button_title && <a className="button-link green" href={field_slide_button_link}>{field_slide_button_title}</a>} */}
@@ -110,7 +114,7 @@ export default class PicturesSlider extends Component{
 
 	render(){
 
-		const { slides } = this.props;
+		const { slides, show_title } = this.props;
 		const { active_slide, auto_playing } = this.state;
 
 		return(
@@ -130,7 +134,7 @@ export default class PicturesSlider extends Component{
 							className={`pictures-slider__slide thumbnail ${ active_slide === index ? "active" : ""}`}
 							style={{ backgroundImage: `url(${ item.url })`}}
 						>
-							<SlideContent {...item} />
+							<SlideContent {...item } show_title={show_title} />
 						</a>
 					)
 					: (
@@ -139,7 +143,7 @@ export default class PicturesSlider extends Component{
 							className={`pictures-slider__slide thumbnail ${ active_slide === index ? "active" : ""}`}
 							style={{ backgroundImage: `url("${ item.field_slide_image }")`}}
 						>
-							<SlideContent {...item} />
+							<SlideContent {...item} show_title={show_title} />
 						</div>
 					)
 
