@@ -190,6 +190,7 @@ body.contrast{
 	.main-footer,
 	.working-hours,
 	.hours-column,
+	.section,
 	.section-switcher button,
 	.days-column,
 	.price-list-detail,
@@ -345,6 +346,21 @@ body.contrast{
 	.event-dates {
 		span {
 			color: $contrast;
+		}
+	}
+	.carousel-education {
+		.heading {
+			color: $contrast !important;
+		}
+	}
+	.carousel-exhibition {
+		.heading {
+			color: $contrast !important;
+		}
+	}
+	.carousel-events {
+		.heading {
+			color: $contrast !important;
 		}
 	}
 }

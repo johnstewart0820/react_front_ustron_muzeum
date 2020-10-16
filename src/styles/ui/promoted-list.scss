@@ -251,7 +251,58 @@
     padding-bottom: 80% !important;
 }
 
+.carousel-education {
+    .heading {
+        color: white !important;
+    }
+}
+.carousel-exhibition {
+    .heading {
+        color: white !important;
+    }
+}
+.loop-event-post__title_education.heading {
+    color: $gold !important;
+}
+
+.carousel-exhibition {
+    .section-switcher {
+        button {
+            color: white !important;
+            border-bottom: 1px solid white;
+            &:after {
+                background-color: white !important;
+            }
+        }
+        button.active {
+            color: $gold !important;
+        }
+    }
+}
+.btn-transparent {
+    background-color: transparent !important;
+    color: $gold !important;
+    border: 1px solid $gold !important;
+    &:hover {
+        background-color: $gold !important;
+        color: white !important;
+        border: 1px solid $gold !important;
+    }
+}
+.carousel-events {
+    .heading {
+        color: $main-color !important;
+    }
+}
+@media (max-width: 1200px) {
+    .see-more {
+        display: none !important;
+    }
+}
 @media (max-width: 1000px) {
+    .loop-event-post__title.heading {
+        font-size: 1em !important;
+    }
     .main-menu__title {
         padding: 15px 15px !important;
     }
@@ -267,6 +318,12 @@
     }
     .homepage-container > .carousel {
         padding-left: 0px !important;
+    }
+    .homepage-container > .carousel-education {
+        padding-left: 40px !important;
+    }
+    .homepage-container > .carousel-exhibition {
+        padding-left: 40px !important;
     }
     .description-container > .carousel {
         padding-left: 0px !important;
@@ -356,6 +413,7 @@
         padding: 20px 25px !important;
         font-size: 0.8em !important;
     }
+    
     span {
         line-height: 1.5em !important;
         font-size: 0.7em !important;

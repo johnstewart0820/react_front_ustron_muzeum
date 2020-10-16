@@ -1,10 +1,12 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect, Component } from 'react';
 import PropTypes from 'prop-types';
 import moment from "moment";
 import LinkToAll from "../buttons/LinkToAll";
 import Arrows from '../buttons/Arrows';
 import SectionHeading from "../general/SectionHeading";
 import HeadingDate from "../buttons/HeadingDate";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClock, faSortUp } from "@fortawesome/free-solid-svg-icons";
 
 export default class Carousel extends Component{
 
@@ -23,8 +25,11 @@ export default class Carousel extends Component{
 	min_slides = 2;
 
 	state = {
+		current: "temporary",
 		loading: true,
-		items: this.props.items,
+		items: this.props.temporary_data,
+		temporary_data: this.props.temporary_data,
+		permanent_data: this.props.permanent_data,
 		posts_length: 0,
 		wrap_left: 0,
 		transition: true,
@@ -33,10 +38,11 @@ export default class Carousel extends Component{
 
 
 	componentDidUpdate ( prev_props ) {
-		if ( prev_props.items !== this.props.items ) {
+		if ( prev_props.temporary_data !== this.props.temporary_data ) {
 			this.setState({
+				current: "temporary",
 				loading: true,
-				items: this.props.items,
+				items: this.props.temporary_data,
 				posts_length: 0,
 				wrap_left: 0,
 				transition: true,
@@ -135,9 +141,12 @@ export default class Carousel extends Component{
 
 	render(){
 
-		const { heading, sub_heading, selectedDate, extra_classes, ItemComponent, path_to_all, link_to_all, bodyStyles , containerStyles, arrow_show=true} = this.props;
+		const { heading, sub_heading, extra_classes, ItemComponent, path_to_all, link_to_all, bodyStyles , containerStyles, arrow_show=true} = this.props;
 		const { items, wrap_left, transition } = this.state;
-
+		const setCurrentSection = (section) => {
+			this.setState({current: section});
+			this.setState({items: section === "temporary" ? this.props.temporary_data : this.props.permanent_data});
+		};
 		if( !items || !items.length || !ItemComponent ) return null;
 
 		const wrap_styles = {
@@ -148,9 +157,43 @@ export default class Carousel extends Component{
 		return (
 			<div style={ containerStyles } className="section mt-5 pt-5 row">
 				<div className={`carousel__head container ${extra_classes}`}>
-					{sub_heading ? <small>{sub_heading}</small> : null}
-					<SectionHeading heading={ heading }/>
-					<LinkToAll path={ path_to_all } href={ link_to_all }  />
+					<div className="row">
+						<div className="col-md-4 col-12">
+							{sub_heading ? <small>{sub_heading}</small> : null}
+							<SectionHeading heading={ heading }/>
+							<LinkToAll path={ path_to_all } href={ link_to_all }  />
+						</div>
+						<div className="col-md-4 col-12">
+							<div className="section-switcher in-col">
+								<button
+								type="button"
+								className={this.state.current === "temporary" ? "active" : ""}
+								onClick={() => setCurrentSection("temporary")}
+								>
+									Czasowa
+									{this.state.current === "temporary" && (
+										<FontAwesomeIcon icon={faSortUp} size="2x" />
+									)}
+								</button>
+								<button
+								type="button"
+								className={this.state.current === "permanent" ? "active" : ""}
+								onClick={() => setCurrentSection("permanent")}
+								>
+									Stałe
+									{this.state.current === "permanent" && (
+										<FontAwesomeIcon icon={faSortUp} size="2x" />
+									)}
+								</button>
+							</div>
+						</div>
+						<div className="col-md-4 col-12 d-flex align-items-center justify-content-center see-more">
+						<a className="btn btn-transparent" >
+							ZOBACZ WSZYSTKIE
+						</a>
+						</div>
+					</div>
+					
 				</div>
 				<div className={`carousel ${ extra_classes || "" } section container `} style={ containerStyles }>
 
