@@ -1,6 +1,6 @@
 
 .loop-news-post{
-	width: 370px;
+	width: 350px;
 	margin-right: 14px;
 	border-bottom: 1px solid transparent;
 	text-decoration: none;
@@ -25,14 +25,14 @@
 
 .loop-news-post__category{
 	letter-spacing: 0;
-	font-size: 1.5em;
-	font-family: $lora;
+	font-size: 1.3em;
+	font-family: $open-sans;
 	margin-bottom: 12px;
 	color: $gold;
 }
 
 .loop-news-post__content{
-	padding: 26px 0px;
+	padding: 14px 0px 26px 0px;
 	color: $gray;
 }
 
@@ -44,9 +44,9 @@
 .loop-news-post__title{
 	letter-spacing: 0;
 	margin-bottom: 12px;
-	font-size: 1.5em;
+	font-size: 1.4em;
 	font-family: $lora;
-	font-weight: 600;
+	font-weight: 700;
 	text-transform: capitalize;
 }
 

@@ -8,17 +8,17 @@ const AboutInfo = (props) => {
   const locale = Locale.getLocale();
   const data = props.data;
   return (
-    <section className="container section about-info mt-5 mb-5 pt-5 pb-5">
-      <div className="row">
-        <div className="col-12 col-md-7"><img src={DefaultImage} alt="" className="img-full featured-image" /></div>
-        <div className="col-12 col-md-5 mb-5">
+    <section className="section about-info mt-5 mb-5 pt-5 pb-5">
+      <div className="row d-flex justify-content-between">
+        <div className="col-12 col-md-5"><img src={DefaultImage} alt="" className="img-full featured-image" /></div>
+        <div className="col-12 col-md-6 mb-5">
           <small>{data.field_about_title}</small>
           <h3>{data.field_about_subtitle}</h3>
           <div className="row mt-5">
             {
               data && data.field_about_icons && data.field_about_icons.map((item, index) => (
                 <div className="col-12 col-md-6" key={index}>
-                  <Link key={index} to={`${item.field_about_url.split(museum_url)[1]}`} className="about-more-item">
+                  <Link key={index} to={`${item.field_about_url.split(museum_url)[1]}`} className="about-more-item open-sans">
                     <img src={item.field_about_icon} alt="xx" />
                     <span>{item.field_about_description}</span>
                   </Link>

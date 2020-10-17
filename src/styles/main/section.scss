@@ -1,12 +1,14 @@
 .section {
-  h3 {
+  h3,h4{
     font-size: 2.94em;
     font-family: $lora;
     text-transform: uppercase;
     font-weight: 700;
-    margin-bottom: 16px;
+    margin-bottom: 50px;
     color: $main-color;
+    margin-top: 15px ;
   }
+  
   .news-single-img {
     width: 100%;
   }
@@ -14,12 +16,11 @@
   small {
     text-transform: capitalize;
     color: $gold;
-    font-size: 1.313em;
+    font-size: 1.2em;
     display: block;
     position: relative;
-    margin-bottom: 16px;
-    font-weight: 600;
-    font-family: $lora;
+    font-weight: 700;
+    font-family: $open-sans;
 
     &:before {
       width: 3em;

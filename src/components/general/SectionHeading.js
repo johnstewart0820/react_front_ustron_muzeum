@@ -8,7 +8,7 @@ const SectionHeading = ({ heading, extra_classes, headingLink, headingLinkText }
 	? (
 		<div className={`section-heading ${ extra_classes || "" }`}>
 			{/* <TileMark /> */}
-			<div className="heading"> { heading } </div>
+			<h3> { heading } </h3>
 
 			{headingLink && headingLinkText && (
 				<LinkToAll href={headingLink} label={headingLinkText} />

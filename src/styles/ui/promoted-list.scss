@@ -1,7 +1,10 @@
 .section {
     .chronicle-desc {
         color: $main-color;
-    }breadcrumbs
+        line-height: 2;
+        font-family: $open-sans;
+        font-weight: 500;
+    }
     &.bg-primary {
         background-color: $main-color;
         color: #fff;
@@ -35,16 +38,13 @@
     .section-switcher {
         &.in-col {
             display: flex;
-
-            button {
-                flex: 1;
-            }
         }
 
         button {
             color: $main-color;
             padding: 15px 30px;
-            font-weight: 700;
+            font-weight: 500;
+            letter-spacing: 0.5px;
             font-size: 1.31em;
             //width: 50%;
             background: transparent;
@@ -290,7 +290,7 @@
     }
 }
 .carousel-events {
-    .heading {
+    h3 {
         color: $main-color !important;
     }
 }

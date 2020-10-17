@@ -43,7 +43,7 @@
 .education-arrow {
 	button {
 		&:first-child {
-			background-color: rgba(100, 100,100, 0.08);
+			background-color: gray;
 			&:hover{
 				background: $gray;
 				svg{

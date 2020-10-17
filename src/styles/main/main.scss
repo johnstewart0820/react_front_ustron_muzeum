@@ -9,7 +9,8 @@
   min-width: 260px;
   text-align: center;
   transition: all 200ms linear;
-
+  font-family: $open-sans;
+  letter-spacing: 0.5px;
   &-primary {
     background-color: $main-color;
     color: #fff;
@@ -128,6 +129,7 @@ section {
     font-family: $roboto !important;
     color: #707070 !important;
     font-weight: 400 !important;
+    margin-top: 15px;
   }
   input,
   textarea {

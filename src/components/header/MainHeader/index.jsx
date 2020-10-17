@@ -56,7 +56,6 @@ const MainHeader = () => {
                 <a
                     href="//#endregion"
                     className="helper helper-bip"
-                    style={{width: 20}}
                 >
                     <BipIcon className="link bip"/>
                 </a>

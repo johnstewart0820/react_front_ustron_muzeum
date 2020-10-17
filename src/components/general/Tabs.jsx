@@ -27,7 +27,7 @@ const Tabs = (props) => {
             </h3>
           </div>
           <div className="col-12 col-md-8">
-            <div className="section-switcher in-col">
+            <div className="section-switcher in-col col-md-8">
               {tabs &&
                 tabs.map((tab) => (
                   <button

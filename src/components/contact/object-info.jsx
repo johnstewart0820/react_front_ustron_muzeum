@@ -33,7 +33,7 @@ const ObjectInfo = (props) => {
   return (
     <section className="container section object-info">
       <div className="row">
-        <div className="col-12 col-lg-5 mb-5">
+        <div className="col-12 col-md-5 mb-5">
           {current === "hours" ? (
             <>
               <small>{ data && data.field_contact_hours_title && data.field_contact_hours_title }</small>
@@ -47,28 +47,30 @@ const ObjectInfo = (props) => {
             </>
           )}
         </div>
-        <div className="col-lg-7">
-          <div className="section-switcher">
-            <button
-              type="button"
-              className={current === "hours" ? "active" : ""}
-              onClick={() => setCurrentSection("hours")}
-            >
-              { <I18n t="opening_hours"/> }
-              {current === "hours" && (
-                <FontAwesomeIcon icon={faSortUp} size="2x" />
-              )}
-            </button>
-            <button
-              type="button"
-              className={current === "prices" ? "active" : ""}
-              onClick={() => setCurrentSection("prices")}
-            >
-              { <I18n t="price_list"/> }
-              {current === "prices" && (
-                <FontAwesomeIcon icon={faSortUp} size="2x" />
-              )}
-            </button>
+        <div className="col-md-7">
+          <div className="col-md-8">
+            <div className="section-switcher">
+              <button
+                type="button"
+                className={current === "hours" ? "active" : ""}
+                onClick={() => setCurrentSection("hours")}
+              >
+                { <I18n t="opening_hours"/> }
+                {current === "hours" && (
+                  <FontAwesomeIcon icon={faSortUp} size="2x" />
+                )}
+              </button>
+              <button
+                type="button"
+                className={current === "prices" ? "active" : ""}
+                onClick={() => setCurrentSection("prices")}
+              >
+                { <I18n t="price_list"/> }
+                {current === "prices" && (
+                  <FontAwesomeIcon icon={faSortUp} size="2x" />
+                )}
+              </button>
+            </div>
           </div>
           {current === "hours" ? (
             <div className="working-hours mt-4">

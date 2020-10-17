@@ -58,22 +58,22 @@
 }
 
 .loop-event-post__title_education{
-	font-family: $lora;
+	font-family: $open-sans;
 	font-weight: 400;
 	font-size: 1.2em;
 	letter-spacing: 0;
 	text-transform: capitalize;
 	color: $gold;
-	padding-bottom: 12px;
+	padding-bottom: 20px;
 }
 .loop-event-post__label_education{
 	font-family: $lora;
 	font-weight: 500;
-	font-size: 1.3em;
+	font-size: 1.5em;
 	letter-spacing: 0;
 	text-transform: capitalize;
 	color: white;
-	padding-bottom: 12px;
+	padding-bottom: 20px;
 }
 
 @media (max-width: 430px){

@@ -24,12 +24,14 @@
   display: inline-flex;
   color: $gold;
   font-family: $lora;
+
   .date_heading_month_year_date {
     padding-top: 0.2em;
+    font-size: 1.2em;
   }
   .date_heading_date {
-    font-size: 2.5em;
     margin-right: 20px;
+    font-size: 2.9em;
   }
   .date_heading_month_year {
     display: inline-flex;

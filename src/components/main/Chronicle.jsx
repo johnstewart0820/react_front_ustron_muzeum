@@ -8,7 +8,7 @@ const TabContentFormatter = (props) => {
     <>
       <div className="col-12 col-md-4 d-flex justify-content-center mb-4">{data.image}</div>
       <div className="col-12 col-md-8">
-        <p className="mb-4 chronicle-desc" dangerouslySetInnerHTML={{__html: data && data.text}}/>
+        <div className="mb-4 chronicle-desc" dangerouslySetInnerHTML={{__html: data && data.text}}/>
         <a href={data.moreLink} className="btn btn-primary">
           {data.button_title}
         </a>
@@ -24,10 +24,8 @@ const Chronicle = (props) => {
     {
       id: 0,
       image: (
-        <img
-          src={data.field_chronicle_ustron_photo}
-          alt=""
-          className="img-fluid"
+        <div
+          style={{backgroundImage:`url("${data.field_chronicle_ustron_photo}")`, width: "100%", height: "350px", backgroundRepeat: "no-repeat"}}
         />
       ),
       text: data.field_chronicle_ustron_description,
@@ -37,10 +35,8 @@ const Chronicle = (props) => {
     {
       id: 1,
       image: (
-        <img
-          src={data.field_chronicle_museum_photo}
-          alt=""
-          className="img-fluid"
+        <div
+          style={{backgroundImage:`url("${data.field_chronicle_museum_photo}")`, width: "100%", height: "350px", backgroundRepeat: "no-repeat"}}
         />
       ),
       text: data.field_chronicle_museum_description,
@@ -54,7 +50,7 @@ const Chronicle = (props) => {
       <Tabs
         source="events"
         subtitle={data.field_hours_title}
-        title="Events"
+        title="KRONIKA"
         linkToMore="test2"
         tabs={[
           {

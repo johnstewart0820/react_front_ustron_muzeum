@@ -1,10 +1,6 @@
 .about-info {
   position: inherit;
 
-  .featured-image {
-    margin-left: -100px;
-  }
-
   img {
     height: 60px;
   }
@@ -32,7 +28,6 @@
 
 @media (max-width: 800px) {
     .featured-image {
-        margin-left: 0px !important;
         padding-bottom: 20px !important;
     }
 }

@@ -47,30 +47,32 @@ const ObjectInfo = (props) => {
           )}
         </div>
         <div className="col-12 col-md-7">
-          <div className="section-switcher in-col">
-            <button
-              type="button"
-              className={current === "hours" ? "active" : ""}
-              onClick={() => setCurrentSection("hours")}
-            >
-              { <I18n t="opening_hours"/> }
-              {current === "hours" && (
-                <FontAwesomeIcon icon={faSortUp} size="2x" />
-              )}
-            </button>
-            <button
-              type="button"
-              className={current === "prices" ? "active" : ""}
-              onClick={() => setCurrentSection("prices")}
-            >
-              { <I18n t="price_list"/> }
-              {current === "prices" && (
-                <FontAwesomeIcon icon={faSortUp} size="2x" />
-              )}
-            </button>
+          <div className="col-12 col-md-8">
+            <div className="section-switcher in-col">
+              <button
+                type="button"
+                className={current === "hours" ? "active" : ""}
+                onClick={() => setCurrentSection("hours")}
+              >
+                { <I18n t="opening_hours"/> }
+                {current === "hours" && (
+                  <FontAwesomeIcon icon={faSortUp} size="2x" />
+                )}
+              </button>
+              <button
+                type="button"
+                className={current === "prices" ? "active" : ""}
+                onClick={() => setCurrentSection("prices")}
+              >
+                { <I18n t="price_list"/> }
+                {current === "prices" && (
+                  <FontAwesomeIcon icon={faSortUp} size="2x" />
+                )}
+              </button>
+            </div>
           </div>
           {current === "hours" ? (
-            <div className="working-hours mt-4">
+            <div className="working-hours open-sans mt-4">
               <div className="days-column">
                 <FontAwesomeIcon icon={faClock} size="2x" />
                 <div className="day">{ <I18n t="monday"/> }</div>

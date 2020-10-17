@@ -187,7 +187,7 @@ export default class Carousel extends Component{
 								</button>
 							</div>
 						</div>
-						<div className="col-md-4 col-12 d-flex align-items-center justify-content-center see-more">
+						<div className="col-md-4 col-12 text-right see-more">
 						<a className="btn btn-transparent" >
 							ZOBACZ WSZYSTKIE
 						</a>

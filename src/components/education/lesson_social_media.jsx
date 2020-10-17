@@ -7,7 +7,7 @@ const LessonSocialMedia = (props) => {
   return (
     <section className="container section mb-5 mt-5 pb-5">
       <div className="row">
-        <div className="col-12 mb-5">
+        <div className="col-12">
           <small>
               <I18n t="museum_title"/>
             </small>

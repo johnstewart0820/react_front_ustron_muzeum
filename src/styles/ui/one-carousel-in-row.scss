@@ -7,6 +7,16 @@
 		margin-left: 15px;
 		max-width: calc( 1920px - 140px );
 	}
+	.section-heading{
+		h3 {
+			font-size: 2.94em;
+			font-family: $lora;
+			text-transform: uppercase;
+			font-weight: 700;
+			color: $main-color;
+			margin-top: 15px;
+		}
+	}
 }
 
 @media (min-width: 1670px) {

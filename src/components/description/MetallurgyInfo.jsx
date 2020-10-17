@@ -14,7 +14,7 @@ const MetallurgyInfo = (props) => {
           </h3>
         </div>
       </div>
-      <div className="row">
+      <div className="row pl-5">
           <div className="col-md-6 metallurgy-link">
             <div className="metallurgy-description mb-5">
               <div dangerouslySetInnerHTML={{__html: data.field_metallurgy_description}}></div>

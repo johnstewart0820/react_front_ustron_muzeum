@@ -19,13 +19,13 @@ const SlideContent = ({ field_slide_title, field_slide_content, field_slide_butt
 			}*/}
 			{show_title === false ? null :
 			<>
-				<div className="hero-title">{field_slide_title}</div>
+				<div className="hero-title open-sans">{field_slide_title}</div>
 				<div className="hero-copy">
 					<div className="hero-copy-line __big">{field_slide_title}</div>
 					<div className="hero-copy-line">{field_slide_content}</div>
 				</div>
 				{field_slide_button_title &&
-				<Link to={!field_slide_button_link ? '/' : field_slide_button_link} className="hero-copy-cta">
+				<Link to={!field_slide_button_link ? '/' : field_slide_button_link} className="hero-copy-cta open-sans weight-600">
 					{field_slide_button_title}
 				</Link>}
 			</>

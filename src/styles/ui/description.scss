@@ -27,18 +27,9 @@
     color: $main-color;
     padding-left: 40px;
     padding-right: 40px;
-    text-align: justify;
-    font-family: $lora;
+    font-family: $open-sans;
     line-height: 2;
-    font-weight: 600;
-    h4,h3 {
-      // font-size: 2.94em;
-      font-weight: 700;
-      margin-bottom: 50px;
-      margin-left: -40px;
-      font-family: $lora;
-      color: $main-color;
-    }
+    font-weight: 500;
   }
   .research-harvest-more {
     padding-top: 3em;
@@ -55,17 +46,17 @@
     }
 
     .monument-title {
-      font-family: $lora;
+      font-family: $open-sans;
       color: $gold;
-      font-size: 1.3em;
+      font-size: 1.2em;
       margin: 1.5em 0px;
     }
 
     .monument-decription {
       font-family: $lora;
       color: white;
-      font-size: 1.5em;
-      font-weight: 500;
+      font-size: 1.2em;
+      font-weight: 600;
     }
 
     .monument_link {
@@ -97,13 +88,12 @@
   }
   .handicraft-info {
     .handicraft-description {
-      text-align: justify;
       color: $main-color;
       padding-left: 40px;
       padding-right: 40px;
-      font-family: $lora;
+      font-family: $open-sans;
       line-height: 2;
-      font-weight: 600;
+      font-weight: 500;
     }
     .btn-link {
       margin-left: 40px;
@@ -111,7 +101,7 @@
     .img-handicraft {
       height: 150px !important;
       width: auto !important;
-      margin-bottom: 20px;
+      margin-bottom: 40px;
     }
     .handicraft-img-cover {
       text-align: center;
@@ -140,9 +130,8 @@
     }
 
     .peoriodics-decription {
-      font-family: $lora;
-      font-size: 1em;
-      font-weight: 600;
+      font-family: $open-sans;
+      font-weight: 500;
       color: $main-color;
       line-height: 2;
     }
@@ -155,15 +144,11 @@
   }
   .metallurgy-info {
     .metallurgy-description {
-      text-align: justify;
       color: $main-color;
 
-      font-family: $lora;
+      font-family: $open-sans;
       line-height: 2;
-      font-weight: 600;
-    }
-    .btn-link {
-      margin-left: 40px;
+      font-weight: 500;
     }
     .img-metallurgy {
       height: 150px;

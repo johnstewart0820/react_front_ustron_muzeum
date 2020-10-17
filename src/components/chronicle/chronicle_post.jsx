@@ -12,12 +12,14 @@ const ChroniclePost = (props) => {
                 <div className="col-12">
                 {chronicle && chronicle.title  && <h3>{chronicle.title}</h3>}
                 </div>
+                <div className="col-12">
                 <div className="row">
                 <div className="col-12 col-md-4">
                     {chronicle && chronicle.title && <img src={chronicle.image} alt="" className="img-fluid" />}
                 </div>
                 <div className="col-12 col-md-8 chronicle-post">
                     <div dangerouslySetInnerHTML={{__html: chronicle && chronicle.body}}></div>
+                </div>
                 </div>
                 </div>
             </div>
