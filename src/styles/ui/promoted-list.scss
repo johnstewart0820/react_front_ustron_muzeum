@@ -477,6 +477,13 @@
     }
 }
 @media (max-width: 500px) {
+    .helper {
+        font-size: 50% !important;
+        padding: 0px 18px !important;
+        &-text-size {
+            font-size: 30% !important;
+        }
+    }
     .carousel {
         padding-left: 40px !important;
     }

@@ -8,8 +8,8 @@
 
     position: absolute;
     z-index: 999;
-    left: calc(-100vw + 144px);
-    top: 70px;
+    left: calc(-100vw + 72px);
+    top: 144px;
     min-height: 813px;
     width: 100vw;
 
@@ -98,7 +98,6 @@ $main-menu-colors:
 
 @media (max-width: 1023px){
     .main-menu{
-        height: calc(100vh - 72px);
 
         .search-form{
             display: block;

@@ -365,4 +365,15 @@ body.contrast{
 			color: $contrast !important;
 		}
 	}
+	.page-helper-bottom {
+		background-color: #000 !important;
+	}
+	@media (max-width: 1570px) {
+		.language-switcher > ul  {
+			
+			li {
+				height: 70px !important;
+			}
+		}
+	}
 }

@@ -3,6 +3,7 @@ import { withRouter } from "react-router-dom";
 import MainMenu from "./MainMenu";
 import { ListIcon } from "../../../svg/icons";
 
+
 class Sidebar extends Component {
     
     static propTypes = { }

@@ -30,13 +30,13 @@
     }
 }
 
-@media (min-width: 1515px){
+@media (min-width: 1570px){
     .sidebar{
         display: none;
     }
 }
 
-@media (max-width: 1515px){
+@media (max-width: 1570px){
     .main-menu__title {
         border-color: transparent;
         padding: 25px 20px;
@@ -44,6 +44,21 @@
         strong{
             display: inline-block;
         }
+    }
+    .sidebar {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+    .language-switcher {
+        position: absolute;
+        right: 73px;
+        top: 72px;
+    }
+    .main-search {
+        position: absolute;
+        right: 0px;
+        top: 72px;
     }
 
     .main-menu__items{
@@ -60,7 +75,7 @@
         padding: 30px 0 0 0;
 
         overflow: auto;
-        max-height: calc( 100vh - 30px);
+        max-height: 100vh;
         min-height: auto;
     }
 
