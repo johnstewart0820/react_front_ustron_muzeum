@@ -11,7 +11,7 @@
     .logo {
         span {
             font-weight: 700;
-            font-size: 1.69em !important;
+            font-size: 1.69em;
             line-height: 1 !important;
             font-family: $lora;
             color: $main-color;
@@ -331,9 +331,12 @@
         justify-content: center;
         padding-top: 5px;
         padding-bottom: 5px;
+        border-bottom: 1px solid $main-color;
     }
     .logo {
-        margin-top: 40px;
+        span {
+            font-size: 1.4em !important;
+        }
     }
 }
 

@@ -25,14 +25,14 @@
     .main-menu__column {
         padding-left: 20px;
         strong {
-            color: #85cb3f;
+            color: white;
         }
         a {
-            color: #85cb3f;
+            color: white;
         }
         .main-menu__items {
             a {
-                color: white;
+                color: #85cb3f;
                 text-decoration: none;
             }
         }
@@ -64,7 +64,7 @@ $main-menu-colors:
     @each $class_name, $color in $main-menu-colors{
         &.#{$class_name}{
             .main-menu__title{
-                color: $color;
+                color: white;
             }
 
             .main-menu__items a:hover{

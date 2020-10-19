@@ -11,7 +11,7 @@ const PostSingleHead = (props) => {
                     <h3 className="padding-title mt-5">{data.title}</h3>
                 </div>
                 <div className="col-md-8">
-                <p>{data.short}</p>
+                <div className="main-home-desc">{data.short}</div>
                 </div>
             </div>
         </section>

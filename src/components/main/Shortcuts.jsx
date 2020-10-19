@@ -17,7 +17,7 @@ const Shortcuts = (props) => {
         <div className="row">
           {data.field_cut &&
             data.field_cut.map((link, index) => (
-              <div key={index} className="col-12 col-md-3 mb-5">
+              <div key={index} className="col-6 col-md-3 mb-5">
                 <a href={link.field_shortcuts_link}><img src={link.field_shortcuts_image} href={link.field_shortcuts_link} alt="" width="75%" className="shortcuts_img"/></a>
               </div>
             ))}

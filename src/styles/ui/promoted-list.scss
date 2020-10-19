@@ -1,7 +1,7 @@
 .section {
     .chronicle-desc {
         color: $main-color;
-        line-height: 2;
+        line-height: 1.5;
         font-family: $open-sans;
         font-weight: 500;
     }
@@ -289,9 +289,19 @@
         border: 1px solid $gold !important;
     }
 }
+
 .carousel-events {
     h3 {
         color: $main-color !important;
+    }
+}
+.section .section-switcher button {
+    flex: 1;
+}
+.archive-image-desc {
+    p {
+        line-height: 1 !important;
+        font-size: 0.7em !important;
     }
 }
 @media (max-width: 1200px) {
@@ -300,6 +310,10 @@
     }
 }
 @media (max-width: 1000px) {
+    
+    h3, h4 {
+        line-height: 1 !important;
+    }
     .loop-event-post__title.heading {
         font-size: 1em !important;
     }
@@ -329,9 +343,9 @@
         padding-left: 0px !important;
     }
     .main-menu__items {
-        line-height: 2 !important;
+        line-height: 1.5 !important;
         a {
-            font-size: 0.7em !important;
+            font-size: 0.9em !important;
         }
     }
     .event-dates-education {
@@ -374,13 +388,13 @@
     }
 
     .monument-title {
-        font-size: 1.2em !important;
+        font-size: 1em !important;
         line-height: 1 !important;
     }
     .monument-decription {
         font-size: 1.3em !important;
         line-height: 1 !important;
-        margin-bottom: 20px !important;
+        margin-bottom: 30px !important;
     }
     div {
         line-height: 1.5 !important;
@@ -392,36 +406,38 @@
     }
     .working-hours {
         .day {
-            line-height: 1.5em !important;
-            font-size: 0.7em !important;
+            line-height: 1.5 !important;
+            font-size: 1.1em !important;
         }
     }
     small {
         font-size: 1em !important;
+        padding-left: 6em;
+        &:before {
+            left: 2em !important;
+            top: 0.5em !important;
+        }
     }
-    h3 {
+    h3, h4 {
         font-size: 2.4em !important;
     }
     button {
         font-size: 1.1em !important;
     }
     p {
-        line-height: 1.5em !important;
-        font-size: 0.7em !important;
-    }
-    .btn, .btn-primary{
-        padding: 20px 25px !important;
-        font-size: 0.8em !important;
+        line-height: 1.5 !important;
+        // font-size: 0.7em !important;
     }
     
     span {
-        line-height: 1.5em !important;
-        font-size: 0.7em !important;
+        line-height: 1.5 !important;
     }
     .price-list-detail,
     .object-info-description {
-        line-height: 1.5em !important;
-        font-size: 0.7em !important;
+        h3 {
+            margin-left: 0px !important;
+        }
+        line-height: 1.5 !important;
     }
     .hero-copy {
 
@@ -453,9 +469,22 @@
         line-height: 1 !important;
         padding-bottom: 5px !important;
     }
+    .days-column {
+        padding: 50px 10px 40px 10px !important;
+    }
+    .hours-column {
+        padding: 50px 10px 40px 10px !important; 
+    }
 }
-
+@media (min-width: 750px) {
+    .research-img-container-top {
+        display: none !important;
+    }
+}
 @media (max-width: 750px) {
+    .monuments-info {
+        padding: 3em 0em !important;
+    }
     .metallurgy-img-cover {
         padding-top: 20px !important;
     }
@@ -470,13 +499,99 @@
         width: 100% !important;
     }
     .social-medias {
-        height: 480px !important;
         span {
-            font-size: 1.2em !important;
+            font-size: 0.5em !important;
         }
+    }
+    .research-img-container-top {
+        display: flex !important;
+    }
+    .research-img-container {
+        display: none !important;
+    }
+}
+@media (min-width: 500px) {
+    .btn-show-transparent {
+        display: none !important;
+    }
+    .monument_link_top {
+        display: none !important;
     }
 }
 @media (max-width: 500px) {
+    .main-menu__title {
+        font-size: 0.9em !important;
+    }
+    .expanded-gallery__arrow {
+        width: 30px !important;
+    }
+    .gallery-item {
+        width: 300px !important;
+    }
+    .close-button {
+        right: 5px !important;
+    }
+    .metallurgy-link {
+        a {
+            width: 100% !important;
+        }
+    }
+    .peoriodics-more {
+        a {
+            width: 100% !important;
+        }
+    }
+    .description-container .peoriodics-info {
+        padding-bottom: 3em !important;
+        padding-top: 3em !important;
+    }
+    .description-container .handicraft-info .img-handicraft {
+        margin-bottom: 20px !important;
+    }
+    .monument-link {
+        width: 100% !important;
+    }
+    .monument_link_top {
+        display: block !important;
+    }
+    .monument_link {
+        display: none !important;
+    }
+    .research-harvest-more {
+        padding-left: 0px !important;
+        a {
+            width: 100% !important;
+        }
+    }
+    .handicraft-link {
+        a {
+            width: 100% !important;
+        }
+    }
+    .description-harvest-more {
+        display: none !important;
+    }
+    .event-dates-education__time {
+        min-width: 50px !important;
+    }
+    .about-more-item {
+        span {
+            font-size: 0.8em !important;
+        }
+    }
+    .btn-show-transparent {
+        display: flex !important;
+    }
+    .btn-about-link {
+        display: none !important;
+    }
+    .days-column {
+        padding: 50px 10px 40px 10px !important;
+    }
+    .hours-column {
+        padding: 50px 10px 40px 10px !important; 
+    }
+
     .helper {
         font-size: 50% !important;
         padding: 0px 18px !important;
@@ -485,7 +600,7 @@
         }
     }
     .carousel {
-        padding-left: 40px !important;
+        padding-left: 10px !important;
     }
     .loop-event-post__title_education.heading {
         font-size: 1.2em !important;
@@ -503,38 +618,19 @@
         font-size: 0.8em !important;
 
     }
-    .metallurgy-img-container {
-        div {
-            font-size: 0.8em !important;
-        }
-    }
-    div {
-        line-height: 1 !important;
-    }
     small {
         font-size: 0.7em !important;
     }
     h3 {
-        font-size: 1.6em !important;
+        font-size: 1.5em !important;
     }
     button {
-        font-size: 0.7em !important;
-    }
-    .btn, .btn-primary {
-        padding: 15px 20px !important;
-        font-size: 0.6em !important;
-    }
-    p {
-        font-size: 0.6em !important;
+        font-size: 1.1em !important;
     }
     .working-hours  {
         .day {
-            font-size: 0.6em !important;
+            font-size: 1.1em !important;
         }
-    }
-    .price-list-detail,
-    .object-info-description {
-        font-size: 0.6em !important;
     }
     .hero-copy-cta {
         width: 250px !important;
@@ -543,7 +639,7 @@
         &-line {
             font-size: 1em !important;
             &.__big {
-                font-size: 2.5em !important;
+                font-size: 2em !important;
                 line-height: 1 !important;
             }
         }
@@ -557,15 +653,14 @@
         line-height: 1 !important;
     }
     .heading {
-        font-size: 2em !important;
+        font-size: 1em !important;
     }
     .download-description {
         font-size: 1em !important;
     }
     .social-medias {
-        height: 380px !important;
         span {
-            font-size: 1.2em !important;
+            font-size: 0.6em !important;
         }
     }
     .month-button-container {
@@ -574,4 +669,7 @@
     .day-button-container {
         padding-left: 0px !important;
     }
+    .object-info {
+        padding: 100px 0 40px 0;
+    }      
 }

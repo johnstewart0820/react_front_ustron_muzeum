@@ -11,9 +11,9 @@
   .object-info-description {
     font-family: $open-sans;
     color: $main-color;
-    padding-left: 40px;
+    padding-left: 30px;
     padding-right: 30px;
-    line-height: 2;
+    line-height: 1.5;
     font-weight: 500;
     h4,h3 {
       margin-left: -40px;
@@ -21,7 +21,7 @@
   }
   .price-list-detail {
     color: #fff;
-    line-height: 2;
+    line-height: 1.5;
     font-family: $open-sans;
     background-color: $main-color;
     padding: 50px 40px 40px 54px;

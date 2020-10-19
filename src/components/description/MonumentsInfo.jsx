@@ -7,6 +7,20 @@ const MonumentsInfo = (props) => {
     <div className="monuments-info mb-5">
       <section className="section container">
         <div className="row">
+            <div className="col-md-6 col-12 monument_link_top">
+              <small>O muzeum</small>
+              <h3>
+                <div className="monuments-main-title mb-5">
+                  {data.field_monument_title}
+                </div>
+              </h3>
+              
+              <div className="monument-harvest-more mb-4">
+                <Link to={!data.field_monument_button_link ? "#" : data.field_monument_button_link} className="monument-link btn-primary">
+                  {data.field_monument_button_title}
+                </Link>
+              </div>
+            </div>
             <div className="col-md-6 col-12 monuments-img-container">
                 <div className="row">
                   {

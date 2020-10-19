@@ -222,6 +222,11 @@ export default class Carousel extends Component{
 
 					</div>
 			  </div>
+				<div className="col-12 btn-show-transparent d-flex justify-content-center mb-4">
+					<a className="btn btn-transparent d-flex justify-content-center" >
+						ZOBACZ WSZYSTKIE
+					</a>
+				</div>
 			</div>
 		)
 	}

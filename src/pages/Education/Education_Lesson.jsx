@@ -36,7 +36,7 @@ const EducationLesson = (props) => {
                 {data === null && <Loader/>}
                 {!!data?.contents && (
                     <EventCarouselEducation
-                        containerStyles={{paddingLeft: '90px', backgroundColor: '#324655'}}
+                        containerStyles={{ backgroundColor: '#324655'}}
                         bodyStyles={{display: 'flex'}}
                         items={data.contents}
                         ItemComponent={LoopEventsPostEducation}

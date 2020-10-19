@@ -17,7 +17,7 @@ const AboutInfo = (props) => {
           <div className="row mt-5">
             {
               data && data.field_about_icons && data.field_about_icons.map((item, index) => (
-                <div className="col-12 col-md-6" key={index}>
+                <div className="col-6 col-md-6" key={index}>
                   <Link key={index} to={`${item.field_about_url.split(museum_url)[1]}`} className="about-more-item open-sans">
                     <img src={item.field_about_icon} alt="xx" />
                     <span>{item.field_about_description}</span>
@@ -26,7 +26,7 @@ const AboutInfo = (props) => {
               ))
             }
           </div>
-          <Link to={!data.field_about_button_link ? "#" : `${data.field_about_button_link.split(museum_url)[1]}`} className="btn btn-primary">
+          <Link to={!data.field_about_button_link ? "#" : `${data.field_about_button_link.split(museum_url)[1]}`} className="btn btn-primary btn-about-link">
             {data.field_about_button_title}
           </Link>
         </div>

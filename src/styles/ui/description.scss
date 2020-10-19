@@ -10,7 +10,6 @@
     color: $main-color;
     margin-bottom: 60px;
     display: block;
-    padding-right: 5em;
 
     span {
       display: block;
@@ -28,7 +27,7 @@
     padding-left: 40px;
     padding-right: 40px;
     font-family: $open-sans;
-    line-height: 2;
+    line-height: 1.5;
     font-weight: 500;
   }
   .research-harvest-more {
@@ -40,7 +39,7 @@
   }
   .monuments-info {
     background-color: $main-color;
-    padding: 10em 3em;
+    padding: 10em 0em;
     .monuments-img-container {
       display: inline-flex;
     }
@@ -92,7 +91,7 @@
       padding-left: 40px;
       padding-right: 40px;
       font-family: $open-sans;
-      line-height: 2;
+      line-height: 1.5;
       font-weight: 500;
     }
     .btn-link {
@@ -133,7 +132,7 @@
       font-family: $open-sans;
       font-weight: 500;
       color: $main-color;
-      line-height: 2;
+      line-height: 1.5;
     }
 
     .peoriodics_link {
@@ -147,7 +146,7 @@
       color: $main-color;
 
       font-family: $open-sans;
-      line-height: 2;
+      line-height: 1.5;
       font-weight: 500;
     }
     .img-metallurgy {

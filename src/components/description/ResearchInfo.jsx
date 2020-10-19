@@ -11,6 +11,9 @@ const ResearchInfo = (props) => {
             <h3>
               {data.field_research_title}
             </h3>
+            <div className="research-img-container-top mt-4">
+              <img src={data.field_research_photo.length > 0 ? data.field_research_photo : DefaultImage} className="img-full"/>
+            </div>
             <div className="mt-5 research-info-description">
               {data.field_research_description}
             </div>

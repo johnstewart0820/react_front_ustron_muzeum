@@ -19,7 +19,7 @@ const HarvestInfo = (props) => {
               <div className="row mt-5">
                 {
                   data && data.field_crops && data.field_crops.map((item, index) => (
-                    <div className="col-12 col-md-4">
+                    <div className="col-6 col-md-4">
                       <a key={index} href={item.field_crops_link} className="description-more-item">
                         <img src={item.field_crops_icon} alt="xx" />
                         <span>{item.field_crops_description}</span>

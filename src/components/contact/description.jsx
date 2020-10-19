@@ -25,7 +25,7 @@ const Description = (props) => {
                 </div>
                 <div className="contact-details mt-5">
                     <div className="row">
-                    <div className="col-1 pr-0">
+                    <div>
                         <FontAwesomeIcon icon={faPhone} />
                     </div>
                     <div className="col contact-phone">
@@ -38,7 +38,7 @@ const Description = (props) => {
                     </div>
                     </div>
                     <div className="row mt-3">
-                    <div className="col-1 pr-0">
+                    <div>
                         <FontAwesomeIcon icon={faEnvelope} />
                     </div>
                     <div className="col">
