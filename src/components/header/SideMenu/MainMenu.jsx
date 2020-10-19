@@ -3,7 +3,7 @@ import { SiteInfoContextConsumer } from "../../../constants/SiteInfoContext";
 import { useHistory, Link } from "react-router-dom";
 import BipIcon from '../../../svg/components/Bip';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faEye, faFont, faLink, faMinus, faPlus} from "@fortawesome/free-solid-svg-icons";
+import {faEye, faFont, faLink, faMinus, faPlus, faAngleDown} from "@fortawesome/free-solid-svg-icons";
 import {toggleContrastVersion, toggleUnderlineLinks} from "../../../extra/theme"
 
 const changeFontSize = e => {
@@ -47,8 +47,9 @@ const MainMenu = (props) => {
                             <div key={ index } className={ column_classes.join(" ") } >
                                 <Link to={ item.path } className="main-menu__title" rel={'noopener noreferrer'}>
                                     
-                                    { subitems && !!subitems.length && <strong onClick={ e => toggleMobileMenu( e, index ) }> &#62; </strong> }
                                     { (!subitems || !subitems.length) ? <span className="sidebar-nochildren-span" onClick={(e)=> (history.push(item.path),props.onNavigate(e))}> { item.label } </span> : <span onClick={ e => toggleMobileMenu( e, index )}> { item.label } </span> }
+                                    { subitems && !!subitems.length &&
+                                     <FontAwesomeIcon onClick={ e => toggleMobileMenu( e, index ) } icon={faAngleDown} size="1x"/> }
                                     
                                 </Link>
                                 
