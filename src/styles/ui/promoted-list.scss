@@ -42,7 +42,7 @@
 
         button {
             color: $main-color;
-            padding: 15px 30px;
+            padding: 15px 20px;
             font-weight: 500;
             letter-spacing: 0.5px;
             font-size: 1.31em;
@@ -311,6 +311,9 @@
 .education-container {
     padding: 20px 40px;
 }
+#q {
+    width: 0px;
+}
 @media (max-width: 1200px) {
     .see-more {
         display: none !important;
@@ -483,6 +486,14 @@
         padding: 50px 10px 40px 10px !important; 
     }
 }
+@media (max-width: 768px) {
+    .calendar-imprez-container {
+        text-align: left !important;
+    }
+    .calendar-imprez {
+        padding-left: 0px !important;
+    }
+}
 @media (min-width: 750px) {
     .research-img-container-top {
         display: none !important;
@@ -521,6 +532,10 @@
     }
 }
 @media (max-width: 500px) {
+    .language-switcher {
+        right: 56px;
+        top: 56px;
+    }
     .education-container {
         padding: 10px 10px;
     }

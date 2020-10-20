@@ -11,6 +11,7 @@
   transition: all 200ms linear;
   font-family: $open-sans;
   letter-spacing: 0.5px;
+  cursor: pointer;
   &-primary {
     background-color: $main-color;
     color: #fff;

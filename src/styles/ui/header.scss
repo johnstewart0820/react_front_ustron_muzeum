@@ -370,3 +370,21 @@
     }
 }
 
+@media (max-width: 500px) {
+    .main-header {
+        height: 112px !important;
+    }
+    .main-search {
+        &-trigger {
+            line-height: 72px !important;
+        }
+
+    }
+    .main-menu {
+        top: 112px !important;
+        left: calc(-100vw + 56px) !important;
+    }
+    .main-header-container {
+        margin-top: 20px !important;
+    }
+}

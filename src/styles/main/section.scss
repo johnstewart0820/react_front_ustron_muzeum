@@ -1,4 +1,9 @@
 .section {
+  .calendar-imprez {
+    color: $gold !important;
+    text-transform: lowercase !important;
+    font-size: 1.5em !important;
+  }
   h3,h4{
     font-size: 2.94em;
     font-family: $lora;
@@ -78,7 +83,7 @@
       background-color: $gold;
       color: #fff;
     }
-
+    
     .container {
       position: relative;
       z-index: 10;
