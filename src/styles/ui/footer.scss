@@ -1,13 +1,14 @@
 .main-footer {
+    font-family: $open-sans;
     background-color: rgba(#324655, 0.08);
-    padding: 70px 0;
+    padding: 70px 0px;
     .footer-links {
-        padding-left: 50px;
+        padding-left: 40px;
         flex: 2;
     }
     .footer-address {
-        padding-left: 10px;
         padding-right: 20px;
+        padding-left: 40px;
         margin-bottom: 20px;
         flex: 1;
     }
@@ -16,6 +17,7 @@
         flex: 3;
     }
     .text-logo {
+        padding: 20px 0px;
         font-size: 2.06em;
         font-family: $lora;
         color: $main-color;
@@ -85,20 +87,16 @@
 
 @media (max-width: 1300px) {
     .main-footer {
-        .contact-details {
-            font-size: 0.7em !important;
-        }
-        nav > ul > li > a {
-            font-size: 0.7em !important;
-        }
         .text-logo {
             font-size: 1.8em !important;
         }
         .days-column {
             padding: 40px 30px 30px 40px !important;
         }
-        .day {
-            font-size: 0.8em !important;
+        .working-hours {
+            .day {
+                font-size: 0.8em !important;
+            }
         }
         .hours-column {
             padding: 40px 0px 30px 0px !important;
@@ -109,12 +107,6 @@
 
 @media (max-width: 1100px) {
     .main-footer {
-        .contact-details {
-            font-size: 0.6em !important;
-        }
-        nav > ul > li > a {
-            font-size: 0.6em !important;
-        }
         .text-logo {
             font-size: 1.4em !important;
         }
@@ -127,8 +119,9 @@
         .hours-column {
             padding: 40px 0px 30px 0px !important;
         }
-    }
-    .footer-links {
-        display: none !important;
+        .footer-links {
+            flex: none;
+            width: 100%;
+        }
     }
 }

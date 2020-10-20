@@ -7,7 +7,7 @@ const Footer = (props) => {
     <SiteInfoContextConsumer>
       { ({ footer_address, footer_hours, footer_links  }) => (
         <footer className="main-footer">
-            <div className="row align-items-end d-flex justify-content-around">
+            <div className="row align-items-end d-flex justify-content-around flex-wrap">
               <div className="footer-address" dangerouslySetInnerHTML={{__html: footer_address}}>
               </div>
               <div className="footer-hours" dangerouslySetInnerHTML={{__html: footer_hours}}>
