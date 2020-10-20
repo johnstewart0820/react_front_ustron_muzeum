@@ -7,7 +7,6 @@ const PostSingleHead = (props) => {
         <section className="container section">
             <div className="row mb-5 post-home-section">
                 <div className="col-md-4">
-                    <small>Turystyka industrialna</small>
                     <h3 className="padding-title mt-5">{data.title}</h3>
                 </div>
                 <div className="col-md-8">
@@ -15,8 +14,12 @@ const PostSingleHead = (props) => {
                 </div>
             </div>
         </section>
-        
-        <img src={data.original_image.length > 0 ? data.original_image : DefaultImage} className="posts-single-img" width="100%"/>
+        {(
+            data.original_image.length > 0 ?
+            <img src={ data.original_image } className="posts-single-img" width="100%"/>
+            :
+            null
+        )}
         <section className="container section mt-4 pt-4">
             <div className="row">
                 <div className="col-md-4">
