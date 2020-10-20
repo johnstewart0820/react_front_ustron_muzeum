@@ -304,6 +304,13 @@
         font-size: 0.7em !important;
     }
 }
+.education-desc {
+    font-size: 0.8em !important;
+    line-height: 0.9 !important;
+}
+.education-container {
+    padding: 20px 40px;
+}
 @media (max-width: 1200px) {
     .see-more {
         display: none !important;
@@ -498,11 +505,6 @@
     .expanded-gallery__items {
         width: 100% !important;
     }
-    .social-medias {
-        span {
-            font-size: 0.5em !important;
-        }
-    }
     .research-img-container-top {
         display: flex !important;
     }
@@ -519,6 +521,9 @@
     }
 }
 @media (max-width: 500px) {
+    .education-container {
+        padding: 10px 10px;
+    }
     .main-menu__title {
         font-size: 0.9em !important;
     }
@@ -657,11 +662,6 @@
     }
     .download-description {
         font-size: 1em !important;
-    }
-    .social-medias {
-        span {
-            font-size: 0.6em !important;
-        }
     }
     .month-button-container {
         padding-left: 0px !important;

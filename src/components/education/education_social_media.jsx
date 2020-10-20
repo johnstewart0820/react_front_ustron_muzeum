@@ -5,7 +5,7 @@ const EducationSocialMedia = (props) => {
   const medias = props.data;
 
   return (
-    <section className="container section mb-5 mt-5 pb-5">
+    <section className="education-container section mb-5 mt-5 pb-5">
       <div className="row">
         <div className="col-12">
           <small>
@@ -20,7 +20,7 @@ const EducationSocialMedia = (props) => {
         </div>
       </div>
       <div className="row">
-        <div className="col-md-3 col-12">
+        <div className="col-md-3 col-6">
           <div className="social-medias">
             <div className="cover-social-media">
               <div className="social-media">
@@ -42,13 +42,13 @@ const EducationSocialMedia = (props) => {
             </div>
           </div>
         </div>
-        <div className="col-md-3 col-12">
+        <div className="col-md-3 col-6">
           <img src={medias.field_educational_videos_photo1} alt="" className="img-full" />            
         </div>
-        <div className="col-md-3 col-12">
+        <div className="col-md-3 col-6">
           <img src={medias.field_educational_videos_photo2} alt="" className="img-full" />
         </div>
-        <div className="col-md-3 col-12">
+        <div className="col-md-3 col-6">
           <img src={medias.field_educational_videos_photo3} alt="" className="img-full" />
         </div>
       </div>
