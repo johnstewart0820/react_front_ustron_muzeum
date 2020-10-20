@@ -3,7 +3,7 @@
 
 .main-menu{
     @include flex-wrap;
-    background: linear-gradient(to right, #324655, #556D80);
+    background: $main-color;
     padding: 34px;
 
     position: absolute;
@@ -20,6 +20,11 @@
         color: $gold;
         text-decoration: none;
         display: block;
+        font-family: $open-sans;
+    }
+
+    span {
+        font-family: $open-sans;
     }
 
     .main-menu__column {

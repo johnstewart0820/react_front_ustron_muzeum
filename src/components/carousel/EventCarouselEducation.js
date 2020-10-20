@@ -148,9 +148,18 @@ export default class Carousel extends Component{
 		return (
 			<div style={ containerStyles } className="section mt-5 pt-5 row">
 				<div className={`carousel__head container ${extra_classes}`}>
-					{sub_heading ? <small>{sub_heading}</small> : null}
-					<SectionHeading heading={ heading }/>
-					<LinkToAll path={ path_to_all } href={ link_to_all }  />
+					<div className="row">
+						<div className="col-md-6 col-12">
+							{sub_heading ? <small>{sub_heading}</small> : null}
+							<SectionHeading heading={ heading }/>
+							<LinkToAll path={ path_to_all } href={ link_to_all }  />
+						</div>
+						<div className="col-md-6 col-12 text-right calendar-imprez-container">
+							<a className="btn calendar-imprez" >
+								kalendarz imprez
+							</a>
+						</div>
+					</div>
 				</div>
 				<div className={`carousel ${ extra_classes || "" } section container `} style={ containerStyles }>
 
