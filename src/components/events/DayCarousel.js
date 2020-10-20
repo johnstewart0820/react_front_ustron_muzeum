@@ -49,9 +49,9 @@ export const DayCarousel = props => {
                 <div className="day-button-wrap">
                     <div className={`carousel`}>
                         <div className="carousel__body">
-                            <Arrows onClick={onArrowClick}/>
+                            <Arrows onClick={onArrowClick} extra_classes="day-arrow"/>
                             <div className="carousel__overflow">
-                                <div className="carousel__wrap">
+                                <div className="carousel__day_wrap">
                                     {carouselDates.map((item, index) => <DayButton key={index} {...item} />)}
                                 </div>
                             </div>

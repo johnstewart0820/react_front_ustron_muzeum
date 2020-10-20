@@ -314,6 +314,14 @@
 #q {
     width: 0px;
 }
+.education {
+    .calendar-imprez-container {
+        display: none;
+    }
+}
+.social-media-item {
+    margin-bottom: 20px;
+}
 @media (max-width: 1200px) {
     .see-more {
         display: none !important;
@@ -469,15 +477,18 @@
         font-size: 1.5em !important;
         line-height: 1 !important;
     }
-    .heading {
-        font-size: 2.5em !important;
-    }
     .download-description {
         font-size: 1em !important;
     }
+    .social-medias {
+        padding: 10px !important;
+    }
     .social-media {
         line-height: 1 !important;
-        padding-bottom: 5px !important;
+        padding-bottom: 10px !important;
+        span {
+            font-size: 0.8em !important;
+        }
     }
     .days-column {
         padding: 50px 10px 40px 10px !important;

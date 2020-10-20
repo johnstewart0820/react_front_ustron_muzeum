@@ -125,3 +125,9 @@
         }
     }
 }
+@media (max-width: 700px) {
+    .footer-hours {
+        flex: none !important;
+        width: 100%;
+    }
+}

@@ -20,7 +20,7 @@ const EducationSocialMedia = (props) => {
         </div>
       </div>
       <div className="row">
-        <div className="col-md-3 col-6">
+        <div className="col-lg-3 col-md-6 col-6 social-media-item">
           <div className="social-medias">
             <div className="cover-social-media">
               <div className="social-media">
@@ -42,13 +42,13 @@ const EducationSocialMedia = (props) => {
             </div>
           </div>
         </div>
-        <div className="col-md-3 col-6">
+        <div className="col-lg-3 col-md-6 col-6 social-media-item">
           <img src={medias.field_educational_videos_photo1} alt="" className="img-full" />            
         </div>
-        <div className="col-md-3 col-6">
+        <div className="col-lg-3 col-md-6 col-6 social-media-item">
           <img src={medias.field_educational_videos_photo2} alt="" className="img-full" />
         </div>
-        <div className="col-md-3 col-6">
+        <div className="col-lg-3 col-md-6 col-6 social-media-item">
           <img src={medias.field_educational_videos_photo3} alt="" className="img-full" />
         </div>
       </div>

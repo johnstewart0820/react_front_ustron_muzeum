@@ -3,7 +3,8 @@
   padding-left: 90px;
   .day-button-carousel {
     display: flex;
-    overflow: hidden;
+    overflow: scroll;
+    overflow-y: hidden;
     .day-button-wrap {
       display: flex;
       .carousel {

@@ -40,6 +40,7 @@ const EducationLesson = (props) => {
                         bodyStyles={{display: 'flex'}}
                         items={data.contents}
                         ItemComponent={LoopEventsPostEducation}
+                        extra_classes="education"
                     />
                 )}
                 <LessonSocialMedia data={props.page.acf}></LessonSocialMedia>
