@@ -126,9 +126,8 @@ body.contrast{
 	  }
 
 	.language-switcher > ul  {
-		&:last-child{
-			border: 1px solid $contrast;
-		}
+
+		border: 1px solid $contrast !important;
 		li {
 			background-color: #000 !important;
 			color: #fff;
@@ -381,6 +380,7 @@ body.contrast{
 			
 			li {
 				height: 54px !important;
+				width: 54px !important;
 			}
 		}
 	}
