@@ -372,6 +372,14 @@ body.contrast{
 		.language-switcher > ul  {
 			
 			li {
+				height: 70px !important;
+			}
+		}
+	}
+	@media (max-width: 500px) {
+		.language-switcher > ul  {
+			
+			li {
 				height: 54px !important;
 			}
 		}
