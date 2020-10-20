@@ -141,7 +141,7 @@ export default class PicturesSlider extends Component{
 						<div
 							key={ index }
 							className={`pictures-slider__slide thumbnail ${ active_slide === index ? "active" : ""}`}
-							style={{ backgroundImage: `url("${ item.field_slide_image }")`}}
+							style={{ backgroundImage: `url("${ item.field_slide_image_thumb }")`}}
 						>
 							<SlideContent {...item} show_title={show_title} />
 						</div>
