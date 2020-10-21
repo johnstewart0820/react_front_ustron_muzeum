@@ -23,10 +23,11 @@ const MetallurgyInfo = (props) => {
               {data.field_metallurgy_button_title}
             </Link>
           </div>
-          <div className="col-md-6 metallurgy-img-container row">
+          <div className="col-md-6 metallurgy-img-container ">
+            <div className="row">
             {
               data.field_metallurgy_elements.map((item, key) => (
-                <div className="col-md-4 metallurgy-img-cover d-flex justify-content-center">
+                <div className="col-lg-4 col-md-12 metallurgy-img-cover d-flex justify-content-center">
                   <div className="fix-content">
                     <div className=" img-metallurgy" >
                       {item.field_metallurgy_elements_number}
@@ -38,6 +39,7 @@ const MetallurgyInfo = (props) => {
                 </div>
               ))
             }
+            </div>
           </div>
         </div>
     </section>

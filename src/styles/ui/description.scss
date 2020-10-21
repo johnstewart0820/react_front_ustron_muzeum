@@ -166,6 +166,7 @@
       text-align: center;
     }
     .metallurgy-decription {
+      text-align: center;
       font-family: $lora;
       font-size: 1.4em;
       font-weight: 700;
@@ -175,4 +176,17 @@
     }
   }
 }
-
+@media (min-width: 800px) {
+  .peoriodics-img-container-bottom {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  .peoriodics-img-container {
+    display: none !important;
+  }
+  .peoriodics-img-container-bottom {
+    display: block !important;
+    margin-bottom: 40px;
+  }
+}
