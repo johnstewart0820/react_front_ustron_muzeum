@@ -155,7 +155,7 @@ export default class Carousel extends Component{
 							<LinkToAll path={ path_to_all } href={ link_to_all }  />
 						</div>
 						<div className="col-md-6 col-12 text-right calendar-imprez-container">
-							<a className="btn calendar-imprez" >
+							<a className="calendar-imprez" >
 								kalendarz imprez
 							</a>
 						</div>
