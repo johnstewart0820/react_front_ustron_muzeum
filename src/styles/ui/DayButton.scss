@@ -51,18 +51,18 @@
   }
 }
 
-.day_main:hover {
+.day_main:not(.sign-day):hover {
   border: 2px solid $gold;
 }
 
-.day_main:hover hr {
+.day_main:not(.sign-day):hover hr {
   border: 1px solid $gold;
 }
 
-.day_main:focus * {
+.day_main:not(.sign-day):focus * {
   color: $gold;
 }
 
-.day_main:focus hr {
+.day_main:not(.sign-day):focus hr {
   border: 1px solid $gold;
 }

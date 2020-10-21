@@ -1,10 +1,11 @@
 import React from "react";
 
-const DayButton = ({disabled, active, containerStyles, monthName, dayName, date, onClick}) => {
+const DayButton = ({disabled, active, containerStyles, monthName, dayName, date, sign, onClick}) => {
     const classes = disabled ? ' disabled' : active ? ' active' : '';
+    const style = sign === false ? ' sign-day' : '';
     return (
         <button
-            className={'day_main' + classes}
+            className={'day_main' + classes + style}
             onClick={onClick}
             style={containerStyles}
         >

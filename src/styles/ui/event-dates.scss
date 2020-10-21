@@ -5,7 +5,7 @@
 	border: 1px solid $gray;
 	padding: 13px 0;
 	max-width: 304px;	
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 }
 
 
@@ -13,7 +13,6 @@
 	font-weight: bold;
 	margin-left: auto;
 	padding: 0 10px;
-	min-width: 80px;
 	text-align: center;
 	color: $main-color;
 	
@@ -23,7 +22,9 @@
 	}
 }
 
-
+.sign-day {
+	opacity: 0.5;
+}
 .event-dates__date{
 	@include flex-a-center;
 	border-right: 1px solid $gray;

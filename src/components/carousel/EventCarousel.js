@@ -156,7 +156,7 @@ export default class Carousel extends Component{
 
 					<div className="carousel__body" style={ bodyStyles }>
 						{ items && items.length >= this.min_slides && 
-							<Arrows onClick={ this.moveItems } /> 
+							<Arrows onClick={ this.moveItems } extra_classes={'education-arrow'}/> 
 						}
 
 						{ items && items.length < this.min_slides &&	<div className="carousel__arrows-placeholder"/> }
