@@ -9,7 +9,6 @@ const LoopNewsPost = props => (
 		</div>
 
 		<div className="loop-news-post__content">
-			<div className="loop-news-post__category">{props.categories_labels.split(',')[props.categories_labels.split(',').length - 1]}</div>
 			<div className="loop-news-post__title heading">{props.title}</div>
 			<div className="loop-news-post__desc" dangerouslySetInnerHTML={{__html: props.short}} />
 		</div>
