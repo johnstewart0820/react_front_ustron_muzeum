@@ -101,7 +101,7 @@ const Event = (props) => {
             <MainHeaderSection extra_classes="subpage">
                 <Breadcrumbs breadcrumbs={breadcrumb}/>
             </MainHeaderSection>
-            <MonthCarousel startDate={selectedDate} handleNextMonth={handleNextMonth} handlePrevMonth={handlePrevMonth}/>
+            <MonthCarousel startDate={moment()} handleNextMonth={handleNextMonth} handlePrevMonth={handlePrevMonth}/>
             <DayCarousel
                 startDate={startDate}
                 selectedDate={selectedDate}
