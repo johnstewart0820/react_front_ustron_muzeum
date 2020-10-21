@@ -2,6 +2,11 @@
     font-family: $open-sans;
     background-color: rgba(#324655, 0.08);
     padding: 70px 0px;
+    .object-info-hour-desc {
+        font-size: 0.7em;
+        display: block;
+        margin-bottom: -5px;
+    }
     .footer-links {
         padding-left: 40px;
         flex: 2;
@@ -99,7 +104,7 @@
             }
         }
         .hours-column {
-            padding: 40px 0px 30px 0px !important;
+            padding: 40px 0px 15px 0px !important;
         }
     }
 
@@ -117,7 +122,7 @@
             font-size: 0.7em !important;
         }
         .hours-column {
-            padding: 40px 0px 30px 0px !important;
+            padding: 40px 0px 15px 0px !important;
         }
         .footer-links {
             flex: none;
