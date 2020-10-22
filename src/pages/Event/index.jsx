@@ -26,6 +26,7 @@ const Event = (props) => {
     const [data, setData] = React.useState(null);
     const [day_data, setDayData] = React.useState(null);
     const [filterArgs, setFilterArgs] = React.useState({});
+    const [signSelected, setSignSelected] = React.useState(false);
     React.useEffect(() => {
         // setStartDate(selectedDate);
         setData(null);
@@ -35,7 +36,7 @@ const Event = (props) => {
             date_to: dateOrDate(selectedDate, filterArgs.date_to),
         }).then(res => {
             setData(res.data);
-            
+            setSignSelected(true);
         }).catch(err => {
             console.error(err);
             setData(false);
@@ -46,23 +47,27 @@ const Event = (props) => {
         setData(null);
         API.getByConfig(acf.field_nearest_events_museum_categories, {
             ...filterArgs,
-            date: dateOrDate(selectedDate, filterArgs.date),
-            date_to: dateOrDate(selectedDate, filterArgs.date_to),
+            date: moment().format('DD.MM.YYYY'),
+            date_to: moment().format('DD.MM.YYYY'),
         }).then(res => {
+            console.log(res.data.contents);
             if (res.data.contents.length === 0)
             {
+                
                 API.getByConfig(acf.field_nearest_events_museum_categories, {
                     ...filterArgs,
-                    date: '01.01.2020',
-                    date_to: '31.12.2020'
+                    date: moment().format('DD.MM.YYYY'),
+                    date_to: moment().add(90, 'days').format('DD.MM.YYYY')
                 }).then(res => {
                     setData(res.data);               
+                    setSignSelected(false);
                 }).catch(err => {
                     console.error(err);
                     setData(false);
                 });
             } else {
                 setData(res.data);
+                setSignSelected(true);
                 setSelectedDate(moment());
             }
         }).catch(err => {
@@ -114,12 +119,13 @@ const Event = (props) => {
             {data === null && <Loader/>}
             {!!data?.contents && (
                 <EventCarousel
-                    heading={'WYBRANA DATA'}
+                    heading={signSelected ? 'WYBRANA DATA' : 'NAJBLIŻSZE WYDARZENIA'}
                     selectedDate={selectedDate}
                     containerStyles={{paddingLeft: '90px', backgroundColor: '#324655'}}
                     bodyStyles={{display: 'flex'}}
                     items={data.contents}
                     ItemComponent={LoopEventsPost}
+                    signSelected = {signSelected}
                 />
             )}
         </>

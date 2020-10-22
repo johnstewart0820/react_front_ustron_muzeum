@@ -135,9 +135,8 @@ export default class Carousel extends Component{
 
 	render(){
 
-		const { heading, selectedDate, extra_classes, ItemComponent, path_to_all, link_to_all, bodyStyles , containerStyles} = this.props;
+		const { heading, selectedDate, extra_classes, ItemComponent, path_to_all, link_to_all, bodyStyles , containerStyles, signSelected} = this.props;
 		const { items, wrap_left, transition } = this.state;
-
 		if( !items || !items.length || !ItemComponent ) return null;
 
 		const wrap_styles = {
@@ -151,7 +150,7 @@ export default class Carousel extends Component{
 					<div className="carousel__head">
 						<SectionHeading heading={ heading } />
 						<LinkToAll path={ path_to_all } href={ link_to_all }  />
-						<HeadingDate date= {selectedDate} />
+						{signSelected === true ? <HeadingDate date= {selectedDate} /> : null}
 					</div>
 
 					<div className="carousel__body" style={ bodyStyles }>
