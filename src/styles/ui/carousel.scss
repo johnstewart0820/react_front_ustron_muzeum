@@ -63,7 +63,9 @@
 	padding-left: 10px !important;
 }
 @media (max-width: 600px){
-	
+	.carousel__wrap {
+		line-height: 1 !important;
+	}
 	.carousel__arrows-placeholder{
 		display: none;
 	}
