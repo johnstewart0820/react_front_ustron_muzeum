@@ -26,11 +26,16 @@ const MainMenu = (props) => {
                         )}
                       </Link>
                       <ul>
-                        {subitems.map(({path, label}, index) => (
+                        {subitems.map(({path, label, inside}, index) => (
                           <li key={ index }>
-                            <Link activeclassname="active" to={path}>
-                              {label}
-                            </Link>
+                            {inside === true ? 
+                              <Link activeclassname="active" to={path}>
+                                {label}
+                              </Link>
+                              :
+                            <a href={path} target='_blank'>{label}</a>  
+                            }
+
                           </li>
                         ))}
                       </ul>

@@ -62,13 +62,13 @@ class SiteInfoContextProvider extends Component{
 			const header_menu = [];
 			for (let i in header_menu_structure) {
 				const main_item_data = header_menu_structure[i].item;
-				const main_item = {label: main_item_data.name, path: (main_item_data.article ? getArticleLink(main_item_data.article) : main_item_data.url) || "#" };
+				const main_item = {label: main_item_data.name, path: (main_item_data.article ? getArticleLink(main_item_data.article) : main_item_data.url) || "#", inside: (main_item_data.article ? true : false) };
 				const sub_item_list = [];
 				const sub_item_list_data = header_menu_structure[i].subitems;
 				
 				for (let j in sub_item_list_data) {
 					const sub_item_data = sub_item_list_data[j].item;
-					const sub_item = {label: sub_item_data.name, path: (sub_item_data.article ? getArticleLink(sub_item_data.article) : sub_item_data.url) || "#" };
+					const sub_item = {label: sub_item_data.name, path: (sub_item_data.article ? getArticleLink(sub_item_data.article) : sub_item_data.url) || "#", inside: (sub_item_data.article ? true : false) };
 					sub_item_list.push(sub_item);
 				}
 				header_menu.push({item: main_item, subitems: sub_item_list});

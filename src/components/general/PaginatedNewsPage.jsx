@@ -25,7 +25,7 @@ const PaginatedNewsPage = props => {
             console.error(err);
             setData(false);
         });
-    }, [props.config, filters]);
+    }, [props.page.breadcrumb, filters]);
 
     const onPageChange = page => {
         setFilters({...filters, page});
