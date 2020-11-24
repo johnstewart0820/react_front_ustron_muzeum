@@ -67,6 +67,11 @@
         line-height: 40px;
     }
 
+    .main-menu__items_sub{
+        display: none;
+        padding: 0 0 0 30px;
+        line-height: 40px;
+    }
     .main-menu{
         display: flex;
         flex-direction: column;
@@ -86,6 +91,11 @@
 
     .main-menu__column.mobile-open{
         .main-menu__items{
+            display: block;
+        }
+    }
+    .main-menu__column_sub.mobile-open-sub{
+        .main-menu__items_sub{
             display: block;
         }
     }

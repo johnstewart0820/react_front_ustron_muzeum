@@ -1,7 +1,34 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import DefaultImage from '../../img/loop/1.jpg';
+import Onegallery from '../gallery/OneGallery';
 const PostSingleHead = (props) => {
     const data = props.data;
+    const [image_url, setImageURL] = useState('');
+    const [isDialogOpen, setDialogOpen] = useState(false);
+    const handleClick = (e) => {
+        setImageURL(e.target.src);
+        setDialogOpen(true);
+    }
+    const closeHandler = () => {
+        setDialogOpen(false);
+    }
+    useEffect(() => {
+        const main_home_desc_part = document.getElementsByClassName('image-post');
+        console.log(main_home_desc_part);
+        for (let i  = 0; i < main_home_desc_part.length; i ++) {
+            main_home_desc_part[i].addEventListener("click", handleClick);
+            if (main_home_desc_part[i].alt != '') {
+                main_home_desc_part[i].outerHTML = 
+                '<div class="image-outer-post">' 
+                + main_home_desc_part[i].outerHTML 
+                + '<div class="image-post-desc">' 
+                + main_home_desc_part[i].alt
+                + '</div>'
+                + '</div>';
+            }
+        }
+    }, [data.body]);
+    
     return (
     <div className="post-container mb-5">
         <section className="container section">
@@ -24,11 +51,16 @@ const PostSingleHead = (props) => {
             <div className="row">
                 <div className="col-md-4">
                 </div>
-                <div className="col-md-8">
+                <div className="col-md-8 post-body-desc">
                     <div className="main-home-desc" dangerouslySetInnerHTML={{__html: data.body}}/>
                 </div>
             </div>
         </section>
+        {isDialogOpen ?
+            <Onegallery item={{thumb: image_url}} closeHandler={closeHandler}/> 
+            :
+            <></>
+        }
     </div>
     );
 }

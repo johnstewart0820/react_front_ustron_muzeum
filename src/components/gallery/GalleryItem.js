@@ -5,10 +5,10 @@ const GalleryItem = ({ name, index, title, onClick, description, thumb }) => (
 	name ?
 	( 
 		<div className="gallery-item">
-			<div
+			<img
 				onClick={ () => onClick( index ) }
 				className="thumbnail mb-4"  
-				style={{ backgroundImage: `url(${ thumb })` }} 
+				src={ thumb } 
 			/>
 		</div>
 	)

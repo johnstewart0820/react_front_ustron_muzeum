@@ -65,11 +65,17 @@ class SiteInfoContextProvider extends Component{
 				const main_item = {label: main_item_data.name, path: (main_item_data.article ? getArticleLink(main_item_data.article) : main_item_data.url) || "#", inside: (main_item_data.article ? true : false) };
 				const sub_item_list = [];
 				const sub_item_list_data = header_menu_structure[i].subitems;
-				
 				for (let j in sub_item_list_data) {
 					const sub_item_data = sub_item_list_data[j].item;
 					const sub_item = {label: sub_item_data.name, path: (sub_item_data.article ? getArticleLink(sub_item_data.article) : sub_item_data.url) || "#", inside: (sub_item_data.article ? true : false) };
-					sub_item_list.push(sub_item);
+					const sub_sub_item_list_data = sub_item_list_data[j].subitems;
+					const sub_sub_item_list = [];
+					for (let k in sub_sub_item_list_data) {
+						const sub_sub_item_data = sub_sub_item_list_data[k].item;
+						const sub_sub_item = {label: sub_sub_item_data.name, path: (sub_sub_item_data.article ? getArticleLink(sub_sub_item_data.article) : sub_sub_item_data.url) || "#", inside: (sub_sub_item_data.article ? true : false)};
+						sub_sub_item_list.push(sub_sub_item);
+					}
+					sub_item_list.push({item: sub_item, subitems: sub_sub_item_list});
 				}
 				header_menu.push({item: main_item, subitems: sub_item_list});
 			}

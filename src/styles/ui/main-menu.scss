@@ -40,6 +40,11 @@
                 text-decoration: none;
             }
         }
+        .main-menu__items_sub {
+            a {
+                text-decoration: none;
+            }
+        }
     }
 
     .header-actions{
@@ -92,6 +97,12 @@ $main-menu-colors:
 }
 
 .main-menu__items{
+    padding-top: 45px;
+    padding-left: 45px;
+    line-height: 10px;
+}
+
+.main-menu__items_sub{
     padding-top: 45px;
     padding-left: 45px;
     line-height: 10px;

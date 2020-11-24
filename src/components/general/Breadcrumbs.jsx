@@ -21,7 +21,7 @@ const getBreadCrumbs = (breadcrumbs) => {
 			else
 				return {label: item.name, to: item.url.split(museum_url)[1]};
 		}
-
+		return {label: item.name, href: item.url};
 	})
 	return result;
 }

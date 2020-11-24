@@ -13,3 +13,24 @@
     align-items: flex-end;
   }
 }
+
+.main-home-desc {
+  .image-post {
+    border: 2px solid silver;
+    padding: 6px;
+    cursor: pointer;
+  }
+  .image-outer-post {
+    padding: 9px;
+    background-color: #eee;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: auto;
+  }
+  .image-post-desc {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}
