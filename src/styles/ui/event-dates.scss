@@ -46,7 +46,30 @@
 	}
 }
 
+.post-event-dates__date{
+	@include flex-a-center;
+	padding: 0 15px;
+	flex: auto;
+
+	strong{
+		font-size: 1em;
+		color: $main-color;
+	}
+
+	span{
+		margin-left: 7px;	
+		letter-spacing: 2.3px;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 0.8em;
+		color: $main-color;
+	}
+}
 .event-dates__date + .event-dates__date{
+	border-top: 1px solid $gray;
+}
+
+.post-event-dates__date + .post-event-dates__date{
 	border-top: 1px solid $gray;
 }
 
@@ -54,6 +77,9 @@
 	flex: auto;
 
 	.event-dates__date{
+		padding: 8px 15px;
+	}
+	.post-event-dates__date{
 		padding: 8px 15px;
 	}
 }

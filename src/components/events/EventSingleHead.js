@@ -1,5 +1,5 @@
 import React from 'react';
-import EventDates from "./EventDates";
+import PostEventDates from "./PostEventDates";
 import DefaultImage from "../../img/loop/1.jpg";
 const fromTimeStampToDateObj = timestamp => ( new Date( timestamp * 1000 ));
 
@@ -21,7 +21,7 @@ const EventSingleHead = (props) => {
                     <p className="news-single-categories-title">
                         {props.title}
                     </p>
-                    <EventDates {...event_dates}/>
+                    <PostEventDates {...event_dates}/>
                     <div className="news-single-body" dangerouslySetInnerHTML={{__html: props.body}}></div>
                 </div>
             </div>

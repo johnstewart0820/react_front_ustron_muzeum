@@ -16,7 +16,7 @@ const PostSingleHead = (props) => {
         const main_home_desc_part = document.getElementsByClassName('image-post');
         console.log(main_home_desc_part);
         for (let i  = 0; i < main_home_desc_part.length; i ++) {
-            main_home_desc_part[i].addEventListener("click", handleClick);
+            
             if (main_home_desc_part[i].alt != '') {
                 main_home_desc_part[i].outerHTML = 
                 '<div class="image-outer-post">' 
@@ -26,6 +26,7 @@ const PostSingleHead = (props) => {
                 + '</div>'
                 + '</div>';
             }
+            main_home_desc_part[i].addEventListener("click", handleClick);
         }
     }, [data.body]);
     

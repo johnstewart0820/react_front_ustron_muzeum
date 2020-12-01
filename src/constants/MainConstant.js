@@ -1,3 +1,3 @@
 export default {
-    site_title: "Muzeum Ustroński"
+    site_title: "Muzeum Ustrońskie"
 };
