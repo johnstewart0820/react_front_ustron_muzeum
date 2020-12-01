@@ -109,7 +109,7 @@ const MainMenu = (props) => {
                             <FontAwesomeIcon icon={faPlus} size="2x" />
                         </a>
                         <a
-                            href="//#endregion"
+                            href="https://ustron.bip.info.pl/dokument.php?iddok=83&idmp=30&r=o"
                             className="helper helper-bip"
                         >
                             <BipIcon className="link bip" />
