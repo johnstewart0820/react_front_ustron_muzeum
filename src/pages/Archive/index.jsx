@@ -46,45 +46,54 @@ const Archive = (props) => {
                                     <p>
                                         <I18n t="address"/> 
                                         <br />
-                                        <strong>
-                                            { data && data.field_digital_archive_address.split(',')[0] },
-                                            <br />
-                                            { data && data.field_digital_archive_address.split(',')[1] }
-                                        </strong>
-                                    </p>
-                                </div>
-                                <div className="contact-details mt-5">
-                                    <div className="row">
                                         {
-                                            data && data.field_digital_archive_telephone &&
-                                            <div>
-                                                <FontAwesomeIcon icon={faPhone} />
-                                            </div>
+                                            data && data.field_digital_archive_address &&
+                                            <strong>
+                                                { data && data.field_digital_archive_address.split(',')[0] },
+                                                <br />
+                                                { data && data.field_digital_archive_address.split(',')[1] }
+                                            </strong>
                                         }
 
-                                        <div className="col contact-phone">
-                                            <a className="d-block" href="#.fff">
-                                                { data && data.field_digital_archive_telephone && data.field_digital_archive_telephone.split(', +')[0] }
-                                            </a>
-                                            <a className="d-block" href="#.fff">
-                                                { data && data.field_digital_archive_telephone && data.field_digital_archive_telephone.split(', +')[1] }
-                                            </a>
+                                    </p>
+                                </div>
+                                {
+                                    data && data.field_digital_archive_telephone && data.field_digital_archive_mail &&
+                                    <div className="contact-details mt-5">
+                                        <div className="row">
+                                            {
+                                                data && data.field_digital_archive_telephone &&
+                                                <div>
+                                                    <FontAwesomeIcon icon={faPhone} />
+                                                </div>
+                                            }
+
+                                            <div className="col contact-phone">
+                                                <a className="d-block" href="#.fff">
+                                                    { data && data.field_digital_archive_telephone && data.field_digital_archive_telephone.split(', +')[0] }
+                                                </a>
+                                                <a className="d-block" href="#.fff">
+                                                    { data && data.field_digital_archive_telephone && data.field_digital_archive_telephone.split(', +')[1] }
+                                                </a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div className="row mt-3">
                                         {
                                             data && data.field_digital_archive_mail &&
-                                            <div>
-                                                <FontAwesomeIcon icon={faEnvelope} />
+                                            <div className="row mt-3">
+                                                <div>
+                                                    <FontAwesomeIcon icon={faEnvelope} />
+                                                </div>
+                                                <div className="col">
+                                                    <a href={ data && data.field_digital_archive_mail }>
+                                                    { data && data.field_digital_archive_mail }
+                                                    </a>
+                                                </div>
                                             </div>
                                         }
-                                        <div className="col">
-                                            <a href={ data && data.field_digital_archive_mail }>
-                                            { data && data.field_digital_archive_mail }
-                                            </a>
-                                        </div>
+                                    
                                     </div>
-                                </div>
+                                }
+                                
                                 <br/>
                                 <br/>
                                 <p><I18n t="nip"/> : { data && data.field_digital_archive_nip }</p>
