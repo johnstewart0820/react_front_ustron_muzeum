@@ -4,6 +4,7 @@ import { SiteInfoContextConsumer } from "../../../constants/SiteInfoContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import Utils from "../../../utils/Locale";
+import {getArticleLink} from "../../../extra/functions";
 
 const Language = (props) => {
   const history = useHistory();
@@ -28,20 +29,22 @@ const Language = (props) => {
   return (
     <SiteInfoContextConsumer>
 		{ ({ languages, active_language, changeLanguage }) => (
+      console.log(languages),
       <div className="language-switcher">
         <ul>
             {
               languages && languages.map((language) => (
+                console.log(language.item.name),
                 <li
                   style={{
-                    order: locale === language ? `1` : ``,
-                    display: locale === language ? `block` : ``,
+                    order: locale === language.item.name.toLowerCase() ? `1` : ``,
+                    display: locale === language.item.name.toLowerCase() ? `block` : ``,
                   }}
-                  key={language}
-                  onClick={() => changeLocale(language)}
+                  key={language.item.name}
+                  onClick={() => { Utils.setLocale(language.item.name.toLowerCase()); setLocale(language.item.name.toLowerCase()); history.push(getArticleLink(language.item.article))}}
                 >
-                  {language}
-                  {locale === language && (
+                  {language.item.name.toLowerCase()}
+                  {locale === language.item.name.toLowerCase() && (
                     <FontAwesomeIcon icon={faChevronDown} size="1x" />
                   )}
                 </li>

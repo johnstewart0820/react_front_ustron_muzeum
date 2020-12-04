@@ -47,14 +47,11 @@ class SiteInfoContextProvider extends Component{
 			const { info } = res.data;
 			// console.log( info );
 
-			const languages = 
-				info.languages && info.languages !== active_language  
-					? info.languages.split(",") 
-					: [];
 
 			const widgets = info?.template?.layout?.["home-page"]?.widgets;
 			// console.log( widgets );
-			
+			const languages = 
+				widgets?.["toggle-menu"]?.elements?.[0]?.menu?.structure || [];			
 			const header_menu_structure = widgets?.["top-menu"]?.elements?.[0]?.menu?.structure || [];
 			const footer_address = widgets?.["footer-contact"]?.elements?.[0]?.content;
 			const footer_hours = widgets?.["footer-hours"]?.elements?.[0]?.content;
