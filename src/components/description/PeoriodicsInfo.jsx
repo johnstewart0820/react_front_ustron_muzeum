@@ -21,11 +21,16 @@ const PeoriodicsInfo = (props) => {
             <div className="peoriodics-decription mb-5">
               {data.field_periodical_description}
             </div>
-            <div className="peoriodics-more">
-              <Link to={!data.field_periodical_button_title ? "#" : data.field_periodical_button_title} className="btn btn-primary peoriodics-link">
-                {data.field_periodical_button_title}
-              </Link>
-            </div>
+            {
+              data.field_periodical_button_title ?
+                <div className="peoriodics-more">
+                  <Link to={!data.field_periodical_button_title ? "#" : data.field_periodical_button_title} className="btn btn-primary peoriodics-link">
+                    {data.field_periodical_button_title}
+                  </Link>
+                </div>
+              :
+                <></>
+            }
           </div>
           
         </div>

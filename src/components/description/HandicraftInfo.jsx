@@ -17,20 +17,29 @@ const HandicraftInfo = (props) => {
             <div className="handicraft-description mb-5">
               {data.field_handicraft_description}
             </div>
-            <Link to={!data.field_handicraft_button_link ? "#" : data.field_handicraft_button_link} className="btn btn-primary btn-link">
-              {data.field_handicraft_button_title}
-            </Link>
+            {
+              data.field_handicraft_button_title ?
+                <Link to={!data.field_handicraft_button_link ? "#" : data.field_handicraft_button_link} className="btn btn-primary btn-link">
+                  {data.field_handicraft_button_title}
+                </Link>
+              :
+                <></>
+            }
+            
           </div>
           <div className="col-md-6 col-12 handicraft-img-container">
               <div className="row">
                 {
                   data.field_handicraft_elements.map((item, key) => (
-                    <div className="col-md-4 col-12 handicraft-img-cover">
-                      <img src={item.field_handicraft_elements_image} className="img-full img-handicraft" />
-                      <div className="handicraft-decription">
-                        {item.field_handicraft_elements_description}
+                    console.log(item),
+                      <div className="col-md-4 col-12 handicraft-img-cover">
+                        <a href={item.field_handicraft_elements_link} className="handicraft-img-cover-text">
+                          <img src={item.field_handicraft_elements_image} className="img-full img-handicraft" />
+                          <div className="handicraft-decription">
+                              {item.field_handicraft_elements_description}
+                          </div>
+                        </a>
                       </div>
-                    </div>
                   ))
                 }
               </div>

@@ -19,7 +19,6 @@ const HomeSlider = (props) => {
           props.data.map(( item, index ) => (
             <Slide index={index} key={index}>
               <div className="hero-container">
-                <div className="hero-title">{item.field_slide_title}</div>
                 <div className="hero-copy">
                   <div className="hero-copy-line __big">{item.field_slide_title}</div>
                   <div className="hero-copy-line">{item.field_slide_content}</div>

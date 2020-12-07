@@ -99,18 +99,31 @@ const Archive = (props) => {
                                 
                                 <br/>
                                 <br/>
-                                <p><I18n t="nip"/> : { data && data.field_digital_archive_nip }</p>
+                                {
+                                    data.field_digital_archive_nip ?
+                                        <p><I18n t="nip"/> : { data && data.field_digital_archive_nip }</p>
+                                    :
+                                        <></>
+                                }
                                 <br/>
-                                <p><I18n t="bank_account_number"/>: 
-                                    { data && data.field_digital_archive_bank && data.field_digital_archive_bank.split(' 4')[0].split('ki')[0] + 'ki' }
-                                </p>
-                                <p>
-                                    { data && data.field_digital_archive_bank && data.field_digital_archive_bank.split(' 4')[0].split('ki')[1] }
-                                </p>
-                                <br/>
-                                <p>4
-                                    { data && data.field_digital_archive_bank && data.field_digital_archive_bank.split(' 4')[1] }
-                                </p>
+                                {
+                                    data.field_digital_archive_bank ?
+                                    <>
+                                        <p><I18n t="bank_account_number"/>: 
+                                            { data && data.field_digital_archive_bank && data.field_digital_archive_bank.split(' 4')[0].split('ki')[0] + 'ki' }
+                                        </p>
+                                        <p>
+                                            { data && data.field_digital_archive_bank && data.field_digital_archive_bank.split(' 4')[0].split('ki')[1] }
+                                        </p>
+                                        <br/>
+                                        <p>4
+                                            { data && data.field_digital_archive_bank && data.field_digital_archive_bank.split(' 4')[1] }
+                                        </p>
+                                    </> 
+                                    :
+                                        <></>
+                                }
+                                
                             </div>
                             <div className="col-12 col-md-8 mt-4">
                                 <div className="contact-block" dangerouslySetInnerHTML={{__html: data && data.field_digital_archive_description}}></div>

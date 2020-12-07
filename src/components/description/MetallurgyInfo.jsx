@@ -19,14 +19,23 @@ const MetallurgyInfo = (props) => {
             <div className="metallurgy-description mb-5">
               <div dangerouslySetInnerHTML={{__html: data.field_metallurgy_description}}></div>
             </div>
-            <Link to={!data.field_metallurgy_button_link ? "#" : data.field_metallurgy_button_link} className="btn btn-primary btn-link">
-              {data.field_metallurgy_button_title}
-            </Link>
+            {
+              data.field_metallurgy_button_title ?
+              <Link to={!data.field_metallurgy_button_link ? "#" : data.field_metallurgy_button_link} className="btn btn-primary btn-link">
+                {data.field_metallurgy_button_title}
+              </Link>
+              :
+              <></>
+            }
+            
           </div>
+          {data.field_metallurgy_elements 
+          ? 
           <div className="col-md-6 metallurgy-img-container ">
             <div className="row">
             {
               data.field_metallurgy_elements.map((item, key) => (
+                 item.field_metallurgy_elements_number ?
                 <div className="col-lg-4 col-md-12 metallurgy-img-cover d-flex justify-content-center">
                   <div className="fix-content">
                     <div className=" img-metallurgy" >
@@ -37,10 +46,17 @@ const MetallurgyInfo = (props) => {
                     </div>
                   </div>
                 </div>
+                :
+                <></>
               ))
             }
             </div>
           </div>
+          :
+          <></>
+          }
+
+          
         </div>
     </section>
   );

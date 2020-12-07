@@ -16,7 +16,7 @@ const MonumentsInfo = (props) => {
               </h3>
               
               <div className="monument-harvest-more mb-4">
-                <Link to={!data.field_monument_button_link ? "#" : data.field_monument_button_link} className="monument-link btn-primary">
+                <Link to={!data.field_monument_button_link ? "#" : data.field_monument_button_link} className="monument-link btn btn-primary">
                   {data.field_monument_button_title}
                 </Link>
               </div>
@@ -47,7 +47,7 @@ const MonumentsInfo = (props) => {
               </h3>
               
               <div className="monument-harvest-more">
-                <Link to={!data.field_monument_button_link ? "#" : data.field_monument_button_link} className="monument-link btn-primary">
+                <Link to={!data.field_monument_button_link ? "#" : data.field_monument_button_link} className="monument-link btn btn-primary">
                   {data.field_monument_button_title}
                 </Link>
               </div>
