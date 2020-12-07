@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-const ExpandedGalleryItem = ({ thumb, title, active }) => (
+const ExpandedGalleryItem = ({ name, thumb, title, active }) => (
 	<div className={`expanded-gallery-item ${ active ? "active" : "" }`}>
 		<div className="expanded-gallery-item__photo">
-			<img src={ thumb } alt={ title }/>
+			<img src={ name } alt={ title }/>
 		</div>
 	</div>
 )

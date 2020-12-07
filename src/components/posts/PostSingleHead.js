@@ -31,38 +31,57 @@ const PostSingleHead = (props) => {
     }, [data.body]);
     
     return (
-    <div className="post-container mb-5">
-        <section className="container section">
-            <div className="row mb-5 post-home-section">
-                <div className="col-md-4">
-                    <h3 className="padding-title mt-5">{data.title}</h3>
-                </div>
-                <div className="col-md-8">
-                <div className="main-home-desc">{data.short}</div>
-                </div>
+        <>
+            {
+                data.short.length == 0 && data.original_image.length == 0 && data.body.length == 0 ?
+                    <></>
+                :
+                <div className="post-container mb-5">
+                {
+                    data.short.length > 0 ? 
+                    <section className="container section">
+                        <div className="row mb-5 post-home-section">
+                            <div className="col-md-4">
+                                <h3 className="padding-title mt-5">{data.title}</h3>
+                            </div>
+                            <div className="col-md-8">
+                            <div className="main-home-desc">{data.short}</div>
+                            </div>
+                        </div>
+                    </section>
+                    :
+                    <></>
+                }
+                {(
+                    data.original_image.length > 0 ?
+                    <img src={ data.original_image } className="posts-single-img" width="100%"/>
+                    :
+                    null
+                )}
+                {
+                    data.body.length > 0 ?
+                    <section className="container section mt-4 pt-4">
+                        <div className="row">
+                            <div className="col-md-4">
+                            </div>
+                            <div className="col-md-8 post-body-desc">
+                                <div className="main-home-desc" dangerouslySetInnerHTML={{__html: data.body}}/>
+                            </div>
+                        </div>
+                    </section>
+                    :
+                    <></>
+                }
+                
             </div>
-        </section>
-        {(
-            data.original_image.length > 0 ?
-            <img src={ data.original_image } className="posts-single-img" width="100%"/>
-            :
-            null
-        )}
-        <section className="container section mt-4 pt-4">
-            <div className="row">
-                <div className="col-md-4">
-                </div>
-                <div className="col-md-8 post-body-desc">
-                    <div className="main-home-desc" dangerouslySetInnerHTML={{__html: data.body}}/>
-                </div>
-            </div>
-        </section>
-        {isDialogOpen ?
-            <Onegallery item={{thumb: image_url}} closeHandler={closeHandler}/> 
-            :
-            <></>
-        }
-    </div>
+            }
+            
+            {isDialogOpen ?
+                <Onegallery item={{name: image_url}} closeHandler={closeHandler}/> 
+                :
+                <></>
+            }
+        </>
     );
 }
 

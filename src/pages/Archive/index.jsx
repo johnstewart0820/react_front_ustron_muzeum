@@ -42,23 +42,25 @@ const Archive = (props) => {
                     <div className="container">
                         <div className="row">
                             <div className="col-12 col-md-4">
-                                <div className="address-details">
-                                    <p>
-                                        <I18n t="address"/> 
-                                        <br />
-                                        {
-                                            data && data.field_digital_archive_address &&
-                                            <strong>
-                                                { data && data.field_digital_archive_address.split(',')[0] },
-                                                <br />
-                                                { data && data.field_digital_archive_address.split(',')[1] }
-                                            </strong>
-                                        }
-
-                                    </p>
-                                </div>
                                 {
                                     data && data.field_digital_archive_telephone && data.field_digital_archive_mail &&
+                                    <>
+                                    <div className="address-details">
+                                        <p>
+                                            <I18n t="address"/> 
+                                            <br />
+                                            {
+                                                data && data.field_digital_archive_address &&
+                                                <strong>
+                                                    { data && data.field_digital_archive_address.split(',')[0] },
+                                                    <br />
+                                                    { data && data.field_digital_archive_address.split(',')[1] }
+                                                </strong>
+                                            }
+
+                                        </p>
+                                    </div>
+                                
                                     <div className="contact-details mt-5">
                                         <div className="row">
                                             {
@@ -92,6 +94,7 @@ const Archive = (props) => {
                                         }
                                     
                                     </div>
+                                    </>
                                 }
                                 
                                 <br/>
