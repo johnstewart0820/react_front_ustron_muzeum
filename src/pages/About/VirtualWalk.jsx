@@ -9,7 +9,6 @@ const VirtualWalk = (props) => {
     const data = props.page.acf.field_virtualwalk_list;
     const title = props.page.acf.field_walk_text;
     return (
-        console.log(title),
         <>
             {!data && <Loader/>}
             {!!data &&

@@ -14,7 +14,6 @@ const PostSingleHead = (props) => {
     }
     useEffect(() => {
         const main_home_desc_part = document.getElementsByClassName('image-post');
-        console.log(main_home_desc_part);
         for (let i  = 0; i < main_home_desc_part.length; i ++) {
             
             if (main_home_desc_part[i].alt != '') {

@@ -50,7 +50,6 @@ const Event = (props) => {
             date: moment().format('DD.MM.YYYY'),
             date_to: moment().format('DD.MM.YYYY'),
         }).then(res => {
-            console.log(res.data.contents);
             if (res.data.contents.length === 0)
             {
                 

@@ -52,7 +52,7 @@ const MainMenu = (props) => {
                             <div key={index} className={column_classes.join(" ")} >
                                 <Link to={item.path} className="main-menu__title" rel={'noopener noreferrer'}>
 
-                                    {(!subitems || !subitems.length) ? <span className="sidebar-nochildren-span" onClick={(e) => (history.push(item.path), props.onNavigate(e))}> {item.label} </span> : <span onClick={e => toggleMobileMenu(e, index)}> {item.label} </span>}
+                                    {(!subitems || !subitems.length) ? <span className="sidebar-nochildren-span" onClick={(e) => (history.push(item.path), props.onNavigate(e))}> {item.label} </span> : <span onClick={e => (history.push(item.path),toggleMobileMenu(e, index))}> {item.label} </span>}
                                     {subitems && !!subitems.length &&
                                         <FontAwesomeIcon onClick={e => toggleMobileMenu(e, index)} icon={faAngleDown} size="1x" />}
 
@@ -64,11 +64,15 @@ const MainMenu = (props) => {
                                             const column_classes = ["main-menu__column_sub", open_sub_menu === index ? "mobile-open-sub" : ""];
                                             return (
                                                 <div key={index} className={column_classes.join(" ")}>
+                                                    {item.inside === true ?
                                                     <Link key={index} to={item.path} rel={'noopener noreferrer'} >
-                                                        {(!subitems || !subitems.length) ? <span className="sidebar-nochildren-span" onClick={(e) => (history.push(item.path), props.onNavigate(e))}> {item.label} </span> : <span onClick={e => toggleMobileMenu(e, index)}> {item.label} </span>}
+                                                        {(!subitems || !subitems.length) ? <span className="sidebar-nochildren-span" onClick={(e) => (history.push(item.path), props.onNavigate(e))}> {item.label} </span> : <span onClick={e => (history.push(item.path),toggleMobileSubMenu(e, index))}> {item.label} </span>}
                                                         {subitems && !!subitems.length &&
                                                             <FontAwesomeIcon onClick={e => toggleMobileSubMenu(e, index)} icon={faAngleDown} size="1x" />}
                                                     </Link>
+                                                    :
+                                                    <a href={item.path} target='_blank'>{item.label}</a>  
+                                                        }
                                                     {
                                                     subitems && !!subitems.length &&
                                                     <div className="main-menu__items_sub">

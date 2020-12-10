@@ -25,7 +25,6 @@ const Home = (props) => {
     React.useEffect(() => {
         // setStartDate(selectedDate);
         setEducationData(null);
-        console.log(props.page.acf.field_education_category);
         const categories = [props.page.acf.field_education_category.id];
         API.getEvents({categories: categories}).then(res => {
             setEducationData(res.data);

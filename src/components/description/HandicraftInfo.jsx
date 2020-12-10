@@ -31,7 +31,6 @@ const HandicraftInfo = (props) => {
               <div className="row">
                 {
                   data.field_handicraft_elements.map((item, key) => (
-                    console.log(item),
                       <div className="col-md-4 col-12 handicraft-img-cover">
                         <a href={item.field_handicraft_elements_link} className="handicraft-img-cover-text">
                           <img src={item.field_handicraft_elements_image} className="img-full img-handicraft" />

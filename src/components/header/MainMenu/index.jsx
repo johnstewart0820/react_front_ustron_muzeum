@@ -11,7 +11,6 @@ const MainMenu = (props) => {
   return (
     <SiteInfoContextConsumer>
       { ({ header_menu }) => (
-        console.log(header_menu),
         <div className="row main-header-navigation open-sans">
           <div className="col-md-12">
             <nav className="main-navigation">

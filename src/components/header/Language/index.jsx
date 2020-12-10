@@ -29,12 +29,10 @@ const Language = (props) => {
   return (
     <SiteInfoContextConsumer>
 		{ ({ languages, active_language, changeLanguage }) => (
-      console.log(languages),
       <div className="language-switcher">
         <ul>
             {
               languages && languages.map((language) => (
-                console.log(language.item.name),
                 <li
                   style={{
                     order: locale === language.item.name.toLowerCase() ? `1` : ``,

@@ -22,11 +22,12 @@ const ChronicleUstron = (props) => {
         });
     }
     return (
+        console.log(info && info.acf && info.acf.field_chronicle_posts && info.acf.field_chronicle_posts),
         <>
             <MainHeaderSection extra_classes="subpage">
                 <Breadcrumbs breadcrumbs={breadcrumb}/>
             </MainHeaderSection>
-            <ChroniclePost data={info && info.acf && info.acf.field_chronicle_posts && info.acf.field_chronicle_posts[index]}/>
+            <ChroniclePost data={info && info.acf && info.acf.field_chronicle_posts && info.acf.field_chronicle_posts[info.acf.field_chronicle_posts.length - index - 1]}/>
             <ChronicleNavigator data={info && info.acf && info.acf.field_chronicle_posts && info.acf.field_chronicle_posts.length} onChangeHandler= {handleClick} />
         </>
     );
