@@ -5,7 +5,7 @@ const Sites = {
 const SITE = Sites.Museum;
 
 const SITES_DOMAIN = {
-	[Sites.Museum]: "muzeum.ustron.s3.netcore.pl"
+	[Sites.Museum]: "muzeum.ustron.pl"
 };
 
 export { Sites, SITE, SITES_DOMAIN };

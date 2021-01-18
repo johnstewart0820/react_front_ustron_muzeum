@@ -2,7 +2,7 @@ import axios from "axios";
 import LocalStorage from "../constants/LocalStorage";
 import wrapInArray from "./wrapInArray";
 
-const API_URL = "https://api.ustron.s3.netcore.pl/";
+const API_URL = "https://api.ustron.pl/";
 const API = axios.create({
     baseURL: API_URL,
 });

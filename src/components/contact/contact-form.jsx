@@ -21,8 +21,8 @@ const ContactForm = (props) => {
   };
   const onSubmit = (e) => {
     e.preventDefault();
-    axios.post('https://api.ustron.s3.netcore.pl/sites/sendMessage', {
-      domain: 'muzeum.ustron.s3.netcore.pl',
+    axios.post('https://api.ustron.pl/sites/sendMessage', {
+      domain: 'muzeum.ustron.pl',
       name: name,
       email: email,
       body: body
