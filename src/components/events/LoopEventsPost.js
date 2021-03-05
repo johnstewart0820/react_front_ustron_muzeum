@@ -18,11 +18,6 @@ export default function LoopEventsPost (props) {
 	return (
 		<Link to={getArticleLink(props)} className="loop-event-post">
 			<div className="loop-event-post__thumbnail has-overlay thumbnail" style={{ backgroundImage: `url("${image || DefaultImage}")` }}>
-				{categories_labels && (
-					<div className="loop-event-post__category">  
-						{categories_labels}
-					</div>
-				)}
 			</div>
 
 			<div className="loop-event-post__content">
