@@ -1,0 +1,15 @@
+.month-button-container {
+  padding-left: 90px;
+  font-family: $lora;
+  color: $main-color;
+  .month {
+    font-size: 2em;
+    font-weight: 700;
+    margin-right: 20px;
+  }
+  .year {
+    font-weight: 500;
+    font-size: 1em;
+    margin-right: 10px;
+  }
+}

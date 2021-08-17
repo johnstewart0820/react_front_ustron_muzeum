@@ -1,0 +1,14 @@
+@import "./mixins.scss";
+
+.section-heading{
+	@include flex-a-center;
+	margin-bottom: 35px;
+
+	svg{
+		margin-right: 45px;
+		path{
+			fill: $gray;
+			stroke: $gray;
+		}
+	}
+}

@@ -1,0 +1,131 @@
+@import "./mixins.scss";
+
+.sidebar{
+    position: absolute;
+    z-index: 1099;
+    right: 72px;
+    top: 73px;
+    width: 72px;
+    height: 71px;
+    background: $main-color;
+    @include flex-column;
+    align-items: center;
+
+
+    svg.fill path{
+        fill: #fff;
+    }
+}
+
+
+.sidebar__trigger{
+    width: 100%;
+    height: 72px;
+    border: 0;
+    background: transparent;
+    @include flex-centered;
+
+    &.active{
+        // background: $green;
+    }
+}
+
+@media (min-width: 1570px){
+    .sidebar{
+        display: none;
+    }
+}
+
+@media (max-width: 1570px){
+    .main-menu__title {
+        border-color: transparent;
+        padding: 25px 20px;
+
+        strong{
+            display: inline-block;
+        }
+    }
+    .sidebar {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+    .language-switcher {
+        position: absolute;
+        right: 73px;
+        top: 72px;
+    }
+    .main-search {
+        position: absolute;
+        right: 0px;
+        top: 72px;
+    }
+
+    .main-menu__items{
+        display: none;
+        padding: 0 0 0 30px;
+        line-height: 40px;
+    }
+
+    .main-menu__items_sub{
+        display: none;
+        padding: 0 0 0 30px;
+        line-height: 40px;
+    }
+    .main-menu{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+        padding: 30px 0 0 0;
+
+        overflow: auto;
+        max-height: 100vh;
+        min-height: auto;
+    }
+
+    .main-menu__column{
+        width: 100%;
+        flex: 0 0;
+    }
+
+    .main-menu__column.mobile-open{
+        .main-menu__items{
+            display: block;
+        }
+    }
+    .main-menu__column_sub.mobile-open-sub{
+        .main-menu__items_sub{
+            display: block;
+        }
+    }
+}
+
+@media (max-width: 500px){
+    .sidebar{
+        min-width: 56px;
+        width: 56px !important;
+        height: 56px !important;
+    }
+    .main-search {
+        top: 56px;
+        right: 0px;
+        &-trigger {
+            width: 56px;
+            height: 56px;
+        }
+    }
+    .language-switcher {
+        right: 56px !important;
+        top: 56px !important;
+        width: 56px !important;
+        ul {
+            li {
+                width: 56px !important;
+                height: 56px !important;
+                line-height: 56px !important;
+                font-size: 0.8em !important;
+            }
+        }
+    }
+}

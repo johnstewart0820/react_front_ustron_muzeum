@@ -1,0 +1,129 @@
+@import "./mixins.scss";
+
+.loop-search-posts-container{
+	padding: 30px 0 50px;
+}
+
+
+.loop-search-posts-container__top{
+	@include flex-a-center;
+
+	.form-select{
+		margin: 0 0 35px auto;
+		border: 0;
+		height: 36px;
+		@include flex-a-center;
+
+		&__label{
+			font-weight: normal;
+			position: static;
+			min-width: 115px;
+			margin-right: 15px;
+			font-size: 1em;
+			letter-spacing: 2.3px;
+			padding: 0;
+		}
+
+
+		select{
+			padding-left: 5px;
+			color: $green;
+		}
+
+		svg{
+			top: 10px;
+			
+			path{
+				stroke: $green;
+			}
+		}
+	}
+}
+
+.loop-search-posts-container__heading-link {
+	margin-bottom: 35px;
+}
+
+.loop-search-posts-container.gastronomy,
+.loop-search-posts-container.accommodations,
+.loop-search-posts-container.news{
+	.row{
+		margin: 0 -14px;
+	}
+
+	.loop-gastronomy-post,
+	.loop-accommodation-post,
+	.loop-news-post{
+		margin-bottom: 90px;
+	}
+}
+
+.loop-search-posts-container.photo-reports{
+	.row{
+		margin: 0 -15px;
+	}
+
+	.loop-photo-report-post{
+		margin-bottom: 65px;
+	}
+}
+
+
+@media (max-width: 1700px){
+	.loop-search-posts-container{
+		.row{
+			.loop-photo-report-post,
+			.loop-accommodation-post,
+			.loop-gastronomy-post,
+			.loop-news-post{
+				width: calc((100% - 14px*3 ) / 3);
+				margin-right: 14px;
+			}
+		}
+	}
+}
+
+@media (max-width: 1199px){
+	.loop-search-posts-container{
+		.row{
+			.loop-photo-report-post,
+			.loop-accommodation-post,
+			.loop-gastronomy-post,
+			.loop-news-post{
+				width: calc((100% - 14px*2 ) / 2);
+			}
+		}
+	}
+}
+
+
+@media (max-width: 650px){
+	.loop-search-posts-container{
+		.row{
+			.loop-photo-report-post,
+			.loop-accommodation-post,
+			.loop-gastronomy-post,
+			.loop-news-post{
+				width: calc((100% - 14px ));
+				margin-left: 14px;
+			}
+		}
+	}
+}
+
+
+@media (max-width: 1199px){
+	.loop-search-posts-container__top {
+	
+		flex-wrap: wrap;
+
+		.form-select{
+			height: auto;
+			// display: block;
+			// margin: 10px 0;
+			width: 100%;
+			margin-left: 0;
+			margin-top: 15px;
+		}	
+	}
+}

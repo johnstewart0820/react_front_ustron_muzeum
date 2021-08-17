@@ -1,0 +1,116 @@
+$slider-max-height: 700px;
+
+.hero-container {
+  font-weight: 700;
+  text-align: center;
+  height: $slider-max-height;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+
+  
+
+  .hero-copy {
+    margin: 30px 0 60px 0;
+    &-line {
+      font-size: 2.5em;
+      font-family: $lora;
+      text-transform: uppercase;
+      color: #fff;
+      font-weight: 600;
+
+      &.__big {
+        font-size: 5.5em;
+        line-height: 100px;
+      }
+    }
+
+    &-cta {
+      border: 2px solid $gold;
+      width: 400px;
+      padding: 20px;
+      font-size: 1em;
+      font-weight: 400;
+      display: inline-block;
+      background: $gold;
+      color: #fff;
+      text-transform: uppercase;
+      text-decoration: none;
+
+      &:hover {
+        background: transparent;
+        color: #fff;
+        border-color: #fff;
+      }
+    }
+  }
+
+  .hero-top-img {
+    position: absolute !important;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    background: no-repeat;
+    height: 700px;
+    background-size: cover;
+    background-position: 50%;
+  }
+}
+
+.hero-title {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: $gold;
+}
+
+.carousel {
+  overflow: hidden;
+}
+
+.carousel-provider {
+  padding: 0px !important;
+  height: 700px !important;
+}
+.carousel-provider > div {
+    height: 100%;
+}
+
+.margin-bottom-500 {
+  margin-bottom: 500px;
+}
+
+.hero-copy {
+  margin: 30px 0 60px 0;
+  &-line {
+    font-size: 2.5em;
+    font-family: $lora;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+
+    &.__big {
+      font-size: 5.5em;
+      line-height: 100px;
+    }
+  }
+
+  &-cta {
+    border: 2px solid $gold;
+    width: 400px;
+    padding: 20px;
+    font-size: 1em;
+    display: inline-block;
+    background: $gold;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+      background: transparent;
+      color: #fff;
+      border-color: #fff;
+    }
+  }
+}

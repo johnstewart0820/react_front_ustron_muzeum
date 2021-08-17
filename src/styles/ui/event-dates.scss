@@ -1,0 +1,87 @@
+@import "./mixins.scss";
+
+.event-dates{
+	@include flex-wrap;
+	border: 1px solid $gray;
+	padding: 13px 0;
+	max-width: 304px;	
+	margin-bottom: 20px;
+}
+
+
+.event-dates__time{
+	font-weight: bold;
+	margin-left: auto;
+	padding: 0 10px;
+	text-align: center;
+	color: $main-color;
+	
+	> div {
+		// min-height: 42px;
+		padding: 8px 0;
+	}
+}
+
+.sign-day {
+	opacity: 0.5;
+}
+.event-dates__date{
+	@include flex-a-center;
+	border-right: 1px solid $gray;
+	padding: 0 15px;
+	flex: auto;
+
+	strong{
+		font-size: 1em;
+		color: $main-color;
+	}
+
+	span{
+		margin-left: 7px;	
+		letter-spacing: 2.3px;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 0.8em;
+		color: $main-color;
+	}
+}
+
+.post-event-dates__date{
+	@include flex-a-center;
+	padding: 0 15px;
+	flex: auto;
+
+	strong{
+		font-size: 1em;
+		color: $main-color;
+	}
+
+	span{
+		margin-left: 7px;	
+		letter-spacing: 2.3px;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 0.8em;
+		color: $main-color;
+	}
+}
+.event-dates__date + .event-dates__date{
+	border-top: 1px solid $gray;
+}
+
+.post-event-dates__date + .post-event-dates__date{
+	border-top: 1px solid $gray;
+}
+
+.event-dates__several_dates{
+	flex: auto;
+
+	.event-dates__date{
+		padding: 8px 15px;
+	}
+	.post-event-dates__date{
+		padding: 8px 15px;
+	}
+}
+
+

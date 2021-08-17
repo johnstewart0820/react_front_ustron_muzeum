@@ -1,0 +1,195 @@
+.description-container {
+  .description-harvest-more {
+    padding-top: 3em;
+  }
+
+  .description-more-item {
+    font-size: 1.13em;
+    font-weight: bold;
+    text-decoration: none;
+    color: $main-color;
+    margin-bottom: 60px;
+    display: block;
+
+    span {
+      display: block;
+      line-height: 25px;
+      margin-top: 17px;
+    }
+
+    &:hover {
+      color: $gold;
+    }
+  }
+
+  .research-info-description {
+    color: $main-color;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-family: $open-sans;
+    line-height: 1.5;
+    font-weight: 500;
+  }
+  .research-harvest-more {
+    padding-top: 3em;
+    padding-left: 40px;
+  }
+  .research-img-container {
+    padding-top: 3em;
+  }
+  .monuments-info {
+    background-color: $main-color;
+    padding: 10em 0em;
+    .monuments-img-container {
+      display: inline-flex;
+    }
+
+    .monument-title {
+      font-family: $open-sans;
+      color: $gold;
+      font-size: 1.2em;
+      margin: 1.5em 0px;
+    }
+
+    .monument-decription {
+      font-family: $lora;
+      color: white;
+      font-size: 1.2em;
+      font-weight: 600;
+    }
+
+    .monument_link {
+      padding-left: 10em;
+    }
+
+    .monuments-main-title {
+      color: white;
+    }
+
+    .monument-link {
+
+        border: 2px solid $gold;
+        width: 260px;
+        padding: 20px;
+        font-size: 1em;
+        font-weight: 700;
+        display: inline-block;
+        background: $gold;
+        color: #fff;
+        text-transform: uppercase;
+        text-align: center;
+        &:hover {
+          background: transparent;
+          color: #fff;
+          border-color: #fff;
+        }
+    }
+  }
+  .handicraft-info {
+    .handicraft-description {
+      color: $main-color;
+      padding-left: 40px;
+      padding-right: 40px;
+      font-family: $open-sans;
+      line-height: 1.5;
+      font-weight: 500;
+    }
+    .btn-link {
+      margin-left: 40px;
+    }
+    .img-handicraft {
+      height: 150px !important;
+      width: auto !important;
+      margin-bottom: 40px;
+    }
+    .handicraft-img-cover {
+      text-align: center;
+      max-width: 100%;
+    }
+    .handicraft-img-cover-text {
+      text-decoration: none;
+    }
+    .handicraft-decription {
+      font-family: $lora;
+      font-size: 1.4em;
+      font-weight: 700;
+      color: $main-color;
+
+    }
+  }
+  .peoriodics-info {
+    padding-top: 10em ;
+    padding-bottom: 10em ;
+    .peoriodics-img-container {
+      display: inline-flex;
+    }
+
+    .peoriodics-title {
+      font-family: $lora;
+      color: $gold;
+      font-size: 1.3em;
+      margin: 1.5em 0px;
+    }
+
+    .peoriodics-decription {
+      font-family: $open-sans;
+      font-weight: 500;
+      color: $main-color;
+      line-height: 1.5;
+    }
+
+    .peoriodics_link {
+      padding-left: 10em;
+    }
+    .peoriodics-link {
+    }
+  }
+  .metallurgy-info {
+    .metallurgy-description {
+      color: $main-color;
+
+      font-family: $open-sans;
+      line-height: 1.5;
+      font-weight: 500;
+    }
+    .img-metallurgy {
+      height: 150px;
+      width: 150px ;
+      border: 1px solid $gold;
+      background-color: $gold;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      font-family: $lora;
+      font-size: 2.2em;
+      color: $main-color;
+      font-weight: 800;
+      text-align: center;
+    }
+    .metallurgy-decription {
+      text-align: center;
+      font-family: $lora;
+      font-size: 1.4em;
+      font-weight: 700;
+      color: $main-color;
+      width: 150px;
+
+    }
+  }
+}
+@media (min-width: 800px) {
+  .peoriodics-img-container-bottom {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  .peoriodics-img-container {
+    display: none !important;
+  }
+  .peoriodics-img-container-bottom {
+    display: block !important;
+    margin-bottom: 40px;
+  }
+}

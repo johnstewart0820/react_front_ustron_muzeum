@@ -1,0 +1,43 @@
+.day-button-container {
+  max-width: 100%;
+  padding-left: 90px;
+  .day-button-carousel {
+    display: flex;
+    overflow: scroll;
+    overflow-y: hidden;
+    .day-button-wrap {
+      display: flex;
+      .carousel {
+        .carousel__body {
+          display: flex;
+          .arrows {
+            position: relative;
+            top: 45px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.date_heading_main {
+  margin-top: 20px;
+  display: inline-flex;
+  color: $gold;
+  font-family: $lora;
+
+  .date_heading_month_year_date {
+    padding-top: 0.2em;
+    font-size: 1.2em;
+  }
+  .date_heading_date {
+    margin-right: 20px;
+    font-size: 2.9em;
+  }
+  .date_heading_month_year {
+    display: inline-flex;
+    .date_heading_month {
+      margin-right: 5px;
+    }
+  }
+}

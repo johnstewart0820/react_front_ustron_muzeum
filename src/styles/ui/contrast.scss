@@ -1,0 +1,387 @@
+
+$contrast: #ffd401;
+
+body.contrast{
+	background: #000;
+	color: $contrast;
+
+	/* SVG */
+	svg{
+		// path, ellipse, rect, circle, line{
+		// 	fill: $contrast;
+		// }
+		&.stroke{
+			path, rect, ellipse, circle, line{
+				stroke: $contrast !important;
+			}
+		}
+
+
+		&.fill-stroke{
+			.fill{
+				fill: $contrast !important;
+			}
+
+			.stroke{
+				stroke: $contrast !important;
+			}
+		}
+
+		&#bip{
+			.white{
+				fill: #000;
+			}
+
+			.red{
+				fill: $contrast
+			}
+		}
+	}
+
+	.helper {
+		color: $contrast !important;
+		&:hover {
+		  color: $gold !important;
+		}
+	}
+
+	.arrows > button:hover,
+	.sidebar__trigger.active,
+	.header__link.active {
+		svg {
+			&.stroke{
+				path, line {
+					stroke: #000 !important;
+				}
+			}
+		}
+	}
+
+
+	// ONLY COLOR
+	small,
+	nav ul > li > button,
+	div,
+	h3,h4, a,
+	.link-to-all,
+	.main-menu a,
+	.carousel__head > a,
+	.footer-main__address_heading,
+	.breadcrumbs div,
+	.breadcrumbs a,
+	.logo span,
+	.links-tiles .row > a,
+	.loop-gastronomy-post__content,
+	.loop-accommodation-post__content,
+	.loop-gastronomy-post__info > a,
+	.loop-accommodation-post__info > a,
+	.main-navigation a,
+	.main-menu a:hover,
+	.search-form input,
+	.search-form input::placeholder,
+	.main-menu__title,
+	.loop-news-post__content,
+	.loop-news-post__date,
+	.footer-main a, .footer-copyright a,
+	.loop-event-post__content,
+	.header__link,
+	p,
+	strong{
+		color: $contrast !important;
+	}
+
+	.main-navigation {
+		> ul {
+		  > li {
+			> a {
+
+			  &:after {
+				background-color: $contrast;
+			  }
+			  &.active {
+				color: $gold !important;
+			  }
+			}
+			&:hover {
+			  a {
+				background-color: $contrast;
+				color: #fff !important;
+			  }
+			}
+			// level 1
+			> ul {
+				background-color: $contrast;
+			  li {
+				margin: 15px 0;
+				a {
+				  color: #fff;
+				  &:hover {
+					color: #000 !important;
+				  }
+				}
+			  }
+			}
+		  }
+		}
+	  }
+
+	.language-switcher > ul  {
+
+		border: 1px solid $contrast !important;
+		li {
+			background-color: #000 !important;
+			color: #fff;
+			svg {
+				margin-left: 6px;
+			}
+
+			&:hover {
+				background-color: $contrast !important;
+				color: #000 !important;
+			}
+		}
+	}
+
+	.main-search {
+		//   position: relative;
+		&-trigger {
+		  background-color: #000 !important;
+		  color: $contrast;
+		  border: 1px solid $contrast;
+		  &:hover {
+			background-color: $contrast !important;
+			color: #fff !important;
+			border: 1px solid $contrast;
+		  }
+		}
+
+		&:hover {
+		  .search-bar {
+			  background-color: #000;
+			  border: 1px solid $contrast;
+		  }
+		  .main-search-trigger {
+			border-bottom: 1px solid $main-color;
+		  }
+		}
+	}
+	.main-header {
+		border-bottom: 1px solid $contrast;
+	}
+	.hero-title, .hero-copy-line {
+		color: #fff !important;
+	}
+	.btn-primary {
+		background-color: #000 !important;
+		color: $contrast !important;
+		border: 1px solid $contrast !important;
+		&:hover {
+			background-color: $contrast !important;
+			color: #000 !important;
+			border: 1px solid $contrast !important;
+		}
+	}
+	// BACKGROUND BLACK AND COLOR CONTRAST
+	.carousel,
+	.loop-event-post__content,
+	.monuments-info,
+	.bg-light-gray,
+	.main-footer,
+	.working-hours,
+	.hours-column,
+	.section,
+	.section-switcher button,
+	.days-column,
+	.price-list-detail,
+	.hero-container a,
+	.pictures-slider__circles button,
+	.text-link-expandable-info,
+	.two-carousels-one-row > div:nth-child(2),
+	.main-header-external-link,
+	.weather{
+		background-color: #000 !important;
+		color: $contrast !important;
+	}
+
+	// BG BLACK + FONT CONTRAST + BORDER CONTRAST
+	.breadcrumbs,
+	.text-link-pic,
+	.footer-main,
+	.main-menu,
+	.footer-copyright,
+	.sidebar,
+	.links-tiles .row > a:hover,
+	.map-with-pins-info{
+		background: #000;
+		color: $contrast;
+		border-color: $contrast
+	}
+
+	.img-metallurgy {
+		background-color: $contrast !important;
+		color: #000 !important;
+		border-color: $contrast !important;
+	}
+
+	.day_main {
+		* {
+			color: $main-color !important;
+
+		}
+		&:hover {
+			border: 3px solid $gold !important;
+		}
+	}
+	.day_main.active{
+		border: 3px solid $gold !important;
+	}
+	// BG CONTRAST
+
+	.sidebar__trigger.active,
+	.pictures-slider__circles button.active,
+	.header__link.active::before,
+	.main-header-external-link > span{
+		background-color: $contrast;
+	}
+
+	.section-switcher button {
+		&:before {
+			background-color: $contrast !important;
+		}
+	}
+
+	// BG CONTRAST AND COLOR BLACK
+	.arrows > button:hover,
+	.text-link-expandable-info__expandable_head{
+		background: $contrast;
+		color: #000;
+	}
+
+
+	// BORDER 1px solid
+	.loop-gastronomy-post__bottom > a:not(.button-link),
+	.loop-accommodation-post__bottom > a:not(.button-link),
+	.arrows > button,
+	.sidebar{
+		border: 1px solid $contrast;
+	}
+
+
+	// BORDER COLOR CONTRAST
+	.links-tiles .row > a,
+	.loop-event-post__dates,
+	.loop-event-post__date{
+		border-color: $contrast;
+	}
+
+
+	// DISPLAY NONE
+	.main-header-external-link::before{
+		display: none;
+	}
+
+
+	// GRAYSCALE
+	.carousel li,
+	img,
+	.thumbnail,
+	.main-header-tiles-section__tile{
+		filter: grayscale(100%);
+	}
+
+	a img {
+		filter: grayscale(0);
+	}
+
+	.handicraft-img-container img {
+		filter: grayscale(0);
+	}
+	a > div {
+		filter: grayscale(1);
+	}
+
+
+
+	/************************* OTHER ******************************/
+
+	.button-link{
+		background: #000;
+		color: $contrast;
+		border-color: $contrast;
+		&:hover{
+			background: $contrast;
+			color: #000 !important;
+		}
+	}
+
+	.auth-panel,
+	.search-form,
+	.main-menu{
+		background: #000;
+		border-color: $contrast;
+		border-top: 1px solid $contrast;
+		border-bottom: 1px solid $contrast;
+	}
+
+
+	.amounts-with-icons__item_circle > span{
+		background: rgba(255, 212, 1, .4);
+	}
+
+	.amounts-with-icons__item_circle{
+		background: rgba(255, 212, 1, .2);
+	}
+
+	.hero-copy-cta {
+		background-color: #000 !important;
+		color: $contrast !important;
+		&:hover {
+		  background: transparent !important;
+		  color: #fff !important;
+		  border-color: #fff !important;
+		}
+	}
+	.loop-news-post__content > div {
+		color: $contrast !important;
+	}
+	.event-dates {
+		span {
+			color: $contrast;
+		}
+	}
+	.carousel-education {
+		.heading {
+			color: $contrast !important;
+		}
+	}
+	.carousel-exhibition {
+		.heading {
+			color: $contrast !important;
+		}
+	}
+	.carousel-events {
+		.heading {
+			color: $contrast !important;
+		}
+	}
+	.page-helper-bottom {
+		background-color: #000 !important;
+	}
+	@media (max-width: 1570px) {
+		.language-switcher > ul  {
+			
+			li {
+				height: 70px !important;
+			}
+		}
+	}
+	@media (max-width: 500px) {
+		.language-switcher > ul  {
+			
+			li {
+				height: 54px !important;
+				width: 54px !important;
+			}
+		}
+	}
+}

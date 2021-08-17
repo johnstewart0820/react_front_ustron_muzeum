@@ -1,0 +1,68 @@
+.object-info {
+  padding: 100px 0;
+
+  p {
+    font-size: 1em;
+    font-family: $roboto;
+    line-height: 25px;
+    padding: 40px 20px 0 45px;
+    text-align: justify;
+  }
+  .object-info-description {
+    font-family: $open-sans;
+    color: $main-color;
+    padding-left: 30px;
+    padding-right: 30px;
+    line-height: 1.5;
+    font-weight: 500;
+    h4,h3 {
+      margin-left: -40px;
+    }
+  }
+  .price-list-detail {
+    color: #fff;
+    line-height: 1.5;
+    font-family: $open-sans;
+    background-color: $main-color;
+    padding: 50px 40px 40px 54px;
+  }
+}
+
+.working-hours {
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+  align-items: flex-end;
+  background: $gold;
+
+  svg {
+    position: relative;
+    top: -30px;
+  }
+
+  .day {
+    font-size: 1em;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .days-column {
+    background-color: $main-color;
+    padding: 50px 40px 40px 54px;
+  }
+
+  .hours-column {
+    background: $gold;
+    padding: 50px 56px 40px 56px;
+    flex: 1;
+    height: 100%;
+
+    .day {
+      font-weight: 600;
+    }
+  }
+
+}
